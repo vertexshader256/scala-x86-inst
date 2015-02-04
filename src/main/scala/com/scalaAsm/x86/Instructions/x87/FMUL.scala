@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FMUL extends InstructionDefinition("FMUL") with FMULImpl
 
 trait FMULImpl {
-  implicit object FMUL_0 extends FMUL._1[m32] {
+  implicit object FMUL_0 extends FMUL._1[m32fp] {
     val opcode: OneOpcode = 0xD8 /+ 1
     override def hasImplicitOperand = true
   }
 
-  implicit object FMUL_1 extends FMUL._1[m64] {
+  implicit object FMUL_1 extends FMUL._1[m64fp] {
     val opcode: OneOpcode = 0xDC /+ 1
     override def hasImplicitOperand = true
   }

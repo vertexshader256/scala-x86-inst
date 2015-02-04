@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FLD extends InstructionDefinition("FLD") with FLDImpl
 
 trait FLDImpl {
-//  implicit object FLD_0 extends FLD._1[STi/m32] {
-//    val opcode: OneOpcode = 0xD9 /+ 0
-//    override def hasImplicitOperand = true
-//  }
+  implicit object FLD_0 extends FLD._1[m32fp] {
+    val opcode: OneOpcode = 0xD9 /+ 0
+    override def hasImplicitOperand = true
+  }
 
-  implicit object FLD_1 extends FLD._1[m64] {
+  implicit object FLD_1 extends FLD._1[m64fp] {
     val opcode: OneOpcode = 0xDD /+ 0
     override def hasImplicitOperand = true
   }

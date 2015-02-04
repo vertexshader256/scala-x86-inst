@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FDIV extends InstructionDefinition("FDIV") with FDIVImpl
 
 trait FDIVImpl {
-  implicit object FDIV_0 extends FDIV._1[m32] {
+  implicit object FDIV_0 extends FDIV._1[m32fp] {
     val opcode: OneOpcode = 0xD8 /+ 6
     override def hasImplicitOperand = true
   }
 
-  implicit object FDIV_1 extends FDIV._1[m64] {
+  implicit object FDIV_1 extends FDIV._1[m64fp] {
     val opcode: OneOpcode = 0xDC /+ 6
     override def hasImplicitOperand = true
   }

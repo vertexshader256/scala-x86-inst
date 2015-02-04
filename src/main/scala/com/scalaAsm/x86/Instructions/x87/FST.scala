@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FST extends InstructionDefinition("FST") with FSTImpl
 
 trait FSTImpl {
-  implicit object FST_0 extends FST._1[m32] {
+  implicit object FST_0 extends FST._1[m32fp] {
     val opcode: OneOpcode = 0xD9 /+ 2
     override def hasImplicitOperand = true
   }
 
-  implicit object FST_1 extends FST._1[m64] {
+  implicit object FST_1 extends FST._1[m64fp] {
     val opcode: OneOpcode = 0xDD /+ 2
     override def hasImplicitOperand = true
   }

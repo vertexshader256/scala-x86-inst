@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FDIVR extends InstructionDefinition("FDIVR") with FDIVRImpl
 
 trait FDIVRImpl {
-  implicit object FDIVR_0 extends FDIVR._1[m32] {
+  implicit object FDIVR_0 extends FDIVR._1[m32fp] {
     val opcode: OneOpcode = 0xD8 /+ 7
     override def hasImplicitOperand = true
   }
 
-  implicit object FDIVR_1 extends FDIVR._1[m64] {
+  implicit object FDIVR_1 extends FDIVR._1[m64fp] {
     val opcode: OneOpcode = 0xDC /+ 7
     override def hasImplicitOperand = true
   }

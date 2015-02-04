@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FSUBR extends InstructionDefinition("FSUBR") with FSUBRImpl
 
 trait FSUBRImpl {
-  implicit object FSUBR_0 extends FSUBR._1[m32] {
+  implicit object FSUBR_0 extends FSUBR._1[m32fp] {
     val opcode: OneOpcode = 0xD8 /+ 5
     override def hasImplicitOperand = true
   }
 
-  implicit object FSUBR_1 extends FSUBR._1[m64] {
+  implicit object FSUBR_1 extends FSUBR._1[m64fp] {
     val opcode: OneOpcode = 0xDC /+ 5
     override def hasImplicitOperand = true
   }

@@ -11,12 +11,12 @@ import com.scalaAsm.x86.Operands.Memory._
 object FADD extends InstructionDefinition("FADD") with FADDImpl
 
 trait FADDImpl {
-  implicit object FADD_0 extends FADD._1[m32] {
+  implicit object FADD_0 extends FADD._1[m32fp] {
     val opcode: OneOpcode = 0xD8 /+ 0
     override def hasImplicitOperand = true
   }
 
-  implicit object FADD_1 extends FADD._1[m64] {
+  implicit object FADD_1 extends FADD._1[m64fp] {
     val opcode: OneOpcode = 0xDC /+ 0
     override def hasImplicitOperand = true
   }
