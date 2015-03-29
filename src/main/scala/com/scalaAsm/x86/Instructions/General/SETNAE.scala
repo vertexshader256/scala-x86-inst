@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Byte on Condition - below/not above or equal/carry (CF=1)
 // Category: general/datamov
 
-object SETNAE extends InstructionDefinition("SETNAE") with SETNAEImpl
+trait SETNAE extends InstructionDefinition {
+  val mnemonic = "SETNAE"
+}
+
+object SETNAE extends SETNAE with SETNAEImpl
 
 trait SETNAEImpl {
-  implicit object SETNAE_0 extends SETNAE._1[rm8] {
+  self: SETNAE =>
+  implicit object SETNAE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x92) /+ 0
   }
 }

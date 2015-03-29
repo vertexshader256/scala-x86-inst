@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Halt
 // Category: general
 
-object HLT extends InstructionDefinition("HLT") with HLTImpl
+trait HLT extends InstructionDefinition {
+  val mnemonic = "HLT"
+}
+
+object HLT extends HLT with HLTImpl
 
 trait HLTImpl {
-  implicit object HLT_0 extends HLT._0 {
+  self: HLT =>
+  implicit object HLT_0 extends _0 {
     val opcode: OneOpcode = 0xF4
   }
 }

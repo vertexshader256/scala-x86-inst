@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Compare Real and Pop Twice
 // Category: general/compar
 
-object FCOMPP extends InstructionDefinition("FCOMPP") with FCOMPPImpl
+trait FCOMPP extends InstructionDefinition {
+  val mnemonic = "FCOMPP"
+}
+
+object FCOMPP extends FCOMPP with FCOMPPImpl
 
 trait FCOMPPImpl {
-  implicit object FCOMPP_0 extends FCOMPP._0 {
+  self: FCOMPP =>
+  implicit object FCOMPP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 3
     override def hasImplicitOperand = true
   }

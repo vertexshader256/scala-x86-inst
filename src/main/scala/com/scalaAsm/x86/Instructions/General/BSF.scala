@@ -8,14 +8,19 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Bit Scan Forward
 // Category: general/bit
 
-object BSF extends InstructionDefinition("BSF") with BSFImpl
+trait BSF extends InstructionDefinition {
+  val mnemonic = "BSF"
+}
+
+object BSF extends BSF with BSFImpl
 
 trait BSFImpl {
-  implicit object BSF_0 extends BSF._2[r16, rm16] {
+  self: BSF =>
+  implicit object BSF_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xBC) /r
   }
 
-  implicit object BSF_1 extends BSF._2[r32, rm32] {
+  implicit object BSF_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0xBC) /r
     override def explicitFormat(op1: r32, op2: rm32) = {
       if (op2.isInstanceOf[reg]) {
@@ -24,7 +29,7 @@ trait BSFImpl {
     }
   }
 
-  implicit object BSF_2 extends BSF._2[r64, rm64] {
+  implicit object BSF_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0xBC) /r
     override def prefix = REX.W(true)
   }

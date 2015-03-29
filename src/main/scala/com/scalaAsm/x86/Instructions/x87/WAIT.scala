@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Check pending unmasked floating-point exceptions
 // Category: general/control
 
-object WAIT extends InstructionDefinition("WAIT") with WAITImpl
+trait WAIT extends InstructionDefinition {
+  val mnemonic = "WAIT"
+}
+
+object WAIT extends WAIT with WAITImpl
 
 trait WAITImpl {
-  implicit object WAIT_0 extends WAIT._0 {
+  self: WAIT =>
+  implicit object WAIT_0 extends _0 {
     val opcode: OneOpcode = 0x9B
   }
 }

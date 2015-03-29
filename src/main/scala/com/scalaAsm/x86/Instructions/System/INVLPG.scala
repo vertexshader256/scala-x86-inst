@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Invalidate TLB Entry
 // Category: general
 
-object INVLPG extends InstructionDefinition("INVLPG") with INVLPGImpl
+trait INVLPG extends InstructionDefinition {
+  val mnemonic = "INVLPG"
+}
+
+object INVLPG extends INVLPG with INVLPGImpl
 
 trait INVLPGImpl {
-  implicit object INVLPG_0 extends INVLPG._1[m] {
+  self: INVLPG =>
+  implicit object INVLPG_0 extends _1[m] {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
   }
 }

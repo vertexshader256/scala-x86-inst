@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Byte on Condition - overflow (OF=1)
 // Category: general/datamov
 
-object SETO extends InstructionDefinition("SETO") with SETOImpl
+trait SETO extends InstructionDefinition {
+  val mnemonic = "SETO"
+}
+
+object SETO extends SETO with SETOImpl
 
 trait SETOImpl {
-  implicit object SETO_0 extends SETO._1[rm8] {
+  self: SETO =>
+  implicit object SETO_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x90) /+ 0
   }
 }

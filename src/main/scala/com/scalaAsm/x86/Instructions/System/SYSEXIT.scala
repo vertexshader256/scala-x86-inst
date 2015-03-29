@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Fast Return from Fast System Call
 // Category: general/branch/trans
 
-object SYSEXIT extends InstructionDefinition("SYSEXIT") with SYSEXITImpl
+trait SYSEXIT extends InstructionDefinition {
+  val mnemonic = "SYSEXIT"
+}
+
+object SYSEXIT extends SYSEXIT with SYSEXITImpl
 
 trait SYSEXITImpl {
-  implicit object SYSEXIT_0 extends SYSEXIT._0 {
+  self: SYSEXIT =>
+  implicit object SYSEXIT_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x35)
     override def hasImplicitOperand = true
   }

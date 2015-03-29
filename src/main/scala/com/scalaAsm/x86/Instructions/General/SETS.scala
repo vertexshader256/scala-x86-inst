@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Byte on Condition - sign (SF=1)
 // Category: general/datamov
 
-object SETS extends InstructionDefinition("SETS") with SETSImpl
+trait SETS extends InstructionDefinition {
+  val mnemonic = "SETS"
+}
+
+object SETS extends SETS with SETSImpl
 
 trait SETSImpl {
-  implicit object SETS_0 extends SETS._1[rm8] {
+  self: SETS =>
+  implicit object SETS_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x98) /+ 0
   }
 }

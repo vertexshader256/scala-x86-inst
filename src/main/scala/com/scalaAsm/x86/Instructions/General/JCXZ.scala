@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Jump short if eCX register is 0
 // Category: general/branch/cond
 
-object JCXZ extends InstructionDefinition("JCXZ") with JCXZImpl
+trait JCXZ extends InstructionDefinition {
+  val mnemonic = "JCXZ"
+}
+
+object JCXZ extends JCXZ with JCXZImpl
 
 trait JCXZImpl {
-  implicit object JCXZ_0 extends JCXZ._1[rel8] {
+  self: JCXZ =>
+  implicit object JCXZ_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE3
     override def hasImplicitOperand = true
   }

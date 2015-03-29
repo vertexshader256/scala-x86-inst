@@ -8,14 +8,19 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Conditional Move - less/not greater (SF!=OF)
 // Category: general/datamov
 
-object CMOVNGE extends InstructionDefinition("CMOVNGE") with CMOVNGEImpl
+trait CMOVNGE extends InstructionDefinition {
+  val mnemonic = "CMOVNGE"
+}
+
+object CMOVNGE extends CMOVNGE with CMOVNGEImpl
 
 trait CMOVNGEImpl {
-  implicit object CMOVNGE_0 extends CMOVNGE._2[r16, rm16] {
+  self: CMOVNGE =>
+  implicit object CMOVNGE_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x4C) /r
   }
 
-  implicit object CMOVNGE_1 extends CMOVNGE._2[r32, rm32] {
+  implicit object CMOVNGE_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x4C) /r
     override def explicitFormat(op1: r32, op2: rm32) = {
       if (op2.isInstanceOf[reg]) {
@@ -24,7 +29,7 @@ trait CMOVNGEImpl {
     }
   }
 
-  implicit object CMOVNGE_2 extends CMOVNGE._2[r64, rm64] {
+  implicit object CMOVNGE_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0x4C) /r
     override def prefix = REX.W(true)
   }

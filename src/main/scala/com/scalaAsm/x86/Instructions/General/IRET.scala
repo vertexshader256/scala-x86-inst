@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Interrupt Return
 // Category: general/breakstack
 
-object IRET extends InstructionDefinition("IRET") with IRETImpl
+trait IRET extends InstructionDefinition {
+  val mnemonic = "IRET"
+}
+
+object IRET extends IRET with IRETImpl
 
 trait IRETImpl {
-  implicit object IRET_0 extends IRET._0 {
+  self: IRET =>
+  implicit object IRET_0 extends _0 {
     val opcode: OneOpcode = 0xCF
     override def hasImplicitOperand = true
   }

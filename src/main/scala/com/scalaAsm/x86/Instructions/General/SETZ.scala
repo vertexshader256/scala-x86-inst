@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Byte on Condition - zero/equal (ZF=0)
 // Category: general/datamov
 
-object SETZ extends InstructionDefinition("SETZ") with SETZImpl
+trait SETZ extends InstructionDefinition {
+  val mnemonic = "SETZ"
+}
+
+object SETZ extends SETZ with SETZImpl
 
 trait SETZImpl {
-  implicit object SETZ_0 extends SETZ._1[rm8] {
+  self: SETZ =>
+  implicit object SETZ_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x94) /+ 0
   }
 }

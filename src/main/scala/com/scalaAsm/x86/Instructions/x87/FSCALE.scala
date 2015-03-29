@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Scale
 // Category: general/arith
 
-object FSCALE extends InstructionDefinition("FSCALE") with FSCALEImpl
+trait FSCALE extends InstructionDefinition {
+  val mnemonic = "FSCALE"
+}
+
+object FSCALE extends FSCALE with FSCALEImpl
 
 trait FSCALEImpl {
-  implicit object FSCALE_0 extends FSCALE._0 {
+  self: FSCALE =>
+  implicit object FSCALE_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true
   }

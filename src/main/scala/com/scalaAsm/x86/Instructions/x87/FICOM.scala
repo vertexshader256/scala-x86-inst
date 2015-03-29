@@ -8,15 +8,20 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Compare Integer
 // Category: general/compar
 
-object FICOM extends InstructionDefinition("FICOM") with FICOMImpl
+trait FICOM extends InstructionDefinition {
+  val mnemonic = "FICOM"
+}
+
+object FICOM extends FICOM with FICOMImpl
 
 trait FICOMImpl {
-  implicit object FICOM_0 extends FICOM._1[m32] {
+  self: FICOM =>
+  implicit object FICOM_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 2
     override def hasImplicitOperand = true
   }
 
-  implicit object FICOM_1 extends FICOM._1[m16] {
+  implicit object FICOM_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 2
     override def hasImplicitOperand = true
   }

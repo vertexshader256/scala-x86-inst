@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Unordered Compare Floating Point Values and Pop
 // Category: general/compar
 
-object FUCOMP extends InstructionDefinition("FUCOMP") with FUCOMPImpl
+trait FUCOMP extends InstructionDefinition {
+  val mnemonic = "FUCOMP"
+}
+
+object FUCOMP extends FUCOMP with FUCOMPImpl
 
 trait FUCOMPImpl {
-  implicit object FUCOMP_0 extends FUCOMP._0 {
+  self: FUCOMP =>
+  implicit object FUCOMP_0 extends _0 {
     val opcode: OneOpcode = 0xDD /+ 5
     override def hasImplicitOperand = true
   }

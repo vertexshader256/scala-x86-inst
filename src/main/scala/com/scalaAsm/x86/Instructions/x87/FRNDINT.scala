@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Round to Integer
 // Category: general/arith
 
-object FRNDINT extends InstructionDefinition("FRNDINT") with FRNDINTImpl
+trait FRNDINT extends InstructionDefinition {
+  val mnemonic = "FRNDINT"
+}
+
+object FRNDINT extends FRNDINT with FRNDINTImpl
 
 trait FRNDINTImpl {
-  implicit object FRNDINT_0 extends FRNDINT._0 {
+  self: FRNDINT =>
+  implicit object FRNDINT_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true
   }

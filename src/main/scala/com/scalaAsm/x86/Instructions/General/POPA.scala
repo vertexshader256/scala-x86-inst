@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Pop All General-Purpose Registers
 // Category: general/stack
 
-object POPA extends InstructionDefinition("POPA") with POPAImpl
+trait POPA extends InstructionDefinition {
+  val mnemonic = "POPA"
+}
+
+object POPA extends POPA with POPAImpl
 
 trait POPAImpl {
-  implicit object POPA_0 extends POPA._0 {
+  self: POPA =>
+  implicit object POPA_0 extends _0 {
     val opcode: OneOpcode = 0x61
     override def hasImplicitOperand = true
   }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Load Constant π
 // Category: general/ldconst
 
-object FLDPI extends InstructionDefinition("FLDPI") with FLDPIImpl
+trait FLDPI extends InstructionDefinition {
+  val mnemonic = "FLDPI"
+}
+
+object FLDPI extends FLDPI with FLDPIImpl
 
 trait FLDPIImpl {
-  implicit object FLDPI_0 extends FLDPI._0 {
+  self: FLDPI =>
+  implicit object FLDPI_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 5
     override def hasImplicitOperand = true
   }

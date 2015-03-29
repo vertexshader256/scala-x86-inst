@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set AL If Carry
 // Category: general/datamov
 
-object SETALC extends InstructionDefinition("SETALC") with SETALCImpl
+trait SETALC extends InstructionDefinition {
+  val mnemonic = "SETALC"
+}
+
+object SETALC extends SETALC with SETALCImpl
 
 trait SETALCImpl {
-  implicit object SETALC_0 extends SETALC._0 {
+  self: SETALC =>
+  implicit object SETALC_0 extends _0 {
     val opcode: OneOpcode = 0xD6
     override def hasImplicitOperand = true
   }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Absolute Value
 // Category: general/arith
 
-object FABS extends InstructionDefinition("FABS") with FABSImpl
+trait FABS extends InstructionDefinition {
+  val mnemonic = "FABS"
+}
+
+object FABS extends FABS with FABSImpl
 
 trait FABSImpl {
-  implicit object FABS_0 extends FABS._0 {
+  self: FABS =>
+  implicit object FABS_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 4
     override def hasImplicitOperand = true
   }

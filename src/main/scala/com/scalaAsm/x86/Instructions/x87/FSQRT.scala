@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Square Root
 // Category: general/arith
 
-object FSQRT extends InstructionDefinition("FSQRT") with FSQRTImpl
+trait FSQRT extends InstructionDefinition {
+  val mnemonic = "FSQRT"
+}
+
+object FSQRT extends FSQRT with FSQRTImpl
 
 trait FSQRTImpl {
-  implicit object FSQRT_0 extends FSQRT._0 {
+  self: FSQRT =>
+  implicit object FSQRT_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true
   }

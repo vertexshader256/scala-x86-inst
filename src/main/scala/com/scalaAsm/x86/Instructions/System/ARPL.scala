@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Adjust RPL Field of Segment Selector
 // Category: general
 
-object ARPL extends InstructionDefinition("ARPL") with ARPLImpl
+trait ARPL extends InstructionDefinition {
+  val mnemonic = "ARPL"
+}
+
+object ARPL extends ARPL with ARPLImpl
 
 trait ARPLImpl {
-  implicit object ARPL_0 extends ARPL._2[rm16, r16] {
+  self: ARPL =>
+  implicit object ARPL_0 extends _2[rm16, r16] {
     val opcode: OneOpcode = 0x63 /r
   }
 }

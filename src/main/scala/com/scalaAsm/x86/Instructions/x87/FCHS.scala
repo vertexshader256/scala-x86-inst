@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Change Sign
 // Category: general/arith
 
-object FCHS extends InstructionDefinition("FCHS") with FCHSImpl
+trait FCHS extends InstructionDefinition {
+  val mnemonic = "FCHS"
+}
+
+object FCHS extends FCHS with FCHSImpl
 
 trait FCHSImpl {
-  implicit object FCHS_0 extends FCHS._0 {
+  self: FCHS =>
+  implicit object FCHS_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 4
     override def hasImplicitOperand = true
   }

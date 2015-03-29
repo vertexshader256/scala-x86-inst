@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Initialize Floating-Point Unit
 // Category: general/control
 
-object FINIT extends InstructionDefinition("FINIT") with FINITImpl
+trait FINIT extends InstructionDefinition {
+  val mnemonic = "FINIT"
+}
+
+object FINIT extends FINIT with FINITImpl
 
 trait FINITImpl {
-  implicit object FINIT_0 extends FINIT._0 {
+  self: FINIT =>
+  implicit object FINIT_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }
 }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Return From Fast System Call
 // Category: general/branch/trans
 
-object SYSRET extends InstructionDefinition("SYSRET") with SYSRETImpl
+trait SYSRET extends InstructionDefinition {
+  val mnemonic = "SYSRET"
+}
+
+object SYSRET extends SYSRET with SYSRETImpl
 
 trait SYSRETImpl {
-  implicit object SYSRET_0 extends SYSRET._0 {
+  self: SYSRET =>
+  implicit object SYSRET_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x07)
     override def hasImplicitOperand = true
   }

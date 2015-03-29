@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Restore Processor Extended States
 // Category: general
 
-object XRSTOR extends InstructionDefinition("XRSTOR") with XRSTORImpl
+trait XRSTOR extends InstructionDefinition {
+  val mnemonic = "XRSTOR"
+}
+
+object XRSTOR extends XRSTOR with XRSTORImpl
 
 trait XRSTORImpl {
-  implicit object XRSTOR_0 extends XRSTOR._1[m] {
+  self: XRSTOR =>
+  implicit object XRSTOR_0 extends _1[m] {
     val opcode: TwoOpcodes = (0x0F, 0xAE) /+ 5
     override def hasImplicitOperand = true
   }

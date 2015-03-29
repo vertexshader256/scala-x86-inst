@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: ASCII Adjust AL After Subtraction
 // Category: general/arith/decimal
 
-object AAS extends InstructionDefinition("AAS") with AASImpl
+trait AAS extends InstructionDefinition {
+  val mnemonic = "AAS"
+}
+
+object AAS extends AAS with AASImpl
 
 trait AASImpl {
-  implicit object AAS_0 extends AAS._0 {
+  self: AAS =>
+  implicit object AAS_0 extends _0 {
     val opcode: OneOpcode = 0x3F
     override def hasImplicitOperand = true
   }

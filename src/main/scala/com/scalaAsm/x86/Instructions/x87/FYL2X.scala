@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Compute y × log2x and Pop
 // Category: general/trans
 
-object FYL2X extends InstructionDefinition("FYL2X") with FYL2XImpl
+trait FYL2X extends InstructionDefinition {
+  val mnemonic = "FYL2X"
+}
+
+object FYL2X extends FYL2X with FYL2XImpl
 
 trait FYL2XImpl {
-  implicit object FYL2X_0 extends FYL2X._0 {
+  self: FYL2X =>
+  implicit object FYL2X_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
     override def hasImplicitOperand = true
   }

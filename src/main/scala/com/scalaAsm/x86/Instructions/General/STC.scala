@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Carry Flag
 // Category: general/flgctrl
 
-object STC extends InstructionDefinition("STC") with STCImpl
+trait STC extends InstructionDefinition {
+  val mnemonic = "STC"
+}
+
+object STC extends STC with STCImpl
 
 trait STCImpl {
-  implicit object STC_0 extends STC._0 {
+  self: STC =>
+  implicit object STC_0 extends _0 {
     val opcode: OneOpcode = 0xF9
   }
 }

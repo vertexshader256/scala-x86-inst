@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Push All General-Purpose Registers
 // Category: general/stack
 
-object PUSHA extends InstructionDefinition("PUSHA") with PUSHAImpl
+trait PUSHA extends InstructionDefinition {
+  val mnemonic = "PUSHA"
+}
+
+object PUSHA extends PUSHA with PUSHAImpl
 
 trait PUSHAImpl {
-  implicit object PUSHA_0 extends PUSHA._0 {
+  self: PUSHA =>
+  implicit object PUSHA_0 extends _0 {
     val opcode: OneOpcode = 0x60
     override def hasImplicitOperand = true
   }

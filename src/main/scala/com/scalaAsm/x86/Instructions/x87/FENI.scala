@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Enable NPX Interrupt
 // Category: general/control
 
-object FENI extends InstructionDefinition("FENI") with FENIImpl
+trait FENI extends InstructionDefinition {
+  val mnemonic = "FENI"
+}
+
+object FENI extends FENI with FENIImpl
 
 trait FENIImpl {
-  implicit object FENI_0 extends FENI._0 {
+  self: FENI =>
+  implicit object FENI_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }
 }

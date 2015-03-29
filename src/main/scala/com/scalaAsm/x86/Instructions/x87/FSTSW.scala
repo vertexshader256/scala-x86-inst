@@ -8,14 +8,19 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Store x87 FPU Status Word
 // Category: general/control
 
-object FSTSW extends InstructionDefinition("FSTSW") with FSTSWImpl
+trait FSTSW extends InstructionDefinition {
+  val mnemonic = "FSTSW"
+}
+
+object FSTSW extends FSTSW with FSTSWImpl
 
 trait FSTSWImpl {
-  implicit object FSTSW_0 extends FSTSW._1[m16] {
+  self: FSTSW =>
+  implicit object FSTSW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xDD /+ 7
   }
 
-  implicit object FSTSW_1 extends FSTSW._0 {
+  implicit object FSTSW_1 extends _0 {
     val opcode: OneOpcode = 0xDF /+ 4
     override def hasImplicitOperand = true
   }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Partial Tangent
 // Category: general/trans
 
-object FPTAN extends InstructionDefinition("FPTAN") with FPTANImpl
+trait FPTAN extends InstructionDefinition {
+  val mnemonic = "FPTAN"
+}
+
+object FPTAN extends FPTAN with FPTANImpl
 
 trait FPTANImpl {
-  implicit object FPTAN_0 extends FPTAN._0 {
+  self: FPTAN =>
+  implicit object FPTAN_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
     override def hasImplicitOperand = true
   }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: High Level Procedure Exit
 // Category: general/stack
 
-object LEAVE extends InstructionDefinition("LEAVE") with LEAVEImpl
+trait LEAVE extends InstructionDefinition {
+  val mnemonic = "LEAVE"
+}
+
+object LEAVE extends LEAVE with LEAVEImpl
 
 trait LEAVEImpl {
-  implicit object LEAVE_0 extends LEAVE._0 {
+  self: LEAVE =>
+  implicit object LEAVE_0 extends _0 {
     val opcode: OneOpcode = 0xC9
     override def hasImplicitOperand = true
   }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Decrement Stack-Top Pointer
 // Category: general/control
 
-object FDECSTP extends InstructionDefinition("FDECSTP") with FDECSTPImpl
+trait FDECSTP extends InstructionDefinition {
+  val mnemonic = "FDECSTP"
+}
+
+object FDECSTP extends FDECSTP with FDECSTPImpl
 
 trait FDECSTPImpl {
-  implicit object FDECSTP_0 extends FDECSTP._0 {
+  self: FDECSTP =>
+  implicit object FDECSTP_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
   }
 }

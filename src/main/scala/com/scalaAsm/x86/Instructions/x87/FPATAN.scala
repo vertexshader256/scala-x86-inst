@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Partial Arctangent and Pop
 // Category: general/trans
 
-object FPATAN extends InstructionDefinition("FPATAN") with FPATANImpl
+trait FPATAN extends InstructionDefinition {
+  val mnemonic = "FPATAN"
+}
+
+object FPATAN extends FPATAN with FPATANImpl
 
 trait FPATANImpl {
-  implicit object FPATAN_0 extends FPATAN._0 {
+  self: FPATAN =>
+  implicit object FPATAN_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
     override def hasImplicitOperand = true
   }

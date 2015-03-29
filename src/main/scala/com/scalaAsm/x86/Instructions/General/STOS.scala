@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Store String
 // Category: general/datamovstring
 
-object STOS extends InstructionDefinition("STOS") with STOSImpl
+trait STOS extends InstructionDefinition {
+  val mnemonic = "STOS"
+}
+
+object STOS extends STOS with STOSImpl
 
 trait STOSImpl {
-  implicit object STOS_0 extends STOS._0 {
+  self: STOS =>
+  implicit object STOS_0 extends _0 {
     val opcode: OneOpcode = 0xAA
     override def hasImplicitOperand = true
   }

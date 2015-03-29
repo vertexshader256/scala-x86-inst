@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Load String
 // Category: general/datamovstring
 
-object LODS extends InstructionDefinition("LODS") with LODSImpl
+trait LODS extends InstructionDefinition {
+  val mnemonic = "LODS"
+}
+
+object LODS extends LODS with LODSImpl
 
 trait LODSImpl {
-  implicit object LODS_0 extends LODS._0 {
+  self: LODS =>
+  implicit object LODS_0 extends _0 {
     val opcode: OneOpcode = 0xAC
     override def hasImplicitOperand = true
   }

@@ -8,18 +8,23 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Jump short if below/not above or equal/carry (CF=1)
 // Category: general/branch/cond
 
-object JNAE extends InstructionDefinition("JNAE") with JNAEImpl
+trait JNAE extends InstructionDefinition {
+  val mnemonic = "JNAE"
+}
+
+object JNAE extends JNAE with JNAEImpl
 
 trait JNAEImpl {
-  implicit object JNAE_0 extends JNAE._1[rel8] {
+  self: JNAE =>
+  implicit object JNAE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x72
   }
 
-  implicit object JNAE_1 extends JNAE._1[rel16] {
+  implicit object JNAE_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x82)
   }
 
-  implicit object JNAE_2 extends JNAE._1[rel32] {
+  implicit object JNAE_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x82)
   }
 }

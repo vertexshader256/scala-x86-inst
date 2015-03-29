@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Scan String
 // Category: general/arithstring/binary
 
-object SCASQ extends InstructionDefinition("SCASQ") with SCASQImpl
+trait SCASQ extends InstructionDefinition {
+  val mnemonic = "SCASQ"
+}
+
+object SCASQ extends SCASQ with SCASQImpl
 
 trait SCASQImpl {
-  implicit object SCASQ_0 extends SCASQ._0 {
+  self: SCASQ =>
+  implicit object SCASQ_0 extends _0 {
     val opcode: OneOpcode = 0xAF
     override def hasImplicitOperand = true
   }

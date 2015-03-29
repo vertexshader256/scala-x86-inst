@@ -8,18 +8,23 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Jump short if less/not greater (SF!=OF)
 // Category: general/branch/cond
 
-object JL extends InstructionDefinition("JL") with JLImpl
+trait JL extends InstructionDefinition {
+  val mnemonic = "JL"
+}
+
+object JL extends JL with JLImpl
 
 trait JLImpl {
-  implicit object JL_0 extends JL._1[rel8] {
+  self: JL =>
+  implicit object JL_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7C
   }
 
-  implicit object JL_1 extends JL._1[rel16] {
+  implicit object JL_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8C)
   }
 
-  implicit object JL_2 extends JL._1[rel32] {
+  implicit object JL_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8C)
   }
 }

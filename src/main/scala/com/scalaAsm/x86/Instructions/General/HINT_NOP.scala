@@ -8,14 +8,19 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Hintable NOP
 // Category: general/control
 
-object HINT_NOP extends InstructionDefinition("HINT_NOP") with HINT_NOPImpl
+trait HINT_NOP extends InstructionDefinition {
+  val mnemonic = "HINT_NOP"
+}
+
+object HINT_NOP extends HINT_NOP with HINT_NOPImpl
 
 trait HINT_NOPImpl {
-  implicit object HINT_NOP_0 extends HINT_NOP._1[rm16] {
+  self: HINT_NOP =>
+  implicit object HINT_NOP_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x18)
   }
 
-  implicit object HINT_NOP_1 extends HINT_NOP._1[rm32] {
+  implicit object HINT_NOP_1 extends _1[rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x18)
   }
 }

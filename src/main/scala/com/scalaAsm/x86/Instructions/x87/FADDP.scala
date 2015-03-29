@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Add and Pop
 // Category: general/arith
 
-object FADDP extends InstructionDefinition("FADDP") with FADDPImpl
+trait FADDP extends InstructionDefinition {
+  val mnemonic = "FADDP"
+}
+
+object FADDP extends FADDP with FADDPImpl
 
 trait FADDPImpl {
-  implicit object FADDP_0 extends FADDP._0 {
+  self: FADDP =>
+  implicit object FADDP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 0
     override def hasImplicitOperand = true
   }

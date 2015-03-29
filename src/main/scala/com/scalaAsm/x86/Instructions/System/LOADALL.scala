@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Load All of the CPU Registers
 // Category: general/branch
 
-object LOADALL extends InstructionDefinition("LOADALL") with LOADALLImpl
+trait LOADALL extends InstructionDefinition {
+  val mnemonic = "LOADALL"
+}
+
+object LOADALL extends LOADALL with LOADALLImpl
 
 trait LOADALLImpl {
-  implicit object LOADALL_0 extends LOADALL._0 {
+  self: LOADALL =>
+  implicit object LOADALL_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x05)
     override def hasImplicitOperand = true
   }

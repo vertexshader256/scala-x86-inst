@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Store x87 FPU Control Word
 // Category: general/control
 
-object FSTCW extends InstructionDefinition("FSTCW") with FSTCWImpl
+trait FSTCW extends InstructionDefinition {
+  val mnemonic = "FSTCW"
+}
+
+object FSTCW extends FSTCW with FSTCWImpl
 
 trait FSTCWImpl {
-  implicit object FSTCW_0 extends FSTCW._1[m16] {
+  self: FSTCW =>
+  implicit object FSTCW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xD9 /+ 7
   }
 }

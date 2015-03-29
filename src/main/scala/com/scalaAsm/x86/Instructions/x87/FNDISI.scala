@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Disable NPX Interrupt
 // Category: general/control
 
-object FNDISI extends InstructionDefinition("FNDISI") with FNDISIImpl
+trait FNDISI extends InstructionDefinition {
+  val mnemonic = "FNDISI"
+}
+
+object FNDISI extends FNDISI with FNDISIImpl
 
 trait FNDISIImpl {
-  implicit object FNDISI_0 extends FNDISI._0 {
+  self: FNDISI =>
+  implicit object FNDISI_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }
 }

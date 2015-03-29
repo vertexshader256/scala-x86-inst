@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: CPU Identification
 // Category: general/control
 
-object CPUID extends InstructionDefinition("CPUID") with CPUIDImpl
+trait CPUID extends InstructionDefinition {
+  val mnemonic = "CPUID"
+}
+
+object CPUID extends CPUID with CPUIDImpl
 
 trait CPUIDImpl {
-  implicit object CPUID_0 extends CPUID._0 {
+  self: CPUID =>
+  implicit object CPUID_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0xA2)
     override def hasImplicitOperand = true
   }

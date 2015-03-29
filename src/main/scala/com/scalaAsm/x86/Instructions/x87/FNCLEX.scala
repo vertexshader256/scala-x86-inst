@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Clear Exceptions
 // Category: general/control
 
-object FNCLEX extends InstructionDefinition("FNCLEX") with FNCLEXImpl
+trait FNCLEX extends InstructionDefinition {
+  val mnemonic = "FNCLEX"
+}
+
+object FNCLEX extends FNCLEX with FNCLEXImpl
 
 trait FNCLEXImpl {
-  implicit object FNCLEX_0 extends FNCLEX._0 {
+  self: FNCLEX =>
+  implicit object FNCLEX_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }
 }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Byte on Condition - not parity/parity odd
 // Category: general/datamov
 
-object SETPO extends InstructionDefinition("SETPO") with SETPOImpl
+trait SETPO extends InstructionDefinition {
+  val mnemonic = "SETPO"
+}
+
+object SETPO extends SETPO with SETPOImpl
 
 trait SETPOImpl {
-  implicit object SETPO_0 extends SETPO._1[rm8] {
+  self: SETPO =>
+  implicit object SETPO_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9B) /+ 0
   }
 }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Compare String Operands
 // Category: general/arithstring/binary
 
-object CMPS extends InstructionDefinition("CMPS") with CMPSImpl
+trait CMPS extends InstructionDefinition {
+  val mnemonic = "CMPS"
+}
+
+object CMPS extends CMPS with CMPSImpl
 
 trait CMPSImpl {
-  implicit object CMPS_0 extends CMPS._0 {
+  self: CMPS =>
+  implicit object CMPS_0 extends _0 {
     val opcode: OneOpcode = 0xA6
     override def hasImplicitOperand = true
   }

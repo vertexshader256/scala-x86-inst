@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Multiply and Pop
 // Category: general/arith
 
-object FMULP extends InstructionDefinition("FMULP") with FMULPImpl
+trait FMULP extends InstructionDefinition {
+  val mnemonic = "FMULP"
+}
+
+object FMULP extends FMULP with FMULPImpl
 
 trait FMULPImpl {
-  implicit object FMULP_0 extends FMULP._0 {
+  self: FMULP =>
+  implicit object FMULP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 1
     override def hasImplicitOperand = true
   }

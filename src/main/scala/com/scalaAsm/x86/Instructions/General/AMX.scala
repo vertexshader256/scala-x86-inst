@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Adjust AX After Multiply
 // Category: general/arith/decimal
 
-object AMX extends InstructionDefinition("AMX") with AMXImpl
+trait AMX extends InstructionDefinition {
+  val mnemonic = "AMX"
+}
+
+object AMX extends AMX with AMXImpl
 
 trait AMXImpl {
-  implicit object AMX_0 extends AMX._1[imm8] {
+  self: AMX =>
+  implicit object AMX_0 extends _1[imm8] {
     val opcode: OneOpcode = 0xD4
     override def hasImplicitOperand = true
   }

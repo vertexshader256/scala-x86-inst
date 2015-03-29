@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Protected Mode
 // Category: general/control
 
-object FSETPM extends InstructionDefinition("FSETPM") with FSETPMImpl
+trait FSETPM extends InstructionDefinition {
+  val mnemonic = "FSETPM"
+}
+
+object FSETPM extends FSETPM with FSETPMImpl
 
 trait FSETPMImpl {
-  implicit object FSETPM_0 extends FSETPM._0 {
+  self: FSETPM =>
+  implicit object FSETPM_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }
 }

@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Table Look-up Translation
 // Category: general/datamov
 
-object XLAT extends InstructionDefinition("XLAT") with XLATImpl
+trait XLAT extends InstructionDefinition {
+  val mnemonic = "XLAT"
+}
+
+object XLAT extends XLAT with XLATImpl
 
 trait XLATImpl {
-  implicit object XLAT_0 extends XLAT._0 {
+  self: XLAT =>
+  implicit object XLAT_0 extends _0 {
     val opcode: OneOpcode = 0xD7
     override def hasImplicitOperand = true
   }

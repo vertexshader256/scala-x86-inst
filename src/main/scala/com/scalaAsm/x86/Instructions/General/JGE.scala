@@ -8,18 +8,23 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Jump short if not less/greater or equal (SF=OF)
 // Category: general/branch/cond
 
-object JGE extends InstructionDefinition("JGE") with JGEImpl
+trait JGE extends InstructionDefinition {
+  val mnemonic = "JGE"
+}
+
+object JGE extends JGE with JGEImpl
 
 trait JGEImpl {
-  implicit object JGE_0 extends JGE._1[rel8] {
+  self: JGE =>
+  implicit object JGE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7D
   }
 
-  implicit object JGE_1 extends JGE._1[rel16] {
+  implicit object JGE_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8D)
   }
 
-  implicit object JGE_2 extends JGE._1[rel32] {
+  implicit object JGE_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8D)
   }
 }

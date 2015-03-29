@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Clear Interrupt Flag
 // Category: general/flgctrl
 
-object CLI extends InstructionDefinition("CLI") with CLIImpl
+trait CLI extends InstructionDefinition {
+  val mnemonic = "CLI"
+}
+
+object CLI extends CLI with CLIImpl
 
 trait CLIImpl {
-  implicit object CLI_0 extends CLI._0 {
+  self: CLI =>
+  implicit object CLI_0 extends _0 {
     val opcode: OneOpcode = 0xFA
   }
 }

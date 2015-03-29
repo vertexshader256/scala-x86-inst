@@ -8,15 +8,20 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Check Array Index Against Bounds
 // Category: general/breakstack
 
-object BOUND extends InstructionDefinition("BOUND") with BOUNDImpl
+trait BOUND extends InstructionDefinition {
+  val mnemonic = "BOUND"
+}
+
+object BOUND extends BOUND with BOUNDImpl
 
 trait BOUNDImpl {
-  implicit object BOUND_0 extends BOUND._2[r16, m16] {
+  self: BOUND =>
+  implicit object BOUND_0 extends _2[r16, m16] {
     val opcode: OneOpcode = 0x62 /r
     override def hasImplicitOperand = true
   }
 
-  implicit object BOUND_1 extends BOUND._2[r32, m32] {
+  implicit object BOUND_1 extends _2[r32, m32] {
     val opcode: OneOpcode = 0x62 /r
     override def hasImplicitOperand = true
   }

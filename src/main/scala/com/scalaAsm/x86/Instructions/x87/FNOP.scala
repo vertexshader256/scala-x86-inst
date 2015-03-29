@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: No Operation
 // Category: general/control
 
-object FNOP extends InstructionDefinition("FNOP") with FNOPImpl
+trait FNOP extends InstructionDefinition {
+  val mnemonic = "FNOP"
+}
+
+object FNOP extends FNOP with FNOPImpl
 
 trait FNOPImpl {
-  implicit object FNOP_0 extends FNOP._0 {
+  self: FNOP =>
+  implicit object FNOP_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 2
   }
 }

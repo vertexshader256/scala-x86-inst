@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Clear Direction Flag
 // Category: general/flgctrl
 
-object CLD extends InstructionDefinition("CLD") with CLDImpl
+trait CLD extends InstructionDefinition {
+  val mnemonic = "CLD"
+}
+
+object CLD extends CLD with CLDImpl
 
 trait CLDImpl {
-  implicit object CLD_0 extends CLD._0 {
+  self: CLD =>
+  implicit object CLD_0 extends _0 {
     val opcode: OneOpcode = 0xFC
   }
 }

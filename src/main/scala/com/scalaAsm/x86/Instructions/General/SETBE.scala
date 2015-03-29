@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Byte on Condition - below or equal/not above (CF=1 AND ZF=1)
 // Category: general/datamov
 
-object SETBE extends InstructionDefinition("SETBE") with SETBEImpl
+trait SETBE extends InstructionDefinition {
+  val mnemonic = "SETBE"
+}
+
+object SETBE extends SETBE with SETBEImpl
 
 trait SETBEImpl {
-  implicit object SETBE_0 extends SETBE._1[rm8] {
+  self: SETBE =>
+  implicit object SETBE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x96) /+ 0
   }
 }

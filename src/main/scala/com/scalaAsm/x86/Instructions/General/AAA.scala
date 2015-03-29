@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: ASCII Adjust After Addition
 // Category: general/arith/decimal
 
-object AAA extends InstructionDefinition("AAA") with AAAImpl
+trait AAA extends InstructionDefinition {
+  val mnemonic = "AAA"
+}
+
+object AAA extends AAA with AAAImpl
 
 trait AAAImpl {
-  implicit object AAA_0 extends AAA._0 {
+  self: AAA =>
+  implicit object AAA_0 extends _0 {
     val opcode: OneOpcode = 0x37
     override def hasImplicitOperand = true
   }

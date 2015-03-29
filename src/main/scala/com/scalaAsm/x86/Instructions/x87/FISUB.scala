@@ -8,15 +8,20 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Subtract
 // Category: general/arith
 
-object FISUB extends InstructionDefinition("FISUB") with FISUBImpl
+trait FISUB extends InstructionDefinition {
+  val mnemonic = "FISUB"
+}
+
+object FISUB extends FISUB with FISUBImpl
 
 trait FISUBImpl {
-  implicit object FISUB_0 extends FISUB._1[m32] {
+  self: FISUB =>
+  implicit object FISUB_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 4
     override def hasImplicitOperand = true
   }
 
-  implicit object FISUB_1 extends FISUB._1[m16] {
+  implicit object FISUB_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 4
     override def hasImplicitOperand = true
   }

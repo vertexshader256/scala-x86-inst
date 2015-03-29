@@ -8,15 +8,20 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Multiply
 // Category: general/arith
 
-object FIMUL extends InstructionDefinition("FIMUL") with FIMULImpl
+trait FIMUL extends InstructionDefinition {
+  val mnemonic = "FIMUL"
+}
+
+object FIMUL extends FIMUL with FIMULImpl
 
 trait FIMULImpl {
-  implicit object FIMUL_0 extends FIMUL._1[m32] {
+  self: FIMUL =>
+  implicit object FIMUL_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 1
     override def hasImplicitOperand = true
   }
 
-  implicit object FIMUL_1 extends FIMUL._1[m16] {
+  implicit object FIMUL_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 1
     override def hasImplicitOperand = true
   }

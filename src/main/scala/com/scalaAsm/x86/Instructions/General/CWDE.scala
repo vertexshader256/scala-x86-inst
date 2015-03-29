@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Convert Word to Doubleword
 // Category: general/conver
 
-object CWDE extends InstructionDefinition("CWDE") with CWDEImpl
+trait CWDE extends InstructionDefinition {
+  val mnemonic = "CWDE"
+}
+
+object CWDE extends CWDE with CWDEImpl
 
 trait CWDEImpl {
-  implicit object CWDE_0 extends CWDE._0 {
+  self: CWDE =>
+  implicit object CWDE_0 extends _0 {
     val opcode: OneOpcode = 0x98
     override def hasImplicitOperand = true
   }

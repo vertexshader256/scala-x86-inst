@@ -8,10 +8,15 @@ import com.scalaAsm.x86.Operands.Memory._
 // Description: Set Direction Flag
 // Category: general/flgctrl
 
-object STD extends InstructionDefinition("STD") with STDImpl
+trait STD extends InstructionDefinition {
+  val mnemonic = "STD"
+}
+
+object STD extends STD with STDImpl
 
 trait STDImpl {
-  implicit object STD_0 extends STD._0 {
+  self: STD =>
+  implicit object STD_0 extends _0 {
     val opcode: OneOpcode = 0xFD
   }
 }
