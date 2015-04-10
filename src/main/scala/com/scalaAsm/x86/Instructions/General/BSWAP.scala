@@ -12,7 +12,7 @@ trait BSWAP extends InstructionDefinition {
   val mnemonic = "BSWAP"
 }
 
-object BSWAP extends BSWAP with BSWAPImpl
+object BSWAP extends BSWAP with OneOperand[BSWAP] with BSWAPImpl
 
 trait BSWAPImpl {
   self: BSWAP =>

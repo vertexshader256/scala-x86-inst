@@ -12,7 +12,7 @@ trait BOUND extends InstructionDefinition {
   val mnemonic = "BOUND"
 }
 
-object BOUND extends BOUND with BOUNDImpl
+object BOUND extends BOUND with TwoOperands[BOUND] with BOUNDImpl
 
 trait BOUNDImpl {
   self: BOUND =>

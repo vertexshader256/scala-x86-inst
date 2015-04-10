@@ -12,7 +12,7 @@ trait LLDT extends InstructionDefinition {
   val mnemonic = "LLDT"
 }
 
-object LLDT extends LLDT with LLDTImpl
+object LLDT extends LLDT with OneOperand[LLDT] with LLDTImpl
 
 trait LLDTImpl {
   self: LLDT =>

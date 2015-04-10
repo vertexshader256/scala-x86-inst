@@ -12,7 +12,7 @@ trait RETN extends InstructionDefinition {
   val mnemonic = "RETN"
 }
 
-object RETN extends RETN with RETNImpl
+object RETN extends RETN with ZeroOperands[RETN] with OneOperand[RETN] with RETNImpl
 
 trait RETNImpl {
   self: RETN =>

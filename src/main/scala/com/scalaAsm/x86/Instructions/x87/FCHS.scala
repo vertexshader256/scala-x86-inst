@@ -12,7 +12,7 @@ trait FCHS extends InstructionDefinition {
   val mnemonic = "FCHS"
 }
 
-object FCHS extends FCHS with FCHSImpl
+object FCHS extends FCHS with ZeroOperands[FCHS] with FCHSImpl
 
 trait FCHSImpl {
   self: FCHS =>

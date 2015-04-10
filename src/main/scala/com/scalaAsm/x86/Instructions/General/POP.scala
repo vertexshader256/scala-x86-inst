@@ -12,7 +12,7 @@ trait POP extends InstructionDefinition {
   val mnemonic = "POP"
 }
 
-object POP extends POP with POPImpl
+object POP extends POP with ZeroOperands[POP] with OneOperand[POP] with POPImpl
 
 trait POPLow {
   self: POP =>

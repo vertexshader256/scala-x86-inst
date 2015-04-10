@@ -12,7 +12,7 @@ trait PUSHAD extends InstructionDefinition {
   val mnemonic = "PUSHAD"
 }
 
-object PUSHAD extends PUSHAD with PUSHADImpl
+object PUSHAD extends PUSHAD with ZeroOperands[PUSHAD] with PUSHADImpl
 
 trait PUSHADImpl {
   self: PUSHAD =>

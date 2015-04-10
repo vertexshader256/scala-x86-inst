@@ -12,7 +12,7 @@ trait BTC extends InstructionDefinition {
   val mnemonic = "BTC"
 }
 
-object BTC extends BTC with BTCImpl
+object BTC extends BTC with TwoOperands[BTC] with BTCImpl
 
 trait BTCImpl {
   self: BTC =>

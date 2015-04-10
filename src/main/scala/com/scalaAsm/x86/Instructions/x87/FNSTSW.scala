@@ -12,7 +12,7 @@ trait FNSTSW extends InstructionDefinition {
   val mnemonic = "FNSTSW"
 }
 
-object FNSTSW extends FNSTSW with FNSTSWImpl
+object FNSTSW extends FNSTSW with ZeroOperands[FNSTSW] with OneOperand[FNSTSW] with FNSTSWImpl
 
 trait FNSTSWImpl {
   self: FNSTSW =>

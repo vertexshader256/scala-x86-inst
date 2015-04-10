@@ -12,7 +12,7 @@ trait POPCNT extends InstructionDefinition {
   val mnemonic = "POPCNT"
 }
 
-object POPCNT extends POPCNT with POPCNTImpl
+object POPCNT extends POPCNT with TwoOperands[POPCNT] with POPCNTImpl
 
 trait POPCNTImpl {
   self: POPCNT =>

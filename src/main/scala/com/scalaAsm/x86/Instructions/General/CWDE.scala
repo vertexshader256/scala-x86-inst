@@ -12,7 +12,7 @@ trait CWDE extends InstructionDefinition {
   val mnemonic = "CWDE"
 }
 
-object CWDE extends CWDE with CWDEImpl
+object CWDE extends CWDE with ZeroOperands[CWDE] with CWDEImpl
 
 trait CWDEImpl {
   self: CWDE =>

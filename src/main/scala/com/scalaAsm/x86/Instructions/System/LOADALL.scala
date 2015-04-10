@@ -12,7 +12,7 @@ trait LOADALL extends InstructionDefinition {
   val mnemonic = "LOADALL"
 }
 
-object LOADALL extends LOADALL with LOADALLImpl
+object LOADALL extends LOADALL with ZeroOperands[LOADALL] with LOADALLImpl
 
 trait LOADALLImpl {
   self: LOADALL =>

@@ -12,7 +12,7 @@ trait FDECSTP extends InstructionDefinition {
   val mnemonic = "FDECSTP"
 }
 
-object FDECSTP extends FDECSTP with FDECSTPImpl
+object FDECSTP extends FDECSTP with ZeroOperands[FDECSTP] with FDECSTPImpl
 
 trait FDECSTPImpl {
   self: FDECSTP =>

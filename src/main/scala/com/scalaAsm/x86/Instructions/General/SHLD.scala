@@ -12,7 +12,7 @@ trait SHLD extends InstructionDefinition {
   val mnemonic = "SHLD"
 }
 
-object SHLD extends SHLD with SHLDImpl
+object SHLD extends SHLD with TwoOperands[SHLD] with SHLDImpl
 
 trait SHLDImpl {
   self: SHLD =>

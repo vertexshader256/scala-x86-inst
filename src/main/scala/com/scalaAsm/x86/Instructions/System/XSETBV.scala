@@ -12,7 +12,7 @@ trait XSETBV extends InstructionDefinition {
   val mnemonic = "XSETBV"
 }
 
-object XSETBV extends XSETBV with XSETBVImpl
+object XSETBV extends XSETBV with ZeroOperands[XSETBV] with XSETBVImpl
 
 trait XSETBVImpl {
   self: XSETBV =>

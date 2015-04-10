@@ -12,7 +12,7 @@ trait AAD extends InstructionDefinition {
   val mnemonic = "AAD"
 }
 
-object AAD extends AAD with AADImpl
+object AAD extends AAD with ZeroOperands[AAD] with AADImpl
 
 trait AADImpl {
   self: AAD =>

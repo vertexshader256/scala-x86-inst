@@ -12,7 +12,7 @@ trait ENTER extends InstructionDefinition {
   val mnemonic = "ENTER"
 }
 
-object ENTER extends ENTER with ENTERImpl
+object ENTER extends ENTER with TwoOperands[ENTER] with ENTERImpl
 
 trait ENTERImpl {
   self: ENTER =>

@@ -12,7 +12,7 @@ trait SETE extends InstructionDefinition {
   val mnemonic = "SETE"
 }
 
-object SETE extends SETE with SETEImpl
+object SETE extends SETE with OneOperand[SETE] with SETEImpl
 
 trait SETEImpl {
   self: SETE =>

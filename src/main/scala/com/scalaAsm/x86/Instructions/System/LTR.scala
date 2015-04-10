@@ -12,7 +12,7 @@ trait LTR extends InstructionDefinition {
   val mnemonic = "LTR"
 }
 
-object LTR extends LTR with LTRImpl
+object LTR extends LTR with OneOperand[LTR] with LTRImpl
 
 trait LTRImpl {
   self: LTR =>

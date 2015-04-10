@@ -12,7 +12,7 @@ trait XGETBV extends InstructionDefinition {
   val mnemonic = "XGETBV"
 }
 
-object XGETBV extends XGETBV with XGETBVImpl
+object XGETBV extends XGETBV with ZeroOperands[XGETBV] with XGETBVImpl
 
 trait XGETBVImpl {
   self: XGETBV =>

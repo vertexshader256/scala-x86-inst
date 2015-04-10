@@ -12,7 +12,7 @@ trait FSTP extends InstructionDefinition {
   val mnemonic = "FSTP"
 }
 
-object FSTP extends FSTP with FSTPImpl
+object FSTP extends FSTP with OneOperand[FSTP] with FSTPImpl
 
 trait FSTPImpl {
   self: FSTP =>

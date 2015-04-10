@@ -12,7 +12,7 @@ trait FDIVP extends InstructionDefinition {
   val mnemonic = "FDIVP"
 }
 
-object FDIVP extends FDIVP with FDIVPImpl
+object FDIVP extends FDIVP with ZeroOperands[FDIVP] with FDIVPImpl
 
 trait FDIVPImpl {
   self: FDIVP =>

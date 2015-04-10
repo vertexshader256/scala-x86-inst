@@ -12,7 +12,7 @@ trait PUSHFD extends InstructionDefinition {
   val mnemonic = "PUSHFD"
 }
 
-object PUSHFD extends PUSHFD with PUSHFDImpl
+object PUSHFD extends PUSHFD with ZeroOperands[PUSHFD] with PUSHFDImpl
 
 trait PUSHFDImpl {
   self: PUSHFD =>

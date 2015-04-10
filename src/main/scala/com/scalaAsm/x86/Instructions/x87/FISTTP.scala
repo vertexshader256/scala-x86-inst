@@ -12,7 +12,7 @@ trait FISTTP extends InstructionDefinition {
   val mnemonic = "FISTTP"
 }
 
-object FISTTP extends FISTTP with FISTTPImpl
+object FISTTP extends FISTTP with OneOperand[FISTTP] with FISTTPImpl
 
 trait FISTTPImpl {
   self: FISTTP =>

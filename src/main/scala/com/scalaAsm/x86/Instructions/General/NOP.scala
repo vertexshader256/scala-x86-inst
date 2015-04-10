@@ -12,7 +12,7 @@ trait NOP extends InstructionDefinition {
   val mnemonic = "NOP"
 }
 
-object NOP extends NOP with NOPImpl
+object NOP extends NOP with ZeroOperands[NOP] with OneOperand[NOP] with NOPImpl
 
 trait NOPLow {
   self: NOP =>

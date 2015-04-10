@@ -12,7 +12,7 @@ trait FXTRACT extends InstructionDefinition {
   val mnemonic = "FXTRACT"
 }
 
-object FXTRACT extends FXTRACT with FXTRACTImpl
+object FXTRACT extends FXTRACT with ZeroOperands[FXTRACT] with FXTRACTImpl
 
 trait FXTRACTImpl {
   self: FXTRACT =>

@@ -12,7 +12,7 @@ trait JMP extends InstructionDefinition {
   val mnemonic = "JMP"
 }
 
-object JMP extends JMP with JMPImpl
+object JMP extends JMP with OneOperand[JMP] with JMPImpl
 
 trait JMPLow {
   self: JMP =>

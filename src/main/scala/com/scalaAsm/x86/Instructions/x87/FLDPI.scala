@@ -12,7 +12,7 @@ trait FLDPI extends InstructionDefinition {
   val mnemonic = "FLDPI"
 }
 
-object FLDPI extends FLDPI with FLDPIImpl
+object FLDPI extends FLDPI with ZeroOperands[FLDPI] with FLDPIImpl
 
 trait FLDPIImpl {
   self: FLDPI =>

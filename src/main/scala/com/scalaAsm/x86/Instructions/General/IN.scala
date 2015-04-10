@@ -12,7 +12,7 @@ trait IN extends InstructionDefinition {
   val mnemonic = "IN"
 }
 
-object IN extends IN with INImpl
+object IN extends IN with ZeroOperands[IN] with OneOperand[IN] with INImpl
 
 trait INImpl {
   self: IN =>

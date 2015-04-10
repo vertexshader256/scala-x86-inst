@@ -12,7 +12,7 @@ trait FISUBR extends InstructionDefinition {
   val mnemonic = "FISUBR"
 }
 
-object FISUBR extends FISUBR with FISUBRImpl
+object FISUBR extends FISUBR with OneOperand[FISUBR] with FISUBRImpl
 
 trait FISUBRImpl {
   self: FISUBR =>

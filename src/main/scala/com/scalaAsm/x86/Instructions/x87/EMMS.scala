@@ -12,7 +12,7 @@ trait EMMS extends InstructionDefinition {
   val mnemonic = "EMMS"
 }
 
-object EMMS extends EMMS with EMMSImpl
+object EMMS extends EMMS with ZeroOperands[EMMS] with EMMSImpl
 
 trait EMMSImpl {
   self: EMMS =>

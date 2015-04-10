@@ -12,7 +12,7 @@ trait LAR extends InstructionDefinition {
   val mnemonic = "LAR"
 }
 
-object LAR extends LAR with LARImpl
+object LAR extends LAR with TwoOperands[LAR] with LARImpl
 
 trait LARImpl {
   self: LAR =>

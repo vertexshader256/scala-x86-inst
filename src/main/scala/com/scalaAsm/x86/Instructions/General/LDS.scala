@@ -12,7 +12,7 @@ trait LDS extends InstructionDefinition {
   val mnemonic = "LDS"
 }
 
-object LDS extends LDS with LDSImpl
+object LDS extends LDS with TwoOperands[LDS] with LDSImpl
 
 trait LDSImpl {
   self: LDS =>

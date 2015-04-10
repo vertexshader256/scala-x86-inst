@@ -12,7 +12,7 @@ trait XSAVE extends InstructionDefinition {
   val mnemonic = "XSAVE"
 }
 
-object XSAVE extends XSAVE with XSAVEImpl
+object XSAVE extends XSAVE with OneOperand[XSAVE] with XSAVEImpl
 
 trait XSAVEImpl {
   self: XSAVE =>

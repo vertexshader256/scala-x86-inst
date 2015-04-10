@@ -12,7 +12,7 @@ trait SALC extends InstructionDefinition {
   val mnemonic = "SALC"
 }
 
-object SALC extends SALC with SALCImpl
+object SALC extends SALC with ZeroOperands[SALC] with SALCImpl
 
 trait SALCImpl {
   self: SALC =>

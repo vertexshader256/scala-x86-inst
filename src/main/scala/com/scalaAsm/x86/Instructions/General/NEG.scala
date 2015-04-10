@@ -12,7 +12,7 @@ trait NEG extends InstructionDefinition {
   val mnemonic = "NEG"
 }
 
-object NEG extends NEG with NEGImpl
+object NEG extends NEG with OneOperand[NEG] with NEGImpl
 
 trait NEGImpl {
   self: NEG =>

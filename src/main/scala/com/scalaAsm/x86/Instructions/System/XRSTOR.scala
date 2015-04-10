@@ -12,7 +12,7 @@ trait XRSTOR extends InstructionDefinition {
   val mnemonic = "XRSTOR"
 }
 
-object XRSTOR extends XRSTOR with XRSTORImpl
+object XRSTOR extends XRSTOR with OneOperand[XRSTOR] with XRSTORImpl
 
 trait XRSTORImpl {
   self: XRSTOR =>

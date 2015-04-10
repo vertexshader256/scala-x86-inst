@@ -12,7 +12,7 @@ trait FWAIT extends InstructionDefinition {
   val mnemonic = "FWAIT"
 }
 
-object FWAIT extends FWAIT with FWAITImpl
+object FWAIT extends FWAIT with ZeroOperands[FWAIT] with FWAITImpl
 
 trait FWAITImpl {
   self: FWAIT =>

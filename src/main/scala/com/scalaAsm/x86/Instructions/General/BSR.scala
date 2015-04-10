@@ -12,7 +12,7 @@ trait BSR extends InstructionDefinition {
   val mnemonic = "BSR"
 }
 
-object BSR extends BSR with BSRImpl
+object BSR extends BSR with TwoOperands[BSR] with BSRImpl
 
 trait BSRImpl {
   self: BSR =>

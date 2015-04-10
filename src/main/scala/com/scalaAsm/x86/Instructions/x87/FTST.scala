@@ -12,7 +12,7 @@ trait FTST extends InstructionDefinition {
   val mnemonic = "FTST"
 }
 
-object FTST extends FTST with FTSTImpl
+object FTST extends FTST with ZeroOperands[FTST] with FTSTImpl
 
 trait FTSTImpl {
   self: FTST =>

@@ -12,7 +12,7 @@ trait FXCH extends InstructionDefinition {
   val mnemonic = "FXCH"
 }
 
-object FXCH extends FXCH with FXCHImpl
+object FXCH extends FXCH with ZeroOperands[FXCH] with FXCHImpl
 
 trait FXCHImpl {
   self: FXCH =>

@@ -12,7 +12,7 @@ trait SCAS extends InstructionDefinition {
   val mnemonic = "SCAS"
 }
 
-object SCAS extends SCAS with SCASImpl
+object SCAS extends SCAS with ZeroOperands[SCAS] with SCASImpl
 
 trait SCASImpl {
   self: SCAS =>

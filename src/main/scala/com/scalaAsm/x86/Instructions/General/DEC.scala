@@ -12,7 +12,7 @@ trait DEC extends InstructionDefinition {
   val mnemonic = "DEC"
 }
 
-object DEC extends DEC with DECImpl
+object DEC extends DEC with OneOperand[DEC] with DECImpl
 
 trait DECLow {
   self: DEC =>

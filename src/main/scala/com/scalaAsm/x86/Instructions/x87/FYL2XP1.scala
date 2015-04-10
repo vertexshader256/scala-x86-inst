@@ -12,7 +12,7 @@ trait FYL2XP1 extends InstructionDefinition {
   val mnemonic = "FYL2XP1"
 }
 
-object FYL2XP1 extends FYL2XP1 with FYL2XP1Impl
+object FYL2XP1 extends FYL2XP1 with ZeroOperands[FYL2XP1] with FYL2XP1Impl
 
 trait FYL2XP1Impl {
   self: FYL2XP1 =>

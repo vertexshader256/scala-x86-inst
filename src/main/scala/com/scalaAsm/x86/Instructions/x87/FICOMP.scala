@@ -12,7 +12,7 @@ trait FICOMP extends InstructionDefinition {
   val mnemonic = "FICOMP"
 }
 
-object FICOMP extends FICOMP with FICOMPImpl
+object FICOMP extends FICOMP with OneOperand[FICOMP] with FICOMPImpl
 
 trait FICOMPImpl {
   self: FICOMP =>

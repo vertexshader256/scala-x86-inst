@@ -12,7 +12,7 @@ trait POPAD extends InstructionDefinition {
   val mnemonic = "POPAD"
 }
 
-object POPAD extends POPAD with POPADImpl
+object POPAD extends POPAD with ZeroOperands[POPAD] with POPADImpl
 
 trait POPADImpl {
   self: POPAD =>

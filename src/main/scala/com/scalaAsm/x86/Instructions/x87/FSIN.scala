@@ -12,7 +12,7 @@ trait FSIN extends InstructionDefinition {
   val mnemonic = "FSIN"
 }
 
-object FSIN extends FSIN with FSINImpl
+object FSIN extends FSIN with ZeroOperands[FSIN] with FSINImpl
 
 trait FSINImpl {
   self: FSIN =>

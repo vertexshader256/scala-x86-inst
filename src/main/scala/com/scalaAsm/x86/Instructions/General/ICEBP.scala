@@ -12,7 +12,7 @@ trait ICEBP extends InstructionDefinition {
   val mnemonic = "ICEBP"
 }
 
-object ICEBP extends ICEBP with ICEBPImpl
+object ICEBP extends ICEBP with ZeroOperands[ICEBP] with ICEBPImpl
 
 trait ICEBPImpl {
   self: ICEBP =>

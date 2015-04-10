@@ -12,7 +12,7 @@ trait FSQRT extends InstructionDefinition {
   val mnemonic = "FSQRT"
 }
 
-object FSQRT extends FSQRT with FSQRTImpl
+object FSQRT extends FSQRT with ZeroOperands[FSQRT] with FSQRTImpl
 
 trait FSQRTImpl {
   self: FSQRT =>

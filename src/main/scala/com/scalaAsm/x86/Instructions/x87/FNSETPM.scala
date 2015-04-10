@@ -12,7 +12,7 @@ trait FNSETPM extends InstructionDefinition {
   val mnemonic = "FNSETPM"
 }
 
-object FNSETPM extends FNSETPM with FNSETPMImpl
+object FNSETPM extends FNSETPM with ZeroOperands[FNSETPM] with FNSETPMImpl
 
 trait FNSETPMImpl {
   self: FNSETPM =>

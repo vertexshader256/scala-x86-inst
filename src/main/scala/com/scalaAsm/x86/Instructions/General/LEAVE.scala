@@ -12,7 +12,7 @@ trait LEAVE extends InstructionDefinition {
   val mnemonic = "LEAVE"
 }
 
-object LEAVE extends LEAVE with LEAVEImpl
+object LEAVE extends LEAVE with ZeroOperands[LEAVE] with LEAVEImpl
 
 trait LEAVEImpl {
   self: LEAVE =>

@@ -12,7 +12,7 @@ trait JPE extends InstructionDefinition {
   val mnemonic = "JPE"
 }
 
-object JPE extends JPE with JPEImpl
+object JPE extends JPE with OneOperand[JPE] with JPEImpl
 
 trait JPEImpl {
   self: JPE =>

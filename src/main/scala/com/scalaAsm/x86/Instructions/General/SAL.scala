@@ -12,7 +12,7 @@ trait SAL extends InstructionDefinition {
   val mnemonic = "SAL"
 }
 
-object SAL extends SAL with SALImpl
+object SAL extends SAL with OneOperand[SAL] with TwoOperands[SAL] with SALImpl
 
 trait SALImpl {
   self: SAL =>

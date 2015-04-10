@@ -12,7 +12,7 @@ trait CMC extends InstructionDefinition {
   val mnemonic = "CMC"
 }
 
-object CMC extends CMC with CMCImpl
+object CMC extends CMC with ZeroOperands[CMC] with CMCImpl
 
 trait CMCImpl {
   self: CMC =>

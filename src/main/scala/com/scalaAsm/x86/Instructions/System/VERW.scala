@@ -12,7 +12,7 @@ trait VERW extends InstructionDefinition {
   val mnemonic = "VERW"
 }
 
-object VERW extends VERW with VERWImpl
+object VERW extends VERW with OneOperand[VERW] with VERWImpl
 
 trait VERWImpl {
   self: VERW =>

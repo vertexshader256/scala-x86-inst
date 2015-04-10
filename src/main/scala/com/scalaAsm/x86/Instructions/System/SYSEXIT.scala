@@ -12,7 +12,7 @@ trait SYSEXIT extends InstructionDefinition {
   val mnemonic = "SYSEXIT"
 }
 
-object SYSEXIT extends SYSEXIT with SYSEXITImpl
+object SYSEXIT extends SYSEXIT with ZeroOperands[SYSEXIT] with SYSEXITImpl
 
 trait SYSEXITImpl {
   self: SYSEXIT =>

@@ -12,7 +12,7 @@ trait DIV extends InstructionDefinition {
   val mnemonic = "DIV"
 }
 
-object DIV extends DIV with DIVImpl
+object DIV extends DIV with OneOperand[DIV] with DIVImpl
 
 trait DIVImpl {
   self: DIV =>

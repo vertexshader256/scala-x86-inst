@@ -12,7 +12,7 @@ trait FADDP extends InstructionDefinition {
   val mnemonic = "FADDP"
 }
 
-object FADDP extends FADDP with FADDPImpl
+object FADDP extends FADDP with ZeroOperands[FADDP] with FADDPImpl
 
 trait FADDPImpl {
   self: FADDP =>

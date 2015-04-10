@@ -12,7 +12,7 @@ trait CMPSQ extends InstructionDefinition {
   val mnemonic = "CMPSQ"
 }
 
-object CMPSQ extends CMPSQ with CMPSQImpl
+object CMPSQ extends CMPSQ with ZeroOperands[CMPSQ] with CMPSQImpl
 
 trait CMPSQImpl {
   self: CMPSQ =>

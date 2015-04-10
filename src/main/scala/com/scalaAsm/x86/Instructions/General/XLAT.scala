@@ -12,7 +12,7 @@ trait XLAT extends InstructionDefinition {
   val mnemonic = "XLAT"
 }
 
-object XLAT extends XLAT with XLATImpl
+object XLAT extends XLAT with ZeroOperands[XLAT] with XLATImpl
 
 trait XLATImpl {
   self: XLAT =>

@@ -12,7 +12,7 @@ trait FSCALE extends InstructionDefinition {
   val mnemonic = "FSCALE"
 }
 
-object FSCALE extends FSCALE with FSCALEImpl
+object FSCALE extends FSCALE with ZeroOperands[FSCALE] with FSCALEImpl
 
 trait FSCALEImpl {
   self: FSCALE =>

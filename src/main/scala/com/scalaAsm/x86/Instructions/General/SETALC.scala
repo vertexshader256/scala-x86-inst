@@ -12,7 +12,7 @@ trait SETALC extends InstructionDefinition {
   val mnemonic = "SETALC"
 }
 
-object SETALC extends SETALC with SETALCImpl
+object SETALC extends SETALC with ZeroOperands[SETALC] with SETALCImpl
 
 trait SETALCImpl {
   self: SETALC =>

@@ -12,7 +12,7 @@ trait RDMSR extends InstructionDefinition {
   val mnemonic = "RDMSR"
 }
 
-object RDMSR extends RDMSR with RDMSRImpl
+object RDMSR extends RDMSR with ZeroOperands[RDMSR] with RDMSRImpl
 
 trait RDMSRImpl {
   self: RDMSR =>

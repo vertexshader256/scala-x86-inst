@@ -12,7 +12,7 @@ trait FSUBR extends InstructionDefinition {
   val mnemonic = "FSUBR"
 }
 
-object FSUBR extends FSUBR with FSUBRImpl
+object FSUBR extends FSUBR with OneOperand[FSUBR] with FSUBRImpl
 
 trait FSUBRImpl {
   self: FSUBR =>

@@ -12,7 +12,7 @@ trait SMSW extends InstructionDefinition {
   val mnemonic = "SMSW"
 }
 
-object SMSW extends SMSW with SMSWImpl
+object SMSW extends SMSW with OneOperand[SMSW] with SMSWImpl
 
 trait SMSWImpl {
   self: SMSW =>

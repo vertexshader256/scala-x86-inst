@@ -12,7 +12,7 @@ trait AAA extends InstructionDefinition {
   val mnemonic = "AAA"
 }
 
-object AAA extends AAA with AAAImpl
+object AAA extends AAA with ZeroOperands[AAA] with AAAImpl
 
 trait AAAImpl {
   self: AAA =>

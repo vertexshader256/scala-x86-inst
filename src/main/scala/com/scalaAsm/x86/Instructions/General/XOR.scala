@@ -12,7 +12,7 @@ trait XOR extends InstructionDefinition {
   val mnemonic = "XOR"
 }
 
-object XOR extends XOR with XORImpl
+object XOR extends XOR with OneOperand[XOR] with TwoOperands[XOR] with XORImpl
 
 trait XORLow {
   self: XOR =>

@@ -12,7 +12,7 @@ trait FICOM extends InstructionDefinition {
   val mnemonic = "FICOM"
 }
 
-object FICOM extends FICOM with FICOMImpl
+object FICOM extends FICOM with OneOperand[FICOM] with FICOMImpl
 
 trait FICOMImpl {
   self: FICOM =>

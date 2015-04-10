@@ -12,7 +12,7 @@ trait STC extends InstructionDefinition {
   val mnemonic = "STC"
 }
 
-object STC extends STC with STCImpl
+object STC extends STC with ZeroOperands[STC] with STCImpl
 
 trait STCImpl {
   self: STC =>

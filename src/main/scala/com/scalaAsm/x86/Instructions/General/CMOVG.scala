@@ -12,7 +12,7 @@ trait CMOVG extends InstructionDefinition {
   val mnemonic = "CMOVG"
 }
 
-object CMOVG extends CMOVG with CMOVGImpl
+object CMOVG extends CMOVG with TwoOperands[CMOVG] with CMOVGImpl
 
 trait CMOVGImpl {
   self: CMOVG =>

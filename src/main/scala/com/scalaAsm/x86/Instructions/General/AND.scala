@@ -12,7 +12,7 @@ trait AND extends InstructionDefinition {
   val mnemonic = "AND"
 }
 
-object AND extends AND with ANDImpl
+object AND extends AND with OneOperand[AND] with TwoOperands[AND] with ANDImpl
 
 trait ANDLow {
   self: AND =>

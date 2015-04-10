@@ -12,7 +12,7 @@ trait FILD extends InstructionDefinition {
   val mnemonic = "FILD"
 }
 
-object FILD extends FILD with FILDImpl
+object FILD extends FILD with OneOperand[FILD] with FILDImpl
 
 trait FILDImpl {
   self: FILD =>

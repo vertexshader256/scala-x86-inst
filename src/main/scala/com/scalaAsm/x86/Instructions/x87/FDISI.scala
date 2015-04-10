@@ -12,7 +12,7 @@ trait FDISI extends InstructionDefinition {
   val mnemonic = "FDISI"
 }
 
-object FDISI extends FDISI with FDISIImpl
+object FDISI extends FDISI with ZeroOperands[FDISI] with FDISIImpl
 
 trait FDISIImpl {
   self: FDISI =>

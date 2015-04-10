@@ -12,7 +12,7 @@ trait AAS extends InstructionDefinition {
   val mnemonic = "AAS"
 }
 
-object AAS extends AAS with AASImpl
+object AAS extends AAS with ZeroOperands[AAS] with AASImpl
 
 trait AASImpl {
   self: AAS =>

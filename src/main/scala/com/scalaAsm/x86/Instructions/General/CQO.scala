@@ -12,7 +12,7 @@ trait CQO extends InstructionDefinition {
   val mnemonic = "CQO"
 }
 
-object CQO extends CQO with CQOImpl
+object CQO extends CQO with ZeroOperands[CQO] with CQOImpl
 
 trait CQOImpl {
   self: CQO =>

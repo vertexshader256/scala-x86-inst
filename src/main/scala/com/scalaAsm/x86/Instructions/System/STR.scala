@@ -12,7 +12,7 @@ trait STR extends InstructionDefinition {
   val mnemonic = "STR"
 }
 
-object STR extends STR with STRImpl
+object STR extends STR with OneOperand[STR] with STRImpl
 
 trait STRImpl {
   self: STR =>

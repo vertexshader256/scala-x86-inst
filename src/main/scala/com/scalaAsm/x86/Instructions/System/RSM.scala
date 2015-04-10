@@ -12,7 +12,7 @@ trait RSM extends InstructionDefinition {
   val mnemonic = "RSM"
 }
 
-object RSM extends RSM with RSMImpl
+object RSM extends RSM with ZeroOperands[RSM] with RSMImpl
 
 trait RSMImpl {
   self: RSM =>

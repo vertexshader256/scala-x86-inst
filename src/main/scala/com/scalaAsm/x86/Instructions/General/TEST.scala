@@ -12,7 +12,7 @@ trait TEST extends InstructionDefinition {
   val mnemonic = "TEST"
 }
 
-object TEST extends TEST with TESTImpl
+object TEST extends TEST with OneOperand[TEST] with TwoOperands[TEST] with TESTImpl
 
 trait TESTLow {
   self: TEST =>

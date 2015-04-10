@@ -12,7 +12,7 @@ trait IDIV extends InstructionDefinition {
   val mnemonic = "IDIV"
 }
 
-object IDIV extends IDIV with IDIVImpl
+object IDIV extends IDIV with OneOperand[IDIV] with IDIVImpl
 
 trait IDIVImpl {
   self: IDIV =>

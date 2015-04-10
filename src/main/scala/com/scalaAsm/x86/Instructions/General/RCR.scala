@@ -12,7 +12,7 @@ trait RCR extends InstructionDefinition {
   val mnemonic = "RCR"
 }
 
-object RCR extends RCR with RCRImpl
+object RCR extends RCR with OneOperand[RCR] with TwoOperands[RCR] with RCRImpl
 
 trait RCRImpl {
   self: RCR =>

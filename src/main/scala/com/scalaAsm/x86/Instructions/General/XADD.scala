@@ -12,7 +12,7 @@ trait XADD extends InstructionDefinition {
   val mnemonic = "XADD"
 }
 
-object XADD extends XADD with XADDImpl
+object XADD extends XADD with TwoOperands[XADD] with XADDImpl
 
 trait XADDImpl {
   self: XADD =>

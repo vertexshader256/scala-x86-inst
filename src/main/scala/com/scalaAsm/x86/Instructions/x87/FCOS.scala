@@ -12,7 +12,7 @@ trait FCOS extends InstructionDefinition {
   val mnemonic = "FCOS"
 }
 
-object FCOS extends FCOS with FCOSImpl
+object FCOS extends FCOS with ZeroOperands[FCOS] with FCOSImpl
 
 trait FCOSImpl {
   self: FCOS =>

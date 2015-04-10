@@ -12,7 +12,7 @@ trait PUSHFQ extends InstructionDefinition {
   val mnemonic = "PUSHFQ"
 }
 
-object PUSHFQ extends PUSHFQ with PUSHFQImpl
+object PUSHFQ extends PUSHFQ with ZeroOperands[PUSHFQ] with PUSHFQImpl
 
 trait PUSHFQImpl {
   self: PUSHFQ =>

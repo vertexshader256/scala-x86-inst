@@ -12,7 +12,7 @@ trait HINT_NOP extends InstructionDefinition {
   val mnemonic = "HINT_NOP"
 }
 
-object HINT_NOP extends HINT_NOP with HINT_NOPImpl
+object HINT_NOP extends HINT_NOP with OneOperand[HINT_NOP] with HINT_NOPImpl
 
 trait HINT_NOPImpl {
   self: HINT_NOP =>

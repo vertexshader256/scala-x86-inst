@@ -12,7 +12,7 @@ trait ADX extends InstructionDefinition {
   val mnemonic = "ADX"
 }
 
-object ADX extends ADX with ADXImpl
+object ADX extends ADX with OneOperand[ADX] with ADXImpl
 
 trait ADXImpl {
   self: ADX =>

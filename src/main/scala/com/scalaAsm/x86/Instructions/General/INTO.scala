@@ -12,7 +12,7 @@ trait INTO extends InstructionDefinition {
   val mnemonic = "INTO"
 }
 
-object INTO extends INTO with INTOImpl
+object INTO extends INTO with ZeroOperands[INTO] with INTOImpl
 
 trait INTOImpl {
   self: INTO =>

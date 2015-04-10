@@ -12,7 +12,7 @@ trait STOSB extends InstructionDefinition {
   val mnemonic = "STOSB"
 }
 
-object STOSB extends STOSB with STOSBImpl
+object STOSB extends STOSB with ZeroOperands[STOSB] with STOSBImpl
 
 trait STOSBImpl {
   self: STOSB =>

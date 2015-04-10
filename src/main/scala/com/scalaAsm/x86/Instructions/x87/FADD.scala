@@ -12,7 +12,7 @@ trait FADD extends InstructionDefinition {
   val mnemonic = "FADD"
 }
 
-object FADD extends FADD with FADDImpl
+object FADD extends FADD with OneOperand[FADD] with FADDImpl
 
 trait FADDImpl {
   self: FADD =>

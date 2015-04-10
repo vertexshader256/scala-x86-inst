@@ -12,7 +12,7 @@ trait LODS extends InstructionDefinition {
   val mnemonic = "LODS"
 }
 
-object LODS extends LODS with LODSImpl
+object LODS extends LODS with ZeroOperands[LODS] with LODSImpl
 
 trait LODSImpl {
   self: LODS =>

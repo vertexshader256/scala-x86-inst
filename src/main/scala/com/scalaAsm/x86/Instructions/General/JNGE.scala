@@ -12,7 +12,7 @@ trait JNGE extends InstructionDefinition {
   val mnemonic = "JNGE"
 }
 
-object JNGE extends JNGE with JNGEImpl
+object JNGE extends JNGE with OneOperand[JNGE] with JNGEImpl
 
 trait JNGEImpl {
   self: JNGE =>

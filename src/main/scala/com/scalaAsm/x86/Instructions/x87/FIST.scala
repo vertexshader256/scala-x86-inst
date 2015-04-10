@@ -12,7 +12,7 @@ trait FIST extends InstructionDefinition {
   val mnemonic = "FIST"
 }
 
-object FIST extends FIST with FISTImpl
+object FIST extends FIST with OneOperand[FIST] with FISTImpl
 
 trait FISTImpl {
   self: FIST =>

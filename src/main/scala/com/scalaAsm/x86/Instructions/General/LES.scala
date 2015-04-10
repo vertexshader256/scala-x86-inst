@@ -12,7 +12,7 @@ trait LES extends InstructionDefinition {
   val mnemonic = "LES"
 }
 
-object LES extends LES with LESImpl
+object LES extends LES with TwoOperands[LES] with LESImpl
 
 trait LESImpl {
   self: LES =>

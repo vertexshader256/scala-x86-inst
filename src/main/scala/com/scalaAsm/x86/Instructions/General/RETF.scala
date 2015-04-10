@@ -12,7 +12,7 @@ trait RETF extends InstructionDefinition {
   val mnemonic = "RETF"
 }
 
-object RETF extends RETF with RETFImpl
+object RETF extends RETF with ZeroOperands[RETF] with OneOperand[RETF] with RETFImpl
 
 trait RETFImpl {
   self: RETF =>

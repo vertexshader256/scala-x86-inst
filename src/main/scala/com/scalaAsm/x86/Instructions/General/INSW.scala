@@ -12,7 +12,7 @@ trait INSW extends InstructionDefinition {
   val mnemonic = "INSW"
 }
 
-object INSW extends INSW with INSWImpl
+object INSW extends INSW with ZeroOperands[INSW] with INSWImpl
 
 trait INSWImpl {
   self: INSW =>

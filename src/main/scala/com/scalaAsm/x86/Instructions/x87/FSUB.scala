@@ -12,7 +12,7 @@ trait FSUB extends InstructionDefinition {
   val mnemonic = "FSUB"
 }
 
-object FSUB extends FSUB with FSUBImpl
+object FSUB extends FSUB with OneOperand[FSUB] with FSUBImpl
 
 trait FSUBImpl {
   self: FSUB =>

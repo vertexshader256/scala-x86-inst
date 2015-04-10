@@ -12,7 +12,7 @@ trait SWAPGS extends InstructionDefinition {
   val mnemonic = "SWAPGS"
 }
 
-object SWAPGS extends SWAPGS with SWAPGSImpl
+object SWAPGS extends SWAPGS with ZeroOperands[SWAPGS] with SWAPGSImpl
 
 trait SWAPGSImpl {
   self: SWAPGS =>

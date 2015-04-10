@@ -12,7 +12,7 @@ trait FUCOMPP extends InstructionDefinition {
   val mnemonic = "FUCOMPP"
 }
 
-object FUCOMPP extends FUCOMPP with FUCOMPPImpl
+object FUCOMPP extends FUCOMPP with ZeroOperands[FUCOMPP] with FUCOMPPImpl
 
 trait FUCOMPPImpl {
   self: FUCOMPP =>

@@ -12,7 +12,7 @@ trait RDTSC extends InstructionDefinition {
   val mnemonic = "RDTSC"
 }
 
-object RDTSC extends RDTSC with RDTSCImpl
+object RDTSC extends RDTSC with ZeroOperands[RDTSC] with RDTSCImpl
 
 trait RDTSCImpl {
   self: RDTSC =>

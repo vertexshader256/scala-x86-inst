@@ -12,7 +12,7 @@ trait LEA extends InstructionDefinition {
   val mnemonic = "LEA"
 }
 
-object LEA extends LEA with LEAImpl
+object LEA extends LEA with TwoOperands[LEA] with LEAImpl
 
 trait LEAImpl {
   self: LEA =>

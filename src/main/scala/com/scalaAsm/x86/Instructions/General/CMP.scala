@@ -12,7 +12,7 @@ trait CMP extends InstructionDefinition {
   val mnemonic = "CMP"
 }
 
-object CMP extends CMP with CMPImpl
+object CMP extends CMP with OneOperand[CMP] with TwoOperands[CMP] with CMPImpl
 
 trait CMPLow {
   self: CMP =>

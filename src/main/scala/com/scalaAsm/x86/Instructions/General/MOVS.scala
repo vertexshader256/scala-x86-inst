@@ -12,7 +12,7 @@ trait MOVS extends InstructionDefinition {
   val mnemonic = "MOVS"
 }
 
-object MOVS extends MOVS with MOVSImpl
+object MOVS extends MOVS with ZeroOperands[MOVS] with MOVSImpl
 
 trait MOVSImpl {
   self: MOVS =>

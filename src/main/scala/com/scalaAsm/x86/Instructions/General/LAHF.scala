@@ -12,7 +12,7 @@ trait LAHF extends InstructionDefinition {
   val mnemonic = "LAHF"
 }
 
-object LAHF extends LAHF with LAHFImpl
+object LAHF extends LAHF with ZeroOperands[LAHF] with LAHFImpl
 
 trait LAHFImpl {
   self: LAHF =>

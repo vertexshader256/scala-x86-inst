@@ -12,7 +12,7 @@ trait CLI extends InstructionDefinition {
   val mnemonic = "CLI"
 }
 
-object CLI extends CLI with CLIImpl
+object CLI extends CLI with ZeroOperands[CLI] with CLIImpl
 
 trait CLIImpl {
   self: CLI =>

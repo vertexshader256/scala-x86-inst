@@ -12,7 +12,7 @@ trait ROR extends InstructionDefinition {
   val mnemonic = "ROR"
 }
 
-object ROR extends ROR with RORImpl
+object ROR extends ROR with OneOperand[ROR] with TwoOperands[ROR] with RORImpl
 
 trait RORImpl {
   self: ROR =>

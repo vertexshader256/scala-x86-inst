@@ -12,7 +12,7 @@ trait INVD extends InstructionDefinition {
   val mnemonic = "INVD"
 }
 
-object INVD extends INVD with INVDImpl
+object INVD extends INVD with ZeroOperands[INVD] with INVDImpl
 
 trait INVDImpl {
   self: INVD =>

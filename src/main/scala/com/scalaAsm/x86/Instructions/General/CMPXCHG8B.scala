@@ -12,7 +12,7 @@ trait CMPXCHG8B extends InstructionDefinition {
   val mnemonic = "CMPXCHG8B"
 }
 
-object CMPXCHG8B extends CMPXCHG8B with CMPXCHG8BImpl
+object CMPXCHG8B extends CMPXCHG8B with OneOperand[CMPXCHG8B] with CMPXCHG8BImpl
 
 trait CMPXCHG8BImpl {
   self: CMPXCHG8B =>

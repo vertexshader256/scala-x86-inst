@@ -12,7 +12,7 @@ trait FDIV extends InstructionDefinition {
   val mnemonic = "FDIV"
 }
 
-object FDIV extends FDIV with FDIVImpl
+object FDIV extends FDIV with OneOperand[FDIV] with FDIVImpl
 
 trait FDIVImpl {
   self: FDIV =>

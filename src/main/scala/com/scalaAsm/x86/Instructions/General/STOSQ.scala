@@ -12,7 +12,7 @@ trait STOSQ extends InstructionDefinition {
   val mnemonic = "STOSQ"
 }
 
-object STOSQ extends STOSQ with STOSQImpl
+object STOSQ extends STOSQ with ZeroOperands[STOSQ] with STOSQImpl
 
 trait STOSQImpl {
   self: STOSQ =>

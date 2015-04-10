@@ -12,7 +12,7 @@ trait XCHG extends InstructionDefinition {
   val mnemonic = "XCHG"
 }
 
-object XCHG extends XCHG with XCHGImpl
+object XCHG extends XCHG with OneOperand[XCHG] with TwoOperands[XCHG] with XCHGImpl
 
 trait XCHGLow {
   self: XCHG =>

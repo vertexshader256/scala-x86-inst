@@ -12,7 +12,7 @@ trait SETC extends InstructionDefinition {
   val mnemonic = "SETC"
 }
 
-object SETC extends SETC with SETCImpl
+object SETC extends SETC with OneOperand[SETC] with SETCImpl
 
 trait SETCImpl {
   self: SETC =>

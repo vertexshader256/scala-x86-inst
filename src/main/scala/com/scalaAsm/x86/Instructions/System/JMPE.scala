@@ -12,7 +12,7 @@ trait JMPE extends InstructionDefinition {
   val mnemonic = "JMPE"
 }
 
-object JMPE extends JMPE with JMPEImpl
+object JMPE extends JMPE with ZeroOperands[JMPE] with JMPEImpl
 
 trait JMPEImpl {
   self: JMPE =>

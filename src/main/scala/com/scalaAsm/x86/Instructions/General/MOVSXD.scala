@@ -12,7 +12,7 @@ trait MOVSXD extends InstructionDefinition {
   val mnemonic = "MOVSXD"
 }
 
-object MOVSXD extends MOVSXD with MOVSXDImpl
+object MOVSXD extends MOVSXD with TwoOperands[MOVSXD] with MOVSXDImpl
 
 trait MOVSXDLow {
   self: MOVSXD =>

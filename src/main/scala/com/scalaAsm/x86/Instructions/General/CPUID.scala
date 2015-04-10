@@ -12,7 +12,7 @@ trait CPUID extends InstructionDefinition {
   val mnemonic = "CPUID"
 }
 
-object CPUID extends CPUID with CPUIDImpl
+object CPUID extends CPUID with ZeroOperands[CPUID] with CPUIDImpl
 
 trait CPUIDImpl {
   self: CPUID =>

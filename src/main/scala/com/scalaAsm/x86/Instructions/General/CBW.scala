@@ -12,7 +12,7 @@ trait CBW extends InstructionDefinition {
   val mnemonic = "CBW"
 }
 
-object CBW extends CBW with CBWImpl
+object CBW extends CBW with ZeroOperands[CBW] with CBWImpl
 
 trait CBWImpl {
   self: CBW =>

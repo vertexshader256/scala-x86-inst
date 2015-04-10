@@ -12,7 +12,7 @@ trait JG extends InstructionDefinition {
   val mnemonic = "JG"
 }
 
-object JG extends JG with JGImpl
+object JG extends JG with OneOperand[JG] with JGImpl
 
 trait JGImpl {
   self: JG =>

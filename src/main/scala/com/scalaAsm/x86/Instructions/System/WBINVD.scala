@@ -12,7 +12,7 @@ trait WBINVD extends InstructionDefinition {
   val mnemonic = "WBINVD"
 }
 
-object WBINVD extends WBINVD with WBINVDImpl
+object WBINVD extends WBINVD with ZeroOperands[WBINVD] with WBINVDImpl
 
 trait WBINVDImpl {
   self: WBINVD =>

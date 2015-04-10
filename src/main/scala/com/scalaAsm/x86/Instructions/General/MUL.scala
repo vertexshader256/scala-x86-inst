@@ -12,7 +12,7 @@ trait MUL extends InstructionDefinition {
   val mnemonic = "MUL"
 }
 
-object MUL extends MUL with MULImpl
+object MUL extends MUL with OneOperand[MUL] with MULImpl
 
 trait MULImpl {
   self: MUL =>

@@ -12,7 +12,7 @@ trait FPREM extends InstructionDefinition {
   val mnemonic = "FPREM"
 }
 
-object FPREM extends FPREM with FPREMImpl
+object FPREM extends FPREM with ZeroOperands[FPREM] with FPREMImpl
 
 trait FPREMImpl {
   self: FPREM =>

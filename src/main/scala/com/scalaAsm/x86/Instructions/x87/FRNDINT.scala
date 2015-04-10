@@ -12,7 +12,7 @@ trait FRNDINT extends InstructionDefinition {
   val mnemonic = "FRNDINT"
 }
 
-object FRNDINT extends FRNDINT with FRNDINTImpl
+object FRNDINT extends FRNDINT with ZeroOperands[FRNDINT] with FRNDINTImpl
 
 trait FRNDINTImpl {
   self: FRNDINT =>

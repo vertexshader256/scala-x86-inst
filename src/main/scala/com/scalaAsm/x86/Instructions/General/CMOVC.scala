@@ -12,7 +12,7 @@ trait CMOVC extends InstructionDefinition {
   val mnemonic = "CMOVC"
 }
 
-object CMOVC extends CMOVC with CMOVCImpl
+object CMOVC extends CMOVC with TwoOperands[CMOVC] with CMOVCImpl
 
 trait CMOVCImpl {
   self: CMOVC =>

@@ -12,7 +12,7 @@ trait JNLE extends InstructionDefinition {
   val mnemonic = "JNLE"
 }
 
-object JNLE extends JNLE with JNLEImpl
+object JNLE extends JNLE with OneOperand[JNLE] with JNLEImpl
 
 trait JNLEImpl {
   self: JNLE =>

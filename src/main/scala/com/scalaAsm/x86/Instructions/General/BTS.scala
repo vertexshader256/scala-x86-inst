@@ -12,7 +12,7 @@ trait BTS extends InstructionDefinition {
   val mnemonic = "BTS"
 }
 
-object BTS extends BTS with BTSImpl
+object BTS extends BTS with TwoOperands[BTS] with BTSImpl
 
 trait BTSImpl {
   self: BTS =>

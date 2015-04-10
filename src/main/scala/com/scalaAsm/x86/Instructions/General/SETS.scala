@@ -12,7 +12,7 @@ trait SETS extends InstructionDefinition {
   val mnemonic = "SETS"
 }
 
-object SETS extends SETS with SETSImpl
+object SETS extends SETS with OneOperand[SETS] with SETSImpl
 
 trait SETSImpl {
   self: SETS =>

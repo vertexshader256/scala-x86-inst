@@ -12,7 +12,7 @@ trait LMSW extends InstructionDefinition {
   val mnemonic = "LMSW"
 }
 
-object LMSW extends LMSW with LMSWImpl
+object LMSW extends LMSW with OneOperand[LMSW] with LMSWImpl
 
 trait LMSWImpl {
   self: LMSW =>

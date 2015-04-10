@@ -12,7 +12,7 @@ trait SYSENTER extends InstructionDefinition {
   val mnemonic = "SYSENTER"
 }
 
-object SYSENTER extends SYSENTER with SYSENTERImpl
+object SYSENTER extends SYSENTER with ZeroOperands[SYSENTER] with SYSENTERImpl
 
 trait SYSENTERImpl {
   self: SYSENTER =>

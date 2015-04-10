@@ -12,7 +12,7 @@ trait POPF extends InstructionDefinition {
   val mnemonic = "POPF"
 }
 
-object POPF extends POPF with POPFImpl
+object POPF extends POPF with ZeroOperands[POPF] with POPFImpl
 
 trait POPFImpl {
   self: POPF =>

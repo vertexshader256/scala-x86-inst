@@ -12,7 +12,7 @@ trait OUT extends InstructionDefinition {
   val mnemonic = "OUT"
 }
 
-object OUT extends OUT with OUTImpl
+object OUT extends OUT with ZeroOperands[OUT] with OneOperand[OUT] with OUTImpl
 
 trait OUTImpl {
   self: OUT =>

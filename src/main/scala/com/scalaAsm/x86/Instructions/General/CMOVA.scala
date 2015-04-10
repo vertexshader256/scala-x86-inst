@@ -12,7 +12,7 @@ trait CMOVA extends InstructionDefinition {
   val mnemonic = "CMOVA"
 }
 
-object CMOVA extends CMOVA with CMOVAImpl
+object CMOVA extends CMOVA with TwoOperands[CMOVA] with CMOVAImpl
 
 trait CMOVAImpl {
   self: CMOVA =>

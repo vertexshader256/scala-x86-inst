@@ -12,7 +12,7 @@ trait INVLPG extends InstructionDefinition {
   val mnemonic = "INVLPG"
 }
 
-object INVLPG extends INVLPG with INVLPGImpl
+object INVLPG extends INVLPG with OneOperand[INVLPG] with INVLPGImpl
 
 trait INVLPGImpl {
   self: INVLPG =>

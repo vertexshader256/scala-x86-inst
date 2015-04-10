@@ -12,7 +12,7 @@ trait FUCOM extends InstructionDefinition {
   val mnemonic = "FUCOM"
 }
 
-object FUCOM extends FUCOM with FUCOMImpl
+object FUCOM extends FUCOM with ZeroOperands[FUCOM] with FUCOMImpl
 
 trait FUCOMImpl {
   self: FUCOM =>

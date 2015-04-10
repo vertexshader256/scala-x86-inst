@@ -12,7 +12,7 @@ trait FPTAN extends InstructionDefinition {
   val mnemonic = "FPTAN"
 }
 
-object FPTAN extends FPTAN with FPTANImpl
+object FPTAN extends FPTAN with ZeroOperands[FPTAN] with FPTANImpl
 
 trait FPTANImpl {
   self: FPTAN =>

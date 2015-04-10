@@ -12,7 +12,7 @@ trait FXAM extends InstructionDefinition {
   val mnemonic = "FXAM"
 }
 
-object FXAM extends FXAM with FXAMImpl
+object FXAM extends FXAM with ZeroOperands[FXAM] with FXAMImpl
 
 trait FXAMImpl {
   self: FXAM =>

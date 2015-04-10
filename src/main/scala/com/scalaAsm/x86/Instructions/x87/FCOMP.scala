@@ -12,7 +12,7 @@ trait FCOMP extends InstructionDefinition {
   val mnemonic = "FCOMP"
 }
 
-object FCOMP extends FCOMP with FCOMPImpl
+object FCOMP extends FCOMP with ZeroOperands[FCOMP] with OneOperand[FCOMP] with FCOMPImpl
 
 trait FCOMPImpl {
   self: FCOMP =>

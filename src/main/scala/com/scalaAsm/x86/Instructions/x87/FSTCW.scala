@@ -12,7 +12,7 @@ trait FSTCW extends InstructionDefinition {
   val mnemonic = "FSTCW"
 }
 
-object FSTCW extends FSTCW with FSTCWImpl
+object FSTCW extends FSTCW with OneOperand[FSTCW] with FSTCWImpl
 
 trait FSTCWImpl {
   self: FSTCW =>

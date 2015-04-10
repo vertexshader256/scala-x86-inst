@@ -12,7 +12,7 @@ trait WRMSR extends InstructionDefinition {
   val mnemonic = "WRMSR"
 }
 
-object WRMSR extends WRMSR with WRMSRImpl
+object WRMSR extends WRMSR with ZeroOperands[WRMSR] with WRMSRImpl
 
 trait WRMSRImpl {
   self: WRMSR =>

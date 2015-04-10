@@ -12,7 +12,7 @@ trait HLT extends InstructionDefinition {
   val mnemonic = "HLT"
 }
 
-object HLT extends HLT with HLTImpl
+object HLT extends HLT with ZeroOperands[HLT] with HLTImpl
 
 trait HLTImpl {
   self: HLT =>

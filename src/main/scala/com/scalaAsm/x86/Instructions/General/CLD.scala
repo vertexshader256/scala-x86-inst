@@ -12,7 +12,7 @@ trait CLD extends InstructionDefinition {
   val mnemonic = "CLD"
 }
 
-object CLD extends CLD with CLDImpl
+object CLD extends CLD with ZeroOperands[CLD] with CLDImpl
 
 trait CLDImpl {
   self: CLD =>

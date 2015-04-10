@@ -12,7 +12,7 @@ trait SYSCALL extends InstructionDefinition {
   val mnemonic = "SYSCALL"
 }
 
-object SYSCALL extends SYSCALL with SYSCALLImpl
+object SYSCALL extends SYSCALL with ZeroOperands[SYSCALL] with SYSCALLImpl
 
 trait SYSCALLImpl {
   self: SYSCALL =>

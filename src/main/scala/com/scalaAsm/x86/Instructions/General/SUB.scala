@@ -12,7 +12,7 @@ trait SUB extends InstructionDefinition {
   val mnemonic = "SUB"
 }
 
-object SUB extends SUB with SUBImpl
+object SUB extends SUB with OneOperand[SUB] with TwoOperands[SUB] with SUBImpl
 
 trait SUBLow {
   self: SUB =>

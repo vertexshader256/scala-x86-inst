@@ -12,7 +12,7 @@ trait SAHF extends InstructionDefinition {
   val mnemonic = "SAHF"
 }
 
-object SAHF extends SAHF with SAHFImpl
+object SAHF extends SAHF with ZeroOperands[SAHF] with SAHFImpl
 
 trait SAHFImpl {
   self: SAHF =>

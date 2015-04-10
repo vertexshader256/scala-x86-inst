@@ -12,7 +12,7 @@ trait CDQE extends InstructionDefinition {
   val mnemonic = "CDQE"
 }
 
-object CDQE extends CDQE with CDQEImpl
+object CDQE extends CDQE with ZeroOperands[CDQE] with CDQEImpl
 
 trait CDQEImpl {
   self: CDQE =>

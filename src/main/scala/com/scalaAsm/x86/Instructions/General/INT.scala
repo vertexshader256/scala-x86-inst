@@ -12,7 +12,7 @@ trait INT extends InstructionDefinition {
   val mnemonic = "INT"
 }
 
-object INT extends INT with INTImpl
+object INT extends INT with OneOperand[INT] with INTImpl
 
 trait INTImpl {
   self: INT =>

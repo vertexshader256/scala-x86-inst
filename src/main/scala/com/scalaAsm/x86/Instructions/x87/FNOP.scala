@@ -12,7 +12,7 @@ trait FNOP extends InstructionDefinition {
   val mnemonic = "FNOP"
 }
 
-object FNOP extends FNOP with FNOPImpl
+object FNOP extends FNOP with ZeroOperands[FNOP] with FNOPImpl
 
 trait FNOPImpl {
   self: FNOP =>

@@ -12,7 +12,7 @@ trait DAA extends InstructionDefinition {
   val mnemonic = "DAA"
 }
 
-object DAA extends DAA with DAAImpl
+object DAA extends DAA with ZeroOperands[DAA] with DAAImpl
 
 trait DAAImpl {
   self: DAA =>

@@ -12,7 +12,7 @@ trait UD2 extends InstructionDefinition {
   val mnemonic = "UD2"
 }
 
-object UD2 extends UD2 with UD2Impl
+object UD2 extends UD2 with ZeroOperands[UD2] with UD2Impl
 
 trait UD2Impl {
   self: UD2 =>

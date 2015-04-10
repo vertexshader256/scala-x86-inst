@@ -12,7 +12,7 @@ trait JS extends InstructionDefinition {
   val mnemonic = "JS"
 }
 
-object JS extends JS with JSImpl
+object JS extends JS with OneOperand[JS] with JSImpl
 
 trait JSImpl {
   self: JS =>

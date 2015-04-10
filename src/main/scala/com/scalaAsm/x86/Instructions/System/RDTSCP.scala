@@ -12,7 +12,7 @@ trait RDTSCP extends InstructionDefinition {
   val mnemonic = "RDTSCP"
 }
 
-object RDTSCP extends RDTSCP with RDTSCPImpl
+object RDTSCP extends RDTSCP with ZeroOperands[RDTSCP] with RDTSCPImpl
 
 trait RDTSCPImpl {
   self: RDTSCP =>

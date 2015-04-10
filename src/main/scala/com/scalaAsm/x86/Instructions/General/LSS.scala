@@ -12,7 +12,7 @@ trait LSS extends InstructionDefinition {
   val mnemonic = "LSS"
 }
 
-object LSS extends LSS with LSSImpl
+object LSS extends LSS with TwoOperands[LSS] with LSSImpl
 
 trait LSSImpl {
   self: LSS =>

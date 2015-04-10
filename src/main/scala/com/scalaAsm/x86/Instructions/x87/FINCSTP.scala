@@ -12,7 +12,7 @@ trait FINCSTP extends InstructionDefinition {
   val mnemonic = "FINCSTP"
 }
 
-object FINCSTP extends FINCSTP with FINCSTPImpl
+object FINCSTP extends FINCSTP with ZeroOperands[FINCSTP] with FINCSTPImpl
 
 trait FINCSTPImpl {
   self: FINCSTP =>

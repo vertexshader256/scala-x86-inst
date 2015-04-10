@@ -12,7 +12,7 @@ trait IMUL extends InstructionDefinition {
   val mnemonic = "IMUL"
 }
 
-object IMUL extends IMUL with IMULImpl
+object IMUL extends IMUL with OneOperand[IMUL] with TwoOperands[IMUL] with IMULImpl
 
 trait IMULLow {
   self: IMUL =>

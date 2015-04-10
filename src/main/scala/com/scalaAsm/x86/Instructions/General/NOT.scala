@@ -12,7 +12,7 @@ trait NOT extends InstructionDefinition {
   val mnemonic = "NOT"
 }
 
-object NOT extends NOT with NOTImpl
+object NOT extends NOT with OneOperand[NOT] with NOTImpl
 
 trait NOTImpl {
   self: NOT =>

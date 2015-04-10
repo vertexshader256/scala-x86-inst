@@ -12,7 +12,7 @@ trait SLDT extends InstructionDefinition {
   val mnemonic = "SLDT"
 }
 
-object SLDT extends SLDT with SLDTImpl
+object SLDT extends SLDT with OneOperand[SLDT] with SLDTImpl
 
 trait SLDTImpl {
   self: SLDT =>

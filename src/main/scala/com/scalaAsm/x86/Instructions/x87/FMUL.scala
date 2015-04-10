@@ -12,7 +12,7 @@ trait FMUL extends InstructionDefinition {
   val mnemonic = "FMUL"
 }
 
-object FMUL extends FMUL with FMULImpl
+object FMUL extends FMUL with OneOperand[FMUL] with FMULImpl
 
 trait FMULImpl {
   self: FMUL =>

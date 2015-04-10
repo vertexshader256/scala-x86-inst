@@ -12,7 +12,7 @@ trait PUSHA extends InstructionDefinition {
   val mnemonic = "PUSHA"
 }
 
-object PUSHA extends PUSHA with PUSHAImpl
+object PUSHA extends PUSHA with ZeroOperands[PUSHA] with PUSHAImpl
 
 trait PUSHAImpl {
   self: PUSHA =>

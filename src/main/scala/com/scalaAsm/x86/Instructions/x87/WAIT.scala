@@ -12,7 +12,7 @@ trait WAIT extends InstructionDefinition {
   val mnemonic = "WAIT"
 }
 
-object WAIT extends WAIT with WAITImpl
+object WAIT extends WAIT with ZeroOperands[WAIT] with WAITImpl
 
 trait WAITImpl {
   self: WAIT =>

@@ -12,7 +12,7 @@ trait FMULP extends InstructionDefinition {
   val mnemonic = "FMULP"
 }
 
-object FMULP extends FMULP with FMULPImpl
+object FMULP extends FMULP with ZeroOperands[FMULP] with FMULPImpl
 
 trait FMULPImpl {
   self: FMULP =>

@@ -12,7 +12,7 @@ trait LGS extends InstructionDefinition {
   val mnemonic = "LGS"
 }
 
-object LGS extends LGS with LGSImpl
+object LGS extends LGS with TwoOperands[LGS] with LGSImpl
 
 trait LGSImpl {
   self: LGS =>

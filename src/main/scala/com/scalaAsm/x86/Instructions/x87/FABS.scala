@@ -12,7 +12,7 @@ trait FABS extends InstructionDefinition {
   val mnemonic = "FABS"
 }
 
-object FABS extends FABS with FABSImpl
+object FABS extends FABS with ZeroOperands[FABS] with FABSImpl
 
 trait FABSImpl {
   self: FABS =>

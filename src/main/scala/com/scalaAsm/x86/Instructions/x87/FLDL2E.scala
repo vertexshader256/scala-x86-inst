@@ -12,7 +12,7 @@ trait FLDL2E extends InstructionDefinition {
   val mnemonic = "FLDL2E"
 }
 
-object FLDL2E extends FLDL2E with FLDL2EImpl
+object FLDL2E extends FLDL2E with ZeroOperands[FLDL2E] with FLDL2EImpl
 
 trait FLDL2EImpl {
   self: FLDL2E =>

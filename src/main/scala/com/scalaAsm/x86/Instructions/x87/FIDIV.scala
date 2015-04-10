@@ -12,7 +12,7 @@ trait FIDIV extends InstructionDefinition {
   val mnemonic = "FIDIV"
 }
 
-object FIDIV extends FIDIV with FIDIVImpl
+object FIDIV extends FIDIV with OneOperand[FIDIV] with FIDIVImpl
 
 trait FIDIVImpl {
   self: FIDIV =>

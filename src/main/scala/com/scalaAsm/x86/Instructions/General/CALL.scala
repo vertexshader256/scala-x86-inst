@@ -12,7 +12,7 @@ trait CALL extends InstructionDefinition {
   val mnemonic = "CALL"
 }
 
-object CALL extends CALL with CALLImpl
+object CALL extends CALL with OneOperand[CALL] with CALLImpl
 
 trait CALLLow {
   self: CALL =>

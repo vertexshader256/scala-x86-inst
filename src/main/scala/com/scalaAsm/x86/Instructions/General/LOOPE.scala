@@ -12,7 +12,7 @@ trait LOOPE extends InstructionDefinition {
   val mnemonic = "LOOPE"
 }
 
-object LOOPE extends LOOPE with LOOPEImpl
+object LOOPE extends LOOPE with OneOperand[LOOPE] with LOOPEImpl
 
 trait LOOPEImpl {
   self: LOOPE =>

@@ -12,7 +12,7 @@ trait SYSRET extends InstructionDefinition {
   val mnemonic = "SYSRET"
 }
 
-object SYSRET extends SYSRET with SYSRETImpl
+object SYSRET extends SYSRET with ZeroOperands[SYSRET] with SYSRETImpl
 
 trait SYSRETImpl {
   self: SYSRET =>

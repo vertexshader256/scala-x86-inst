@@ -12,7 +12,7 @@ trait IRETD extends InstructionDefinition {
   val mnemonic = "IRETD"
 }
 
-object IRETD extends IRETD with IRETDImpl
+object IRETD extends IRETD with ZeroOperands[IRETD] with IRETDImpl
 
 trait IRETDImpl {
   self: IRETD =>

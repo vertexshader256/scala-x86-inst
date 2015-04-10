@@ -12,7 +12,7 @@ trait JPO extends InstructionDefinition {
   val mnemonic = "JPO"
 }
 
-object JPO extends JPO with JPOImpl
+object JPO extends JPO with OneOperand[JPO] with JPOImpl
 
 trait JPOImpl {
   self: JPO =>

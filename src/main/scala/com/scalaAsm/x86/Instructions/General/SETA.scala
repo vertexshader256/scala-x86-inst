@@ -12,7 +12,7 @@ trait SETA extends InstructionDefinition {
   val mnemonic = "SETA"
 }
 
-object SETA extends SETA with SETAImpl
+object SETA extends SETA with OneOperand[SETA] with SETAImpl
 
 trait SETAImpl {
   self: SETA =>

@@ -12,7 +12,7 @@ trait SAR extends InstructionDefinition {
   val mnemonic = "SAR"
 }
 
-object SAR extends SAR with SARImpl
+object SAR extends SAR with OneOperand[SAR] with TwoOperands[SAR] with SARImpl
 
 trait SARImpl {
   self: SAR =>

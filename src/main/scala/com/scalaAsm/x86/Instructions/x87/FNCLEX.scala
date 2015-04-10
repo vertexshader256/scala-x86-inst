@@ -12,7 +12,7 @@ trait FNCLEX extends InstructionDefinition {
   val mnemonic = "FNCLEX"
 }
 
-object FNCLEX extends FNCLEX with FNCLEXImpl
+object FNCLEX extends FNCLEX with ZeroOperands[FNCLEX] with FNCLEXImpl
 
 trait FNCLEXImpl {
   self: FNCLEX =>
