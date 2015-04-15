@@ -12,10 +12,9 @@ trait CMOVC extends InstructionDefinition {
   val mnemonic = "CMOVC"
 }
 
-object CMOVC extends CMOVC with TwoOperands[CMOVC] with CMOVCImpl
+object CMOVC extends TwoOperands[CMOVC] with CMOVCImpl
 
-trait CMOVCImpl {
-  self: CMOVC =>
+trait CMOVCImpl extends CMOVC {
   implicit object CMOVC_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x42) /r
   }

@@ -12,10 +12,9 @@ trait CLTS extends InstructionDefinition {
   val mnemonic = "CLTS"
 }
 
-object CLTS extends CLTS with ZeroOperands[CLTS] with CLTSImpl
+object CLTS extends ZeroOperands[CLTS] with CLTSImpl
 
-trait CLTSImpl {
-  self: CLTS =>
+trait CLTSImpl extends CLTS {
   implicit object CLTS_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x06)
     override def hasImplicitOperand = true

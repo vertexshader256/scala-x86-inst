@@ -12,10 +12,9 @@ trait FICOM extends InstructionDefinition {
   val mnemonic = "FICOM"
 }
 
-object FICOM extends FICOM with OneOperand[FICOM] with FICOMImpl
+object FICOM extends OneOperand[FICOM] with FICOMImpl
 
-trait FICOMImpl {
-  self: FICOM =>
+trait FICOMImpl extends FICOM {
   implicit object FICOM_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 2
     override def hasImplicitOperand = true

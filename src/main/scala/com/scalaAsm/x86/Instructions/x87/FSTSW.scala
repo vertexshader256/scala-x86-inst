@@ -12,10 +12,9 @@ trait FSTSW extends InstructionDefinition {
   val mnemonic = "FSTSW"
 }
 
-object FSTSW extends FSTSW with ZeroOperands[FSTSW] with OneOperand[FSTSW] with FSTSWImpl
+object FSTSW extends ZeroOperands[FSTSW] with OneOperand[FSTSW] with FSTSWImpl
 
-trait FSTSWImpl {
-  self: FSTSW =>
+trait FSTSWImpl extends FSTSW {
   implicit object FSTSW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xDD /+ 7
   }

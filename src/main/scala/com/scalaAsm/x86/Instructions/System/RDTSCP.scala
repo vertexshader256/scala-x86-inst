@@ -12,10 +12,9 @@ trait RDTSCP extends InstructionDefinition {
   val mnemonic = "RDTSCP"
 }
 
-object RDTSCP extends RDTSCP with ZeroOperands[RDTSCP] with RDTSCPImpl
+object RDTSCP extends ZeroOperands[RDTSCP] with RDTSCPImpl
 
-trait RDTSCPImpl {
-  self: RDTSCP =>
+trait RDTSCPImpl extends RDTSCP {
   implicit object RDTSCP_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
     override def hasImplicitOperand = true

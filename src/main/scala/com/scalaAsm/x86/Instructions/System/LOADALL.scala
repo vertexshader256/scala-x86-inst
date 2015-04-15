@@ -12,10 +12,9 @@ trait LOADALL extends InstructionDefinition {
   val mnemonic = "LOADALL"
 }
 
-object LOADALL extends LOADALL with ZeroOperands[LOADALL] with LOADALLImpl
+object LOADALL extends ZeroOperands[LOADALL] with LOADALLImpl
 
-trait LOADALLImpl {
-  self: LOADALL =>
+trait LOADALLImpl extends LOADALL {
   implicit object LOADALL_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x05)
     override def hasImplicitOperand = true

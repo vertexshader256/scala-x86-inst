@@ -12,10 +12,9 @@ trait MOVSX extends InstructionDefinition {
   val mnemonic = "MOVSX"
 }
 
-object MOVSX extends MOVSX with TwoOperands[MOVSX] with MOVSXImpl
+object MOVSX extends TwoOperands[MOVSX] with MOVSXImpl
 
-trait MOVSXLow {
-  self: MOVSX =>
+trait MOVSXLow extends MOVSX {
   implicit object MOVSX_0 extends _2[r16, rm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBE) /r
   }
@@ -40,7 +39,6 @@ trait MOVSXLow {
 }
 
 trait MOVSXImpl extends MOVSXLow {
-  self: MOVSX =>
   implicit object MOVSX_5 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xBF) /r
   }

@@ -12,10 +12,9 @@ trait ADD extends InstructionDefinition {
   val mnemonic = "ADD"
 }
 
-object ADD extends ADD with OneOperand[ADD] with TwoOperands[ADD] with ADDImpl
+object ADD extends OneOperand[ADD] with TwoOperands[ADD] with ADDImpl
 
-trait ADDLow {
-  self: ADD =>
+trait ADDLow extends ADD {
   implicit object ADD_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x00 /r
   }
@@ -74,7 +73,6 @@ trait ADDLow {
 }
 
 trait ADDImpl extends ADDLow {
-  self: ADD =>
   implicit object ADD_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x03 /r
   }

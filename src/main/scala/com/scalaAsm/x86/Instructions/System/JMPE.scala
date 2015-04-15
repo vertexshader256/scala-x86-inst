@@ -12,10 +12,9 @@ trait JMPE extends InstructionDefinition {
   val mnemonic = "JMPE"
 }
 
-object JMPE extends JMPE with ZeroOperands[JMPE] with JMPEImpl
+object JMPE extends ZeroOperands[JMPE] with JMPEImpl
 
-trait JMPEImpl {
-  self: JMPE =>
+trait JMPEImpl extends JMPE {
   implicit object JMPE_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 6
   }

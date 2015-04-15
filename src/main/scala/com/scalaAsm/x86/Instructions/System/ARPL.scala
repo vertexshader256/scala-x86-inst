@@ -12,10 +12,9 @@ trait ARPL extends InstructionDefinition {
   val mnemonic = "ARPL"
 }
 
-object ARPL extends ARPL with TwoOperands[ARPL] with ARPLImpl
+object ARPL extends TwoOperands[ARPL] with ARPLImpl
 
-trait ARPLImpl {
-  self: ARPL =>
+trait ARPLImpl extends ARPL {
   implicit object ARPL_0 extends _2[rm16, r16] {
     val opcode: OneOpcode = 0x63 /r
   }

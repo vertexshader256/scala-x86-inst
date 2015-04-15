@@ -12,10 +12,9 @@ trait PUSH extends InstructionDefinition {
   val mnemonic = "PUSH"
 }
 
-object PUSH extends PUSH with ZeroOperands[PUSH] with OneOperand[PUSH] with PUSHImpl
+object PUSH extends ZeroOperands[PUSH] with OneOperand[PUSH] with PUSHImpl
 
-trait PUSHLow {
-  self: PUSH =>
+trait PUSHLow extends PUSH {
   implicit object PUSH_0 extends _1[rm16] {
     val opcode: OneOpcode = 0xFF /+ 6
     override def hasImplicitOperand = true
@@ -33,7 +32,6 @@ trait PUSHLow {
 }
 
 trait PUSHImpl extends PUSHLow {
-  self: PUSH =>
   implicit object PUSH_3 extends _0 {
     val opcode: OneOpcode = 0x06
     override def hasImplicitOperand = true

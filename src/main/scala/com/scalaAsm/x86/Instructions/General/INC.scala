@@ -12,10 +12,9 @@ trait INC extends InstructionDefinition {
   val mnemonic = "INC"
 }
 
-object INC extends INC with OneOperand[INC] with INCImpl
+object INC extends OneOperand[INC] with INCImpl
 
-trait INCLow {
-  self: INC =>
+trait INCLow extends INC {
   implicit object INC_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xFE /+ 0
   }
@@ -35,7 +34,6 @@ trait INCLow {
 }
 
 trait INCImpl extends INCLow {
-  self: INC =>
   implicit object INC_4 extends _1[r16] {
     val opcode: OneOpcode = 0x40 + rw
     override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))

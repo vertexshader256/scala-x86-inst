@@ -12,10 +12,9 @@ trait LSL extends InstructionDefinition {
   val mnemonic = "LSL"
 }
 
-object LSL extends LSL with TwoOperands[LSL] with LSLImpl
+object LSL extends TwoOperands[LSL] with LSLImpl
 
-trait LSLImpl {
-  self: LSL =>
+trait LSLImpl extends LSL {
   implicit object LSL_0 extends _2[r16, m16] {
     val opcode: TwoOpcodes = (0x0F, 0x03) /r
   }

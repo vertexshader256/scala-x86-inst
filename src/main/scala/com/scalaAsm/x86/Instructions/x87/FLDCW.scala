@@ -12,10 +12,9 @@ trait FLDCW extends InstructionDefinition {
   val mnemonic = "FLDCW"
 }
 
-object FLDCW extends FLDCW with OneOperand[FLDCW] with FLDCWImpl
+object FLDCW extends OneOperand[FLDCW] with FLDCWImpl
 
-trait FLDCWImpl {
-  self: FLDCW =>
+trait FLDCWImpl extends FLDCW {
   implicit object FLDCW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xD9 /+ 5
   }

@@ -12,10 +12,9 @@ trait NOT extends InstructionDefinition {
   val mnemonic = "NOT"
 }
 
-object NOT extends NOT with OneOperand[NOT] with NOTImpl
+object NOT extends OneOperand[NOT] with NOTImpl
 
-trait NOTImpl {
-  self: NOT =>
+trait NOTImpl extends NOT {
   implicit object NOT_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 2
   }

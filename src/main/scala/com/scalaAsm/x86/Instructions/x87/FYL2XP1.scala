@@ -12,10 +12,9 @@ trait FYL2XP1 extends InstructionDefinition {
   val mnemonic = "FYL2XP1"
 }
 
-object FYL2XP1 extends FYL2XP1 with ZeroOperands[FYL2XP1] with FYL2XP1Impl
+object FYL2XP1 extends ZeroOperands[FYL2XP1] with FYL2XP1Impl
 
-trait FYL2XP1Impl {
-  self: FYL2XP1 =>
+trait FYL2XP1Impl extends FYL2XP1 {
   implicit object FYL2XP1_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true

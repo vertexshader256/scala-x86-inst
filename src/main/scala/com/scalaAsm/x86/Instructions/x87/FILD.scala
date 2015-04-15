@@ -12,10 +12,9 @@ trait FILD extends InstructionDefinition {
   val mnemonic = "FILD"
 }
 
-object FILD extends FILD with OneOperand[FILD] with FILDImpl
+object FILD extends OneOperand[FILD] with FILDImpl
 
-trait FILDImpl {
-  self: FILD =>
+trait FILDImpl extends FILD {
   implicit object FILD_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDB /+ 0
     override def hasImplicitOperand = true

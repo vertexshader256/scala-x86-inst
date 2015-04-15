@@ -12,10 +12,9 @@ trait IMUL extends InstructionDefinition {
   val mnemonic = "IMUL"
 }
 
-object IMUL extends IMUL with OneOperand[IMUL] with TwoOperands[IMUL] with IMULImpl
+object IMUL extends OneOperand[IMUL] with TwoOperands[IMUL] with IMULImpl
 
-trait IMULLow {
-  self: IMUL =>
+trait IMULLow extends IMUL {
   implicit object IMUL_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 5
     override def hasImplicitOperand = true
@@ -39,7 +38,6 @@ trait IMULLow {
 }
 
 trait IMULImpl extends IMULLow {
-  self: IMUL =>
   implicit object IMUL_4 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xAF) /r
   }

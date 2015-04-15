@@ -12,10 +12,9 @@ trait WRMSR extends InstructionDefinition {
   val mnemonic = "WRMSR"
 }
 
-object WRMSR extends WRMSR with ZeroOperands[WRMSR] with WRMSRImpl
+object WRMSR extends ZeroOperands[WRMSR] with WRMSRImpl
 
-trait WRMSRImpl {
-  self: WRMSR =>
+trait WRMSRImpl extends WRMSR {
   implicit object WRMSR_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x30)
     override def hasImplicitOperand = true

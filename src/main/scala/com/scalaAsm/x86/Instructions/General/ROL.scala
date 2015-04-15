@@ -12,10 +12,9 @@ trait ROL extends InstructionDefinition {
   val mnemonic = "ROL"
 }
 
-object ROL extends ROL with OneOperand[ROL] with TwoOperands[ROL] with ROLImpl
+object ROL extends OneOperand[ROL] with TwoOperands[ROL] with ROLImpl
 
-trait ROLImpl {
-  self: ROL =>
+trait ROLImpl extends ROL {
   implicit object ROL_0 extends _2[rm8, imm8] {
     val opcode: OneOpcode = 0xC0 /+ 0
   }

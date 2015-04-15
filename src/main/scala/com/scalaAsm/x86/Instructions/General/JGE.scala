@@ -12,10 +12,9 @@ trait JGE extends InstructionDefinition {
   val mnemonic = "JGE"
 }
 
-object JGE extends JGE with OneOperand[JGE] with JGEImpl
+object JGE extends OneOperand[JGE] with JGEImpl
 
-trait JGEImpl {
-  self: JGE =>
+trait JGEImpl extends JGE {
   implicit object JGE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7D
   }

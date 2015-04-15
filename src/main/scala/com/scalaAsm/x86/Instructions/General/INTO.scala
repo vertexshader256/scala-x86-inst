@@ -12,10 +12,9 @@ trait INTO extends InstructionDefinition {
   val mnemonic = "INTO"
 }
 
-object INTO extends INTO with ZeroOperands[INTO] with INTOImpl
+object INTO extends ZeroOperands[INTO] with INTOImpl
 
-trait INTOImpl {
-  self: INTO =>
+trait INTOImpl extends INTO {
   implicit object INTO_0 extends _0 {
     val opcode: OneOpcode = 0xCE
     override def hasImplicitOperand = true

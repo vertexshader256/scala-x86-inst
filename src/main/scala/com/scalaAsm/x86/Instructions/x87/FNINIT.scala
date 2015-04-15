@@ -12,10 +12,9 @@ trait FNINIT extends InstructionDefinition {
   val mnemonic = "FNINIT"
 }
 
-object FNINIT extends FNINIT with ZeroOperands[FNINIT] with FNINITImpl
+object FNINIT extends ZeroOperands[FNINIT] with FNINITImpl
 
-trait FNINITImpl {
-  self: FNINIT =>
+trait FNINITImpl extends FNINIT {
   implicit object FNINIT_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }

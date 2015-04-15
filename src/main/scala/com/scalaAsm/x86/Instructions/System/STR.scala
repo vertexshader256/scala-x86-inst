@@ -12,10 +12,9 @@ trait STR extends InstructionDefinition {
   val mnemonic = "STR"
 }
 
-object STR extends STR with OneOperand[STR] with STRImpl
+object STR extends OneOperand[STR] with STRImpl
 
-trait STRImpl {
-  self: STR =>
+trait STRImpl extends STR {
   implicit object STR_0 extends _1[m16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 1
     override def hasImplicitOperand = true

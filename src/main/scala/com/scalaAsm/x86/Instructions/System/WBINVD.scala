@@ -12,10 +12,9 @@ trait WBINVD extends InstructionDefinition {
   val mnemonic = "WBINVD"
 }
 
-object WBINVD extends WBINVD with ZeroOperands[WBINVD] with WBINVDImpl
+object WBINVD extends ZeroOperands[WBINVD] with WBINVDImpl
 
-trait WBINVDImpl {
-  self: WBINVD =>
+trait WBINVDImpl extends WBINVD {
   implicit object WBINVD_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x09)
   }

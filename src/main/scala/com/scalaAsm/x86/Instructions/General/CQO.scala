@@ -12,10 +12,9 @@ trait CQO extends InstructionDefinition {
   val mnemonic = "CQO"
 }
 
-object CQO extends CQO with ZeroOperands[CQO] with CQOImpl
+object CQO extends ZeroOperands[CQO] with CQOImpl
 
-trait CQOImpl {
-  self: CQO =>
+trait CQOImpl extends CQO {
   implicit object CQO_0 extends _0 {
     val opcode: OneOpcode = 0x99
     override def hasImplicitOperand = true

@@ -12,10 +12,9 @@ trait FPATAN extends InstructionDefinition {
   val mnemonic = "FPATAN"
 }
 
-object FPATAN extends FPATAN with ZeroOperands[FPATAN] with FPATANImpl
+object FPATAN extends ZeroOperands[FPATAN] with FPATANImpl
 
-trait FPATANImpl {
-  self: FPATAN =>
+trait FPATANImpl extends FPATAN {
   implicit object FPATAN_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
     override def hasImplicitOperand = true

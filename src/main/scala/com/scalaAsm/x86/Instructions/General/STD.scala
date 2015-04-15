@@ -12,10 +12,9 @@ trait STD extends InstructionDefinition {
   val mnemonic = "STD"
 }
 
-object STD extends STD with ZeroOperands[STD] with STDImpl
+object STD extends ZeroOperands[STD] with STDImpl
 
-trait STDImpl {
-  self: STD =>
+trait STDImpl extends STD {
   implicit object STD_0 extends _0 {
     val opcode: OneOpcode = 0xFD
   }

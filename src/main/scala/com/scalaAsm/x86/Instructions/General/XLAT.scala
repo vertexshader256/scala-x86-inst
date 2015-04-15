@@ -12,10 +12,9 @@ trait XLAT extends InstructionDefinition {
   val mnemonic = "XLAT"
 }
 
-object XLAT extends XLAT with ZeroOperands[XLAT] with XLATImpl
+object XLAT extends ZeroOperands[XLAT] with XLATImpl
 
-trait XLATImpl {
-  self: XLAT =>
+trait XLATImpl extends XLAT {
   implicit object XLAT_0 extends _0 {
     val opcode: OneOpcode = 0xD7
     override def hasImplicitOperand = true

@@ -12,10 +12,9 @@ trait SHL extends InstructionDefinition {
   val mnemonic = "SHL"
 }
 
-object SHL extends SHL with OneOperand[SHL] with TwoOperands[SHL] with SHLImpl
+object SHL extends OneOperand[SHL] with TwoOperands[SHL] with SHLImpl
 
-trait SHLImpl {
-  self: SHL =>
+trait SHLImpl extends SHL {
   implicit object SHL_0 extends _2[rm8, imm8] {
     val opcode: OneOpcode = 0xC0 /+ 4
   }

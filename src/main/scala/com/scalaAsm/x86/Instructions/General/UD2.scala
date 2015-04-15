@@ -12,10 +12,9 @@ trait UD2 extends InstructionDefinition {
   val mnemonic = "UD2"
 }
 
-object UD2 extends UD2 with ZeroOperands[UD2] with UD2Impl
+object UD2 extends ZeroOperands[UD2] with UD2Impl
 
-trait UD2Impl {
-  self: UD2 =>
+trait UD2Impl extends UD2 {
   implicit object UD2_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x0B)
   }

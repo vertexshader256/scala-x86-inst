@@ -12,10 +12,9 @@ trait FCLEX extends InstructionDefinition {
   val mnemonic = "FCLEX"
 }
 
-object FCLEX extends FCLEX with ZeroOperands[FCLEX] with FCLEXImpl
+object FCLEX extends ZeroOperands[FCLEX] with FCLEXImpl
 
-trait FCLEXImpl {
-  self: FCLEX =>
+trait FCLEXImpl extends FCLEX {
   implicit object FCLEX_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }

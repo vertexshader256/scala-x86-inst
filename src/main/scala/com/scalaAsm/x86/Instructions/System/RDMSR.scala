@@ -12,10 +12,9 @@ trait RDMSR extends InstructionDefinition {
   val mnemonic = "RDMSR"
 }
 
-object RDMSR extends RDMSR with ZeroOperands[RDMSR] with RDMSRImpl
+object RDMSR extends ZeroOperands[RDMSR] with RDMSRImpl
 
-trait RDMSRImpl {
-  self: RDMSR =>
+trait RDMSRImpl extends RDMSR {
   implicit object RDMSR_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x32)
     override def hasImplicitOperand = true

@@ -12,10 +12,9 @@ trait IN extends InstructionDefinition {
   val mnemonic = "IN"
 }
 
-object IN extends IN with ZeroOperands[IN] with OneOperand[IN] with INImpl
+object IN extends ZeroOperands[IN] with OneOperand[IN] with INImpl
 
-trait INImpl {
-  self: IN =>
+trait INImpl extends IN {
   implicit object IN_0 extends _1[imm8] {
     val opcode: OneOpcode = 0xE4
     override def hasImplicitOperand = true

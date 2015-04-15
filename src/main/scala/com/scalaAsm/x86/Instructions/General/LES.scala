@@ -12,10 +12,9 @@ trait LES extends InstructionDefinition {
   val mnemonic = "LES"
 }
 
-object LES extends LES with TwoOperands[LES] with LESImpl
+object LES extends TwoOperands[LES] with LESImpl
 
-trait LESImpl {
-  self: LES =>
+trait LESImpl extends LES {
   implicit object LES_0 extends _2[r16, m] {
     val opcode: OneOpcode = 0xC4 /r
     override def hasImplicitOperand = true

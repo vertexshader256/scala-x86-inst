@@ -12,10 +12,9 @@ trait OUTSB extends InstructionDefinition {
   val mnemonic = "OUTSB"
 }
 
-object OUTSB extends OUTSB with ZeroOperands[OUTSB] with OUTSBImpl
+object OUTSB extends ZeroOperands[OUTSB] with OUTSBImpl
 
-trait OUTSBImpl {
-  self: OUTSB =>
+trait OUTSBImpl extends OUTSB {
   implicit object OUTSB_0 extends _0 {
     val opcode: OneOpcode = 0x6E
     override def hasImplicitOperand = true

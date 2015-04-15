@@ -12,10 +12,9 @@ trait HINT_NOP extends InstructionDefinition {
   val mnemonic = "HINT_NOP"
 }
 
-object HINT_NOP extends HINT_NOP with OneOperand[HINT_NOP] with HINT_NOPImpl
+object HINT_NOP extends OneOperand[HINT_NOP] with HINT_NOPImpl
 
-trait HINT_NOPImpl {
-  self: HINT_NOP =>
+trait HINT_NOPImpl extends HINT_NOP {
   implicit object HINT_NOP_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x18)
   }

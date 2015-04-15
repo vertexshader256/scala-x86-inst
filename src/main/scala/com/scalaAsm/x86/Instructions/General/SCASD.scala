@@ -12,10 +12,9 @@ trait SCASD extends InstructionDefinition {
   val mnemonic = "SCASD"
 }
 
-object SCASD extends SCASD with ZeroOperands[SCASD] with SCASDImpl
+object SCASD extends ZeroOperands[SCASD] with SCASDImpl
 
-trait SCASDImpl {
-  self: SCASD =>
+trait SCASDImpl extends SCASD {
   implicit object SCASD_0 extends _0 {
     val opcode: OneOpcode = 0xAF
     override def hasImplicitOperand = true

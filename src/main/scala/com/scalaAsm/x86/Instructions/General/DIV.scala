@@ -12,10 +12,9 @@ trait DIV extends InstructionDefinition {
   val mnemonic = "DIV"
 }
 
-object DIV extends DIV with OneOperand[DIV] with DIVImpl
+object DIV extends OneOperand[DIV] with DIVImpl
 
-trait DIVImpl {
-  self: DIV =>
+trait DIVImpl extends DIV {
   implicit object DIV_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 6
     override def hasImplicitOperand = true

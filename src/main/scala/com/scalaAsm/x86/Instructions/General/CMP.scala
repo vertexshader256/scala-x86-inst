@@ -12,10 +12,9 @@ trait CMP extends InstructionDefinition {
   val mnemonic = "CMP"
 }
 
-object CMP extends CMP with OneOperand[CMP] with TwoOperands[CMP] with CMPImpl
+object CMP extends OneOperand[CMP] with TwoOperands[CMP] with CMPImpl
 
-trait CMPLow {
-  self: CMP =>
+trait CMPLow extends CMP {
   implicit object CMP_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x38 /r
   }
@@ -74,7 +73,6 @@ trait CMPLow {
 }
 
 trait CMPImpl extends CMPLow {
-  self: CMP =>
   implicit object CMP_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x3B /r
   }

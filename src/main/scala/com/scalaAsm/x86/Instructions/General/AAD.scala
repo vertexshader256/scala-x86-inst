@@ -12,10 +12,9 @@ trait AAD extends InstructionDefinition {
   val mnemonic = "AAD"
 }
 
-object AAD extends AAD with ZeroOperands[AAD] with AADImpl
+object AAD extends ZeroOperands[AAD] with AADImpl
 
-trait AADImpl {
-  self: AAD =>
+trait AADImpl extends AAD {
   implicit object AAD_0 extends _0 {
     val opcode: OneOpcode = 0xD5
     override def hasImplicitOperand = true

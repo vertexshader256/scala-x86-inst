@@ -12,10 +12,9 @@ trait FMUL extends InstructionDefinition {
   val mnemonic = "FMUL"
 }
 
-object FMUL extends FMUL with OneOperand[FMUL] with FMULImpl
+object FMUL extends OneOperand[FMUL] with FMULImpl
 
-trait FMULImpl {
-  self: FMUL =>
+trait FMULImpl extends FMUL {
   implicit object FMUL_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD8 /+ 1
     override def hasImplicitOperand = true

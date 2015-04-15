@@ -12,10 +12,9 @@ trait ENTER extends InstructionDefinition {
   val mnemonic = "ENTER"
 }
 
-object ENTER extends ENTER with TwoOperands[ENTER] with ENTERImpl
+object ENTER extends TwoOperands[ENTER] with ENTERImpl
 
-trait ENTERImpl {
-  self: ENTER =>
+trait ENTERImpl extends ENTER {
   implicit object ENTER_0 extends _2[imm16, imm8] {
     val opcode: OneOpcode = 0xC8
     override def hasImplicitOperand = true

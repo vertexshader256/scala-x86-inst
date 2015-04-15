@@ -12,10 +12,9 @@ trait SAR extends InstructionDefinition {
   val mnemonic = "SAR"
 }
 
-object SAR extends SAR with OneOperand[SAR] with TwoOperands[SAR] with SARImpl
+object SAR extends OneOperand[SAR] with TwoOperands[SAR] with SARImpl
 
-trait SARImpl {
-  self: SAR =>
+trait SARImpl extends SAR {
   implicit object SAR_0 extends _2[rm8, imm8] {
     val opcode: OneOpcode = 0xC0 /+ 7
   }

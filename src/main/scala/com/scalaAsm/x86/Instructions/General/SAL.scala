@@ -12,10 +12,9 @@ trait SAL extends InstructionDefinition {
   val mnemonic = "SAL"
 }
 
-object SAL extends SAL with OneOperand[SAL] with TwoOperands[SAL] with SALImpl
+object SAL extends OneOperand[SAL] with TwoOperands[SAL] with SALImpl
 
-trait SALImpl {
-  self: SAL =>
+trait SALImpl extends SAL {
   implicit object SAL_0 extends _2[rm8, imm8] {
     val opcode: OneOpcode = 0xC0 /+ 4
   }

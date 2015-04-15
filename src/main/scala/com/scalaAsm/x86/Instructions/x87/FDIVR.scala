@@ -12,10 +12,9 @@ trait FDIVR extends InstructionDefinition {
   val mnemonic = "FDIVR"
 }
 
-object FDIVR extends FDIVR with OneOperand[FDIVR] with FDIVRImpl
+object FDIVR extends OneOperand[FDIVR] with FDIVRImpl
 
-trait FDIVRImpl {
-  self: FDIVR =>
+trait FDIVRImpl extends FDIVR {
   implicit object FDIVR_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD8 /+ 7
     override def hasImplicitOperand = true

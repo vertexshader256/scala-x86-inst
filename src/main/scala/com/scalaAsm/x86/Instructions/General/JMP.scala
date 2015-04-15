@@ -12,10 +12,9 @@ trait JMP extends InstructionDefinition {
   val mnemonic = "JMP"
 }
 
-object JMP extends JMP with OneOperand[JMP] with JMPImpl
+object JMP extends OneOperand[JMP] with JMPImpl
 
-trait JMPLow {
-  self: JMP =>
+trait JMPLow extends JMP {
   implicit object JMP_0 extends _1[rm16] {
     val opcode: OneOpcode = 0xFF /+ 4
   }
@@ -30,7 +29,6 @@ trait JMPLow {
 }
 
 trait JMPImpl extends JMPLow {
-  self: JMP =>
   implicit object JMP_3 extends _1[rel16] {
     val opcode: OneOpcode = 0xE9
   }

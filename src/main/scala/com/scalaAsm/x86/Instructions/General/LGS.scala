@@ -12,10 +12,9 @@ trait LGS extends InstructionDefinition {
   val mnemonic = "LGS"
 }
 
-object LGS extends LGS with TwoOperands[LGS] with LGSImpl
+object LGS extends TwoOperands[LGS] with LGSImpl
 
-trait LGSImpl {
-  self: LGS =>
+trait LGSImpl extends LGS {
   implicit object LGS_0 extends _2[r16, m] {
     val opcode: TwoOpcodes = (0x0F, 0xB5) /r
     override def hasImplicitOperand = true

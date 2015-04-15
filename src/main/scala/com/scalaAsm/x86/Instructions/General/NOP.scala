@@ -12,10 +12,9 @@ trait NOP extends InstructionDefinition {
   val mnemonic = "NOP"
 }
 
-object NOP extends NOP with ZeroOperands[NOP] with OneOperand[NOP] with NOPImpl
+object NOP extends ZeroOperands[NOP] with OneOperand[NOP] with NOPImpl
 
-trait NOPLow {
-  self: NOP =>
+trait NOPLow extends NOP {
   implicit object NOP_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x0D)
   }
@@ -26,7 +25,6 @@ trait NOPLow {
 }
 
 trait NOPImpl extends NOPLow {
-  self: NOP =>
   implicit object NOP_2 extends _0 {
     val opcode: OneOpcode = 0x90
   }

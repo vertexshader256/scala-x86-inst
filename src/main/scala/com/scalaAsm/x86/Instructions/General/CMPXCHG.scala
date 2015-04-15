@@ -12,10 +12,9 @@ trait CMPXCHG extends InstructionDefinition {
   val mnemonic = "CMPXCHG"
 }
 
-object CMPXCHG extends CMPXCHG with TwoOperands[CMPXCHG] with CMPXCHGImpl
+object CMPXCHG extends TwoOperands[CMPXCHG] with CMPXCHGImpl
 
-trait CMPXCHGImpl {
-  self: CMPXCHG =>
+trait CMPXCHGImpl extends CMPXCHG {
   implicit object CMPXCHG_0 extends _2[rm8, r8] {
     val opcode: TwoOpcodes = (0x0F, 0xB0) /r
     override def hasImplicitOperand = true

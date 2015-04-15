@@ -12,10 +12,9 @@ trait SETALC extends InstructionDefinition {
   val mnemonic = "SETALC"
 }
 
-object SETALC extends SETALC with ZeroOperands[SETALC] with SETALCImpl
+object SETALC extends ZeroOperands[SETALC] with SETALCImpl
 
-trait SETALCImpl {
-  self: SETALC =>
+trait SETALCImpl extends SETALC {
   implicit object SETALC_0 extends _0 {
     val opcode: OneOpcode = 0xD6
     override def hasImplicitOperand = true

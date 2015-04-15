@@ -12,10 +12,9 @@ trait PUSHAD extends InstructionDefinition {
   val mnemonic = "PUSHAD"
 }
 
-object PUSHAD extends PUSHAD with ZeroOperands[PUSHAD] with PUSHADImpl
+object PUSHAD extends ZeroOperands[PUSHAD] with PUSHADImpl
 
-trait PUSHADImpl {
-  self: PUSHAD =>
+trait PUSHADImpl extends PUSHAD {
   implicit object PUSHAD_0 extends _0 {
     val opcode: OneOpcode = 0x60
     override def hasImplicitOperand = true

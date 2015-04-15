@@ -12,10 +12,9 @@ trait IRETQ extends InstructionDefinition {
   val mnemonic = "IRETQ"
 }
 
-object IRETQ extends IRETQ with ZeroOperands[IRETQ] with IRETQImpl
+object IRETQ extends ZeroOperands[IRETQ] with IRETQImpl
 
-trait IRETQImpl {
-  self: IRETQ =>
+trait IRETQImpl extends IRETQ {
   implicit object IRETQ_0 extends _0 {
     val opcode: OneOpcode = 0xCF
     override def hasImplicitOperand = true

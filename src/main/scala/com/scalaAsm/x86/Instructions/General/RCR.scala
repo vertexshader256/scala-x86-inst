@@ -12,10 +12,9 @@ trait RCR extends InstructionDefinition {
   val mnemonic = "RCR"
 }
 
-object RCR extends RCR with OneOperand[RCR] with TwoOperands[RCR] with RCRImpl
+object RCR extends OneOperand[RCR] with TwoOperands[RCR] with RCRImpl
 
-trait RCRImpl {
-  self: RCR =>
+trait RCRImpl extends RCR {
   implicit object RCR_0 extends _2[rm8, imm8] {
     val opcode: OneOpcode = 0xC0 /+ 3
   }

@@ -12,10 +12,9 @@ trait BTC extends InstructionDefinition {
   val mnemonic = "BTC"
 }
 
-object BTC extends BTC with TwoOperands[BTC] with BTCImpl
+object BTC extends TwoOperands[BTC] with BTCImpl
 
-trait BTCImpl {
-  self: BTC =>
+trait BTCImpl extends BTC {
   implicit object BTC_0 extends _2[rm16, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 7
   }

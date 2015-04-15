@@ -12,10 +12,9 @@ trait JECXZ extends InstructionDefinition {
   val mnemonic = "JECXZ"
 }
 
-object JECXZ extends JECXZ with OneOperand[JECXZ] with JECXZImpl
+object JECXZ extends OneOperand[JECXZ] with JECXZImpl
 
-trait JECXZImpl {
-  self: JECXZ =>
+trait JECXZImpl extends JECXZ {
   implicit object JECXZ_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE3
     override def hasImplicitOperand = true

@@ -12,10 +12,9 @@ trait BOUND extends InstructionDefinition {
   val mnemonic = "BOUND"
 }
 
-object BOUND extends BOUND with TwoOperands[BOUND] with BOUNDImpl
+object BOUND extends TwoOperands[BOUND] with BOUNDImpl
 
-trait BOUNDImpl {
-  self: BOUND =>
+trait BOUNDImpl extends BOUND {
   implicit object BOUND_0 extends _2[r16, m16] {
     val opcode: OneOpcode = 0x62 /r
     override def hasImplicitOperand = true

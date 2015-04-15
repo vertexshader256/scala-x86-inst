@@ -12,10 +12,9 @@ trait JNP extends InstructionDefinition {
   val mnemonic = "JNP"
 }
 
-object JNP extends JNP with OneOperand[JNP] with JNPImpl
+object JNP extends OneOperand[JNP] with JNPImpl
 
-trait JNPImpl {
-  self: JNP =>
+trait JNPImpl extends JNP {
   implicit object JNP_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7B
   }

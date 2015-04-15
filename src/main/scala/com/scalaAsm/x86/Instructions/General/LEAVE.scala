@@ -12,10 +12,9 @@ trait LEAVE extends InstructionDefinition {
   val mnemonic = "LEAVE"
 }
 
-object LEAVE extends LEAVE with ZeroOperands[LEAVE] with LEAVEImpl
+object LEAVE extends ZeroOperands[LEAVE] with LEAVEImpl
 
-trait LEAVEImpl {
-  self: LEAVE =>
+trait LEAVEImpl extends LEAVE {
   implicit object LEAVE_0 extends _0 {
     val opcode: OneOpcode = 0xC9
     override def hasImplicitOperand = true

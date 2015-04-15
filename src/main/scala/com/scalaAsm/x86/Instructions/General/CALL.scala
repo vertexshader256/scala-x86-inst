@@ -12,10 +12,9 @@ trait CALL extends InstructionDefinition {
   val mnemonic = "CALL"
 }
 
-object CALL extends CALL with OneOperand[CALL] with CALLImpl
+object CALL extends OneOperand[CALL] with CALLImpl
 
-trait CALLLow {
-  self: CALL =>
+trait CALLLow extends CALL {
   implicit object CALL_0 extends _1[rm16] {
     val opcode: OneOpcode = 0xFF /+ 2
     override def hasImplicitOperand = true
@@ -33,7 +32,6 @@ trait CALLLow {
 }
 
 trait CALLImpl extends CALLLow {
-  self: CALL =>
   implicit object CALL_3 extends _1[rel16] {
     val opcode: OneOpcode = 0xE8
     override def hasImplicitOperand = true

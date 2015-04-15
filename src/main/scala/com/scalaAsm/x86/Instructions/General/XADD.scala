@@ -12,10 +12,9 @@ trait XADD extends InstructionDefinition {
   val mnemonic = "XADD"
 }
 
-object XADD extends XADD with TwoOperands[XADD] with XADDImpl
+object XADD extends TwoOperands[XADD] with XADDImpl
 
-trait XADDImpl {
-  self: XADD =>
+trait XADDImpl extends XADD {
   implicit object XADD_0 extends _2[rm8, r8] {
     val opcode: TwoOpcodes = (0x0F, 0xC0) /r
   }

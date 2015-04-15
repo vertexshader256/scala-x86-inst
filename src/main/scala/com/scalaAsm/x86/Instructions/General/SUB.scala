@@ -12,10 +12,9 @@ trait SUB extends InstructionDefinition {
   val mnemonic = "SUB"
 }
 
-object SUB extends SUB with OneOperand[SUB] with TwoOperands[SUB] with SUBImpl
+object SUB extends OneOperand[SUB] with TwoOperands[SUB] with SUBImpl
 
-trait SUBLow {
-  self: SUB =>
+trait SUBLow extends SUB {
   implicit object SUB_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x28 /r
   }
@@ -74,7 +73,6 @@ trait SUBLow {
 }
 
 trait SUBImpl extends SUBLow {
-  self: SUB =>
   implicit object SUB_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x2B /r
   }

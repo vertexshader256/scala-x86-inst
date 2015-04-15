@@ -12,10 +12,9 @@ trait CLC extends InstructionDefinition {
   val mnemonic = "CLC"
 }
 
-object CLC extends CLC with ZeroOperands[CLC] with CLCImpl
+object CLC extends ZeroOperands[CLC] with CLCImpl
 
-trait CLCImpl {
-  self: CLC =>
+trait CLCImpl extends CLC {
   implicit object CLC_0 extends _0 {
     val opcode: OneOpcode = 0xF8
   }

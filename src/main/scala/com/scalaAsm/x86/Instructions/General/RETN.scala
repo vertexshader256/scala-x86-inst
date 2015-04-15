@@ -12,10 +12,9 @@ trait RETN extends InstructionDefinition {
   val mnemonic = "RETN"
 }
 
-object RETN extends RETN with ZeroOperands[RETN] with OneOperand[RETN] with RETNImpl
+object RETN extends ZeroOperands[RETN] with OneOperand[RETN] with RETNImpl
 
-trait RETNImpl {
-  self: RETN =>
+trait RETNImpl extends RETN {
   implicit object RETN_0 extends _1[imm16] {
     val opcode: OneOpcode = 0xC2
     override def hasImplicitOperand = true

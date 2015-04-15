@@ -12,10 +12,9 @@ trait SHLD extends InstructionDefinition {
   val mnemonic = "SHLD"
 }
 
-object SHLD extends SHLD with TwoOperands[SHLD] with SHLDImpl
+object SHLD extends TwoOperands[SHLD] with SHLDImpl
 
-trait SHLDImpl {
-  self: SHLD =>
+trait SHLDImpl extends SHLD {
   implicit object SHLD_0 extends _2[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xA5) /r
     override def hasImplicitOperand = true

@@ -12,10 +12,9 @@ trait FRNDINT extends InstructionDefinition {
   val mnemonic = "FRNDINT"
 }
 
-object FRNDINT extends FRNDINT with ZeroOperands[FRNDINT] with FRNDINTImpl
+object FRNDINT extends ZeroOperands[FRNDINT] with FRNDINTImpl
 
-trait FRNDINTImpl {
-  self: FRNDINT =>
+trait FRNDINTImpl extends FRNDINT {
   implicit object FRNDINT_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true

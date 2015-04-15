@@ -12,10 +12,9 @@ trait SWAPGS extends InstructionDefinition {
   val mnemonic = "SWAPGS"
 }
 
-object SWAPGS extends SWAPGS with ZeroOperands[SWAPGS] with SWAPGSImpl
+object SWAPGS extends ZeroOperands[SWAPGS] with SWAPGSImpl
 
-trait SWAPGSImpl {
-  self: SWAPGS =>
+trait SWAPGSImpl extends SWAPGS {
   implicit object SWAPGS_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
     override def hasImplicitOperand = true

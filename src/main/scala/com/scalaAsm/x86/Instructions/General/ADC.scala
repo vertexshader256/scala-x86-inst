@@ -12,10 +12,9 @@ trait ADC extends InstructionDefinition {
   val mnemonic = "ADC"
 }
 
-object ADC extends ADC with OneOperand[ADC] with TwoOperands[ADC] with ADCImpl
+object ADC extends OneOperand[ADC] with TwoOperands[ADC] with ADCImpl
 
-trait ADCLow {
-  self: ADC =>
+trait ADCLow extends ADC {
   implicit object ADC_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x10 /r
   }
@@ -74,7 +73,6 @@ trait ADCLow {
 }
 
 trait ADCImpl extends ADCLow {
-  self: ADC =>
   implicit object ADC_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x13 /r
   }

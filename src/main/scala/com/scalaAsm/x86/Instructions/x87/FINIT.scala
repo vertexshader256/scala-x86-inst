@@ -12,10 +12,9 @@ trait FINIT extends InstructionDefinition {
   val mnemonic = "FINIT"
 }
 
-object FINIT extends FINIT with ZeroOperands[FINIT] with FINITImpl
+object FINIT extends ZeroOperands[FINIT] with FINITImpl
 
-trait FINITImpl {
-  self: FINIT =>
+trait FINITImpl extends FINIT {
   implicit object FINIT_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }

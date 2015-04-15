@@ -12,10 +12,9 @@ trait POP extends InstructionDefinition {
   val mnemonic = "POP"
 }
 
-object POP extends POP with ZeroOperands[POP] with OneOperand[POP] with POPImpl
+object POP extends ZeroOperands[POP] with OneOperand[POP] with POPImpl
 
-trait POPLow {
-  self: POP =>
+trait POPLow extends POP {
   implicit object POP_0 extends _1[rm16] {
     val opcode: OneOpcode = 0x8F /+ 0
     override def hasImplicitOperand = true
@@ -33,7 +32,6 @@ trait POPLow {
 }
 
 trait POPImpl extends POPLow {
-  self: POP =>
   implicit object POP_3 extends _0 {
     val opcode: OneOpcode = 0x07
     override def hasImplicitOperand = true

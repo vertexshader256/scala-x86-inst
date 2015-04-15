@@ -12,10 +12,9 @@ trait JC extends InstructionDefinition {
   val mnemonic = "JC"
 }
 
-object JC extends JC with OneOperand[JC] with JCImpl
+object JC extends OneOperand[JC] with JCImpl
 
-trait JCImpl {
-  self: JC =>
+trait JCImpl extends JC {
   implicit object JC_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x72
   }

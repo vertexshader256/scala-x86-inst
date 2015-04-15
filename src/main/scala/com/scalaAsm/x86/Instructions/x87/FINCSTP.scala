@@ -12,10 +12,9 @@ trait FINCSTP extends InstructionDefinition {
   val mnemonic = "FINCSTP"
 }
 
-object FINCSTP extends FINCSTP with ZeroOperands[FINCSTP] with FINCSTPImpl
+object FINCSTP extends ZeroOperands[FINCSTP] with FINCSTPImpl
 
-trait FINCSTPImpl {
-  self: FINCSTP =>
+trait FINCSTPImpl extends FINCSTP {
   implicit object FINCSTP_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
   }

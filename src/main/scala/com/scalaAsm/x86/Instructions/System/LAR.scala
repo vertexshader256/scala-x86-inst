@@ -12,10 +12,9 @@ trait LAR extends InstructionDefinition {
   val mnemonic = "LAR"
 }
 
-object LAR extends LAR with TwoOperands[LAR] with LARImpl
+object LAR extends TwoOperands[LAR] with LARImpl
 
-trait LARImpl {
-  self: LAR =>
+trait LARImpl extends LAR {
   implicit object LAR_0 extends _2[r16, m16] {
     val opcode: TwoOpcodes = (0x0F, 0x02) /r
   }

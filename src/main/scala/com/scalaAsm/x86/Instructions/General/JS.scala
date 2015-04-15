@@ -12,10 +12,9 @@ trait JS extends InstructionDefinition {
   val mnemonic = "JS"
 }
 
-object JS extends JS with OneOperand[JS] with JSImpl
+object JS extends OneOperand[JS] with JSImpl
 
-trait JSImpl {
-  self: JS =>
+trait JSImpl extends JS {
   implicit object JS_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x78
   }

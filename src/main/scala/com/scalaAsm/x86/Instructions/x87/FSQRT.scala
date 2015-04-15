@@ -12,10 +12,9 @@ trait FSQRT extends InstructionDefinition {
   val mnemonic = "FSQRT"
 }
 
-object FSQRT extends FSQRT with ZeroOperands[FSQRT] with FSQRTImpl
+object FSQRT extends ZeroOperands[FSQRT] with FSQRTImpl
 
-trait FSQRTImpl {
-  self: FSQRT =>
+trait FSQRTImpl extends FSQRT {
   implicit object FSQRT_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true

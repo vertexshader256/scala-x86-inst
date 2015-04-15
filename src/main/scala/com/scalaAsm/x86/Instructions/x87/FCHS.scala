@@ -12,10 +12,9 @@ trait FCHS extends InstructionDefinition {
   val mnemonic = "FCHS"
 }
 
-object FCHS extends FCHS with ZeroOperands[FCHS] with FCHSImpl
+object FCHS extends ZeroOperands[FCHS] with FCHSImpl
 
-trait FCHSImpl {
-  self: FCHS =>
+trait FCHSImpl extends FCHS {
   implicit object FCHS_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 4
     override def hasImplicitOperand = true

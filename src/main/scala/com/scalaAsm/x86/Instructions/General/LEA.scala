@@ -12,10 +12,9 @@ trait LEA extends InstructionDefinition {
   val mnemonic = "LEA"
 }
 
-object LEA extends LEA with TwoOperands[LEA] with LEAImpl
+object LEA extends TwoOperands[LEA] with LEAImpl
 
-trait LEAImpl {
-  self: LEA =>
+trait LEAImpl extends LEA {
   implicit object LEA_0 extends _2[r16, m] {
     val opcode: OneOpcode = 0x8D /r
   }

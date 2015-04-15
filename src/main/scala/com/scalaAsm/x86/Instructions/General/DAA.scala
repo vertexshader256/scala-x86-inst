@@ -12,10 +12,9 @@ trait DAA extends InstructionDefinition {
   val mnemonic = "DAA"
 }
 
-object DAA extends DAA with ZeroOperands[DAA] with DAAImpl
+object DAA extends ZeroOperands[DAA] with DAAImpl
 
-trait DAAImpl {
-  self: DAA =>
+trait DAAImpl extends DAA {
   implicit object DAA_0 extends _0 {
     val opcode: OneOpcode = 0x27
     override def hasImplicitOperand = true

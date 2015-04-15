@@ -12,10 +12,9 @@ trait BSWAP extends InstructionDefinition {
   val mnemonic = "BSWAP"
 }
 
-object BSWAP extends BSWAP with OneOperand[BSWAP] with BSWAPImpl
+object BSWAP extends OneOperand[BSWAP] with BSWAPImpl
 
-trait BSWAPImpl {
-  self: BSWAP =>
+trait BSWAPImpl extends BSWAP {
   implicit object BSWAP_0 extends _1[r16] {
     val opcode: TwoOpcodes = (0x0F, 0xC8) + rw
     override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))

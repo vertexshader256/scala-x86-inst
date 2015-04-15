@@ -12,10 +12,9 @@ trait SETNG extends InstructionDefinition {
   val mnemonic = "SETNG"
 }
 
-object SETNG extends SETNG with OneOperand[SETNG] with SETNGImpl
+object SETNG extends OneOperand[SETNG] with SETNGImpl
 
-trait SETNGImpl {
-  self: SETNG =>
+trait SETNGImpl extends SETNG {
   implicit object SETNG_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9E) /+ 0
   }

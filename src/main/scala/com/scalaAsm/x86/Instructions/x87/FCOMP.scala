@@ -12,10 +12,9 @@ trait FCOMP extends InstructionDefinition {
   val mnemonic = "FCOMP"
 }
 
-object FCOMP extends FCOMP with ZeroOperands[FCOMP] with OneOperand[FCOMP] with FCOMPImpl
+object FCOMP extends ZeroOperands[FCOMP] with OneOperand[FCOMP] with FCOMPImpl
 
-trait FCOMPImpl {
-  self: FCOMP =>
+trait FCOMPImpl extends FCOMP {
   implicit object FCOMP_0 extends _1[m32fp] {
     val opcode: OneOpcode = 0xD8 /+ 3
     override def hasImplicitOperand = true

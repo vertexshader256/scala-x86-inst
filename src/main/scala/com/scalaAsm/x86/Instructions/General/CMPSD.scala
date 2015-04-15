@@ -12,10 +12,9 @@ trait CMPSD extends InstructionDefinition {
   val mnemonic = "CMPSD"
 }
 
-object CMPSD extends CMPSD with ZeroOperands[CMPSD] with CMPSDImpl
+object CMPSD extends ZeroOperands[CMPSD] with CMPSDImpl
 
-trait CMPSDImpl {
-  self: CMPSD =>
+trait CMPSDImpl extends CMPSD {
   implicit object CMPSD_0 extends _0 {
     val opcode: OneOpcode = 0xA7
     override def hasImplicitOperand = true

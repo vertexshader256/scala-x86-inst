@@ -12,10 +12,9 @@ trait MOVSD extends InstructionDefinition {
   val mnemonic = "MOVSD"
 }
 
-object MOVSD extends MOVSD with ZeroOperands[MOVSD] with MOVSDImpl
+object MOVSD extends ZeroOperands[MOVSD] with MOVSDImpl
 
-trait MOVSDImpl {
-  self: MOVSD =>
+trait MOVSDImpl extends MOVSD {
   implicit object MOVSD_0 extends _0 {
     val opcode: OneOpcode = 0xA5
     override def hasImplicitOperand = true

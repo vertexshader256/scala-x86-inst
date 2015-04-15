@@ -12,10 +12,9 @@ trait VERR extends InstructionDefinition {
   val mnemonic = "VERR"
 }
 
-object VERR extends VERR with OneOperand[VERR] with VERRImpl
+object VERR extends OneOperand[VERR] with VERRImpl
 
-trait VERRImpl {
-  self: VERR =>
+trait VERRImpl extends VERR {
   implicit object VERR_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 4
   }

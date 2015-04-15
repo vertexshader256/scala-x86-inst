@@ -12,10 +12,9 @@ trait FDECSTP extends InstructionDefinition {
   val mnemonic = "FDECSTP"
 }
 
-object FDECSTP extends FDECSTP with ZeroOperands[FDECSTP] with FDECSTPImpl
+object FDECSTP extends ZeroOperands[FDECSTP] with FDECSTPImpl
 
-trait FDECSTPImpl {
-  self: FDECSTP =>
+trait FDECSTPImpl extends FDECSTP {
   implicit object FDECSTP_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
   }

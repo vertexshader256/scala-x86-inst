@@ -12,10 +12,9 @@ trait FPREM extends InstructionDefinition {
   val mnemonic = "FPREM"
 }
 
-object FPREM extends FPREM with ZeroOperands[FPREM] with FPREMImpl
+object FPREM extends ZeroOperands[FPREM] with FPREMImpl
 
-trait FPREMImpl {
-  self: FPREM =>
+trait FPREMImpl extends FPREM {
   implicit object FPREM_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true

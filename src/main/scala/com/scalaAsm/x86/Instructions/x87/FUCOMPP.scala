@@ -12,10 +12,9 @@ trait FUCOMPP extends InstructionDefinition {
   val mnemonic = "FUCOMPP"
 }
 
-object FUCOMPP extends FUCOMPP with ZeroOperands[FUCOMPP] with FUCOMPPImpl
+object FUCOMPP extends ZeroOperands[FUCOMPP] with FUCOMPPImpl
 
-trait FUCOMPPImpl {
-  self: FUCOMPP =>
+trait FUCOMPPImpl extends FUCOMPP {
   implicit object FUCOMPP_0 extends _0 {
     val opcode: OneOpcode = 0xDA /+ 5
     override def hasImplicitOperand = true

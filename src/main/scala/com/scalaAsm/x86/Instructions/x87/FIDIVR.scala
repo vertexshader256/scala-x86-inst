@@ -12,10 +12,9 @@ trait FIDIVR extends InstructionDefinition {
   val mnemonic = "FIDIVR"
 }
 
-object FIDIVR extends FIDIVR with OneOperand[FIDIVR] with FIDIVRImpl
+object FIDIVR extends OneOperand[FIDIVR] with FIDIVRImpl
 
-trait FIDIVRImpl {
-  self: FIDIVR =>
+trait FIDIVRImpl extends FIDIVR {
   implicit object FIDIVR_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 7
     override def hasImplicitOperand = true

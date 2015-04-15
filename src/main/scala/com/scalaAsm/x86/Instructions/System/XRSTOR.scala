@@ -12,10 +12,9 @@ trait XRSTOR extends InstructionDefinition {
   val mnemonic = "XRSTOR"
 }
 
-object XRSTOR extends XRSTOR with OneOperand[XRSTOR] with XRSTORImpl
+object XRSTOR extends OneOperand[XRSTOR] with XRSTORImpl
 
-trait XRSTORImpl {
-  self: XRSTOR =>
+trait XRSTORImpl extends XRSTOR {
   implicit object XRSTOR_0 extends _1[m] {
     val opcode: TwoOpcodes = (0x0F, 0xAE) /+ 5
     override def hasImplicitOperand = true

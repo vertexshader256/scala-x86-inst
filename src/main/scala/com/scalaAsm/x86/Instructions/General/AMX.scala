@@ -12,10 +12,9 @@ trait AMX extends InstructionDefinition {
   val mnemonic = "AMX"
 }
 
-object AMX extends AMX with OneOperand[AMX] with AMXImpl
+object AMX extends OneOperand[AMX] with AMXImpl
 
-trait AMXImpl {
-  self: AMX =>
+trait AMXImpl extends AMX {
   implicit object AMX_0 extends _1[imm8] {
     val opcode: OneOpcode = 0xD4
     override def hasImplicitOperand = true

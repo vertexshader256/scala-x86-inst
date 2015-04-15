@@ -12,10 +12,9 @@ trait DEC extends InstructionDefinition {
   val mnemonic = "DEC"
 }
 
-object DEC extends DEC with OneOperand[DEC] with DECImpl
+object DEC extends OneOperand[DEC] with DECImpl
 
-trait DECLow {
-  self: DEC =>
+trait DECLow extends DEC {
   implicit object DEC_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xFE /+ 1
   }
@@ -35,7 +34,6 @@ trait DECLow {
 }
 
 trait DECImpl extends DECLow {
-  self: DEC =>
   implicit object DEC_4 extends _1[r16] {
     val opcode: OneOpcode = 0x48 + rw
     override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))

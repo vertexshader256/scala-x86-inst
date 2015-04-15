@@ -12,10 +12,9 @@ trait SBB extends InstructionDefinition {
   val mnemonic = "SBB"
 }
 
-object SBB extends SBB with OneOperand[SBB] with TwoOperands[SBB] with SBBImpl
+object SBB extends OneOperand[SBB] with TwoOperands[SBB] with SBBImpl
 
-trait SBBLow {
-  self: SBB =>
+trait SBBLow extends SBB {
   implicit object SBB_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x18 /r
   }
@@ -74,7 +73,6 @@ trait SBBLow {
 }
 
 trait SBBImpl extends SBBLow {
-  self: SBB =>
   implicit object SBB_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x1B /r
   }

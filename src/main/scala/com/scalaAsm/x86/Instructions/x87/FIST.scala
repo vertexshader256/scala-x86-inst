@@ -12,10 +12,9 @@ trait FIST extends InstructionDefinition {
   val mnemonic = "FIST"
 }
 
-object FIST extends FIST with OneOperand[FIST] with FISTImpl
+object FIST extends OneOperand[FIST] with FISTImpl
 
-trait FISTImpl {
-  self: FIST =>
+trait FISTImpl extends FIST {
   implicit object FIST_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDB /+ 2
     override def hasImplicitOperand = true

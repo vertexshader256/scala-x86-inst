@@ -12,10 +12,9 @@ trait BT extends InstructionDefinition {
   val mnemonic = "BT"
 }
 
-object BT extends BT with TwoOperands[BT] with BTImpl
+object BT extends TwoOperands[BT] with BTImpl
 
-trait BTImpl {
-  self: BT =>
+trait BTImpl extends BT {
   implicit object BT_0 extends _2[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xA3) /r
   }

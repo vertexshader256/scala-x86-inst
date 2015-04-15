@@ -12,10 +12,9 @@ trait IDIV extends InstructionDefinition {
   val mnemonic = "IDIV"
 }
 
-object IDIV extends IDIV with OneOperand[IDIV] with IDIVImpl
+object IDIV extends OneOperand[IDIV] with IDIVImpl
 
-trait IDIVImpl {
-  self: IDIV =>
+trait IDIVImpl extends IDIV {
   implicit object IDIV_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 7
     override def hasImplicitOperand = true

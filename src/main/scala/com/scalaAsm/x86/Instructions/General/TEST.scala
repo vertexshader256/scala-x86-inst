@@ -12,10 +12,9 @@ trait TEST extends InstructionDefinition {
   val mnemonic = "TEST"
 }
 
-object TEST extends TEST with OneOperand[TEST] with TwoOperands[TEST] with TESTImpl
+object TEST extends OneOperand[TEST] with TwoOperands[TEST] with TESTImpl
 
-trait TESTLow {
-  self: TEST =>
+trait TESTLow extends TEST {
   implicit object TEST_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x84 /r
   }
@@ -57,7 +56,6 @@ trait TESTLow {
 }
 
 trait TESTImpl extends TESTLow {
-  self: TEST =>
   implicit object TEST_8 extends _1[imm8] {
     val opcode: OneOpcode = 0xA8
     override def hasImplicitOperand = true

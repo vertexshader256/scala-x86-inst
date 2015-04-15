@@ -12,10 +12,9 @@ trait FXCH extends InstructionDefinition {
   val mnemonic = "FXCH"
 }
 
-object FXCH extends FXCH with ZeroOperands[FXCH] with FXCHImpl
+object FXCH extends ZeroOperands[FXCH] with FXCHImpl
 
-trait FXCHImpl {
-  self: FXCH =>
+trait FXCHImpl extends FXCH {
   implicit object FXCH_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 1
     override def hasImplicitOperand = true

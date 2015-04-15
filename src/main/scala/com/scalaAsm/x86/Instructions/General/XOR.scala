@@ -12,10 +12,9 @@ trait XOR extends InstructionDefinition {
   val mnemonic = "XOR"
 }
 
-object XOR extends XOR with OneOperand[XOR] with TwoOperands[XOR] with XORImpl
+object XOR extends OneOperand[XOR] with TwoOperands[XOR] with XORImpl
 
-trait XORLow {
-  self: XOR =>
+trait XORLow extends XOR {
   implicit object XOR_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x30 /r
   }
@@ -74,7 +73,6 @@ trait XORLow {
 }
 
 trait XORImpl extends XORLow {
-  self: XOR =>
   implicit object XOR_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x33 /r
   }

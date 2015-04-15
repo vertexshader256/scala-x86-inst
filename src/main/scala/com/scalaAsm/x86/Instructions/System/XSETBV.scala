@@ -12,10 +12,9 @@ trait XSETBV extends InstructionDefinition {
   val mnemonic = "XSETBV"
 }
 
-object XSETBV extends XSETBV with ZeroOperands[XSETBV] with XSETBVImpl
+object XSETBV extends ZeroOperands[XSETBV] with XSETBVImpl
 
-trait XSETBVImpl {
-  self: XSETBV =>
+trait XSETBVImpl extends XSETBV {
   implicit object XSETBV_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 2
     override def hasImplicitOperand = true

@@ -12,10 +12,9 @@ trait LOOP extends InstructionDefinition {
   val mnemonic = "LOOP"
 }
 
-object LOOP extends LOOP with OneOperand[LOOP] with LOOPImpl
+object LOOP extends OneOperand[LOOP] with LOOPImpl
 
-trait LOOPImpl {
-  self: LOOP =>
+trait LOOPImpl extends LOOP {
   implicit object LOOP_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE2
     override def hasImplicitOperand = true

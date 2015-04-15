@@ -12,10 +12,9 @@ trait HLT extends InstructionDefinition {
   val mnemonic = "HLT"
 }
 
-object HLT extends HLT with ZeroOperands[HLT] with HLTImpl
+object HLT extends ZeroOperands[HLT] with HLTImpl
 
-trait HLTImpl {
-  self: HLT =>
+trait HLTImpl extends HLT {
   implicit object HLT_0 extends _0 {
     val opcode: OneOpcode = 0xF4
   }

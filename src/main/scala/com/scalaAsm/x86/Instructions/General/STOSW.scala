@@ -12,10 +12,9 @@ trait STOSW extends InstructionDefinition {
   val mnemonic = "STOSW"
 }
 
-object STOSW extends STOSW with ZeroOperands[STOSW] with STOSWImpl
+object STOSW extends ZeroOperands[STOSW] with STOSWImpl
 
-trait STOSWImpl {
-  self: STOSW =>
+trait STOSWImpl extends STOSW {
   implicit object STOSW_0 extends _0 {
     val opcode: OneOpcode = 0xAB
     override def hasImplicitOperand = true

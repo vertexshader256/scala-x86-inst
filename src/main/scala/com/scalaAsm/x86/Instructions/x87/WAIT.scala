@@ -12,10 +12,9 @@ trait WAIT extends InstructionDefinition {
   val mnemonic = "WAIT"
 }
 
-object WAIT extends WAIT with ZeroOperands[WAIT] with WAITImpl
+object WAIT extends ZeroOperands[WAIT] with WAITImpl
 
-trait WAITImpl {
-  self: WAIT =>
+trait WAITImpl extends WAIT {
   implicit object WAIT_0 extends _0 {
     val opcode: OneOpcode = 0x9B
   }

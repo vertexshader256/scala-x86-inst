@@ -12,10 +12,9 @@ trait SYSCALL extends InstructionDefinition {
   val mnemonic = "SYSCALL"
 }
 
-object SYSCALL extends SYSCALL with ZeroOperands[SYSCALL] with SYSCALLImpl
+object SYSCALL extends ZeroOperands[SYSCALL] with SYSCALLImpl
 
-trait SYSCALLImpl {
-  self: SYSCALL =>
+trait SYSCALLImpl extends SYSCALL {
   implicit object SYSCALL_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x05)
     override def hasImplicitOperand = true

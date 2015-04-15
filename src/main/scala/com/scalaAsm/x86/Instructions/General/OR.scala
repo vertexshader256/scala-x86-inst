@@ -12,10 +12,9 @@ trait OR extends InstructionDefinition {
   val mnemonic = "OR"
 }
 
-object OR extends OR with OneOperand[OR] with TwoOperands[OR] with ORImpl
+object OR extends OneOperand[OR] with TwoOperands[OR] with ORImpl
 
-trait ORLow {
-  self: OR =>
+trait ORLow extends OR {
   implicit object OR_0 extends _2[rm8, r8] {
     val opcode: OneOpcode = 0x08 /r
   }
@@ -74,7 +73,6 @@ trait ORLow {
 }
 
 trait ORImpl extends ORLow {
-  self: OR =>
   implicit object OR_12 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x0B /r
   }

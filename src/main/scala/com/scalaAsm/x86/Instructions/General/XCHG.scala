@@ -12,17 +12,15 @@ trait XCHG extends InstructionDefinition {
   val mnemonic = "XCHG"
 }
 
-object XCHG extends XCHG with OneOperand[XCHG] with TwoOperands[XCHG] with XCHGImpl
+object XCHG extends OneOperand[XCHG] with TwoOperands[XCHG] with XCHGImpl
 
-trait XCHGLow {
-  self: XCHG =>
+trait XCHGLow extends XCHG {
   implicit object XCHG_0 extends _2[r8, rm8] {
     val opcode: OneOpcode = 0x86 /r
   }
 }
 
 trait XCHGImpl extends XCHGLow {
-  self: XCHG =>
   implicit object XCHG_1 extends _2[r16, rm16] {
     val opcode: OneOpcode = 0x87 /r
   }

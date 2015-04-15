@@ -12,10 +12,9 @@ trait FNENI extends InstructionDefinition {
   val mnemonic = "FNENI"
 }
 
-object FNENI extends FNENI with ZeroOperands[FNENI] with FNENIImpl
+object FNENI extends ZeroOperands[FNENI] with FNENIImpl
 
-trait FNENIImpl {
-  self: FNENI =>
+trait FNENIImpl extends FNENI {
   implicit object FNENI_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
   }

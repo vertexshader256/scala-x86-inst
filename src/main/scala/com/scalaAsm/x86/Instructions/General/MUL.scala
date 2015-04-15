@@ -12,10 +12,9 @@ trait MUL extends InstructionDefinition {
   val mnemonic = "MUL"
 }
 
-object MUL extends MUL with OneOperand[MUL] with MULImpl
+object MUL extends OneOperand[MUL] with MULImpl
 
-trait MULImpl {
-  self: MUL =>
+trait MULImpl extends MUL {
   implicit object MUL_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 4
     override def hasImplicitOperand = true

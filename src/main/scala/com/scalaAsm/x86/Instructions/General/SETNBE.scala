@@ -12,10 +12,9 @@ trait SETNBE extends InstructionDefinition {
   val mnemonic = "SETNBE"
 }
 
-object SETNBE extends SETNBE with OneOperand[SETNBE] with SETNBEImpl
+object SETNBE extends OneOperand[SETNBE] with SETNBEImpl
 
-trait SETNBEImpl {
-  self: SETNBE =>
+trait SETNBEImpl extends SETNBE {
   implicit object SETNBE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x97) /+ 0
   }

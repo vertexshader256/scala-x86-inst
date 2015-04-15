@@ -12,10 +12,9 @@ trait FISUBR extends InstructionDefinition {
   val mnemonic = "FISUBR"
 }
 
-object FISUBR extends FISUBR with OneOperand[FISUBR] with FISUBRImpl
+object FISUBR extends OneOperand[FISUBR] with FISUBRImpl
 
-trait FISUBRImpl {
-  self: FISUBR =>
+trait FISUBRImpl extends FISUBR {
   implicit object FISUBR_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 5
     override def hasImplicitOperand = true

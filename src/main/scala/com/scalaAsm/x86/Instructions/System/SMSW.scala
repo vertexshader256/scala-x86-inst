@@ -12,10 +12,9 @@ trait SMSW extends InstructionDefinition {
   val mnemonic = "SMSW"
 }
 
-object SMSW extends SMSW with OneOperand[SMSW] with SMSWImpl
+object SMSW extends OneOperand[SMSW] with SMSWImpl
 
-trait SMSWImpl {
-  self: SMSW =>
+trait SMSWImpl extends SMSW {
   implicit object SMSW_0 extends _1[m16] {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 4
     override def hasImplicitOperand = true

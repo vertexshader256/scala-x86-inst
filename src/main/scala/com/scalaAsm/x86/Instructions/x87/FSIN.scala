@@ -12,10 +12,9 @@ trait FSIN extends InstructionDefinition {
   val mnemonic = "FSIN"
 }
 
-object FSIN extends FSIN with ZeroOperands[FSIN] with FSINImpl
+object FSIN extends ZeroOperands[FSIN] with FSINImpl
 
-trait FSINImpl {
-  self: FSIN =>
+trait FSINImpl extends FSIN {
   implicit object FSIN_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
     override def hasImplicitOperand = true
