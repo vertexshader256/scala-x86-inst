@@ -1,7 +1,9 @@
+package com.scalaAsm.x86.Instructions
+
 import com.scalaAsm.x86.Instructions.General._
 import com.scalaAsm.x86.Instructions.System._
 import com.scalaAsm.x86.Instructions.x87._
-import com.scalaAsm.x86.Instructions.x86Instruction
+
 object instructionMap {
   val instMap = Map[Int, Set[x86Instruction]](
     0 -> Set(STR.STR_2, SLDT.SLDT_1, LTR.LTR_0, JMPE.JMPE_0, STR.STR_3, VERR.VERR_0, SLDT.SLDT_3, ADD.ADD_9, LLDT.LLDT_0, VERW.VERW_0, SLDT.SLDT_2, STR.STR_1, SLDT.SLDT_0, STR.STR_0),
