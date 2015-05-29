@@ -27,7 +27,7 @@ trait CMPLow extends CMP {
     val opcode: OneOpcode = 0x39 /r
     override def explicitFormat(op1: rm32, op2: r32) = {
       if (op1.isInstanceOf[reg]) {
-         Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op2, op1.asInstanceOf[reg])), immediate = None))
+         Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op2, op1.asInstanceOf[reg])), immediate = Array()))
       } else None
     }
   }
@@ -81,7 +81,7 @@ trait CMPImpl extends CMPLow {
     val opcode: OneOpcode = 0x3B /r
     override def explicitFormat(op1: r32, op2: rm32) = {
       if (op2.isInstanceOf[reg]) {
-        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = None))
+        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = Array()))
       } else None
     }
   }

@@ -36,11 +36,11 @@ trait DECLow extends DEC {
 trait DECImpl extends DECLow {
   implicit object DEC_4 extends _1[r16] {
     val opcode: OneOpcode = 0x48 + rw
-    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 
   implicit object DEC_5 extends _1[r32] {
     val opcode: OneOpcode = 0x48 + rd
-    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 }

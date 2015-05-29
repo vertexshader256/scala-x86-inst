@@ -17,17 +17,17 @@ object BSWAP extends OneOperand[BSWAP] with BSWAPImpl
 trait BSWAPImpl extends BSWAP {
   implicit object BSWAP_0 extends _1[r16] {
     val opcode: TwoOpcodes = (0x0F, 0xC8) + rw
-    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 
   implicit object BSWAP_1 extends _1[r32] {
     val opcode: TwoOpcodes = (0x0F, 0xC8) + rd
-    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 
   implicit object BSWAP_2 extends _1[r64] {
     val opcode: TwoOpcodes = (0x0F, 0xC8) + ro
     override def prefix = REX.W(true)
-    override def explicitFormat(op1: r64) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r64) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 }

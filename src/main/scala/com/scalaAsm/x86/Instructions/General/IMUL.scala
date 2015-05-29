@@ -46,7 +46,7 @@ trait IMULImpl extends IMULLow {
     val opcode: TwoOpcodes = (0x0F, 0xAF) /r
     override def explicitFormat(op1: r32, op2: rm32) = {
       if (op2.isInstanceOf[reg]) {
-        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = None))
+        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = Array()))
       } else None
     }
   }

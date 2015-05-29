@@ -39,19 +39,19 @@ trait POPImpl extends POPLow {
 
   implicit object POP_4 extends _1[r16] {
     val opcode: OneOpcode = 0x58 + rw
-    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
     override def hasImplicitOperand = true
   }
 
   implicit object POP_5 extends _1[r32] {
     val opcode: OneOpcode = 0x58 + rd
-    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
     override def hasImplicitOperand = true
   }
 
   implicit object POP_6 extends _1[r64] {
     val opcode: OneOpcode = 0x58 + ro
-    override def explicitFormat(op1: r64) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r64) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
     override def hasImplicitOperand = true
   }
 }

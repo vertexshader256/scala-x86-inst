@@ -36,11 +36,11 @@ trait INCLow extends INC {
 trait INCImpl extends INCLow {
   implicit object INC_4 extends _1[r16] {
     val opcode: OneOpcode = 0x40 + rw
-    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 
   implicit object INC_5 extends _1[r32] {
     val opcode: OneOpcode = 0x40 + rd
-    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
   }
 }

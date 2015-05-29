@@ -29,7 +29,7 @@ trait XCHGImpl extends XCHGLow {
     val opcode: OneOpcode = 0x87 /r
     override def explicitFormat(op1: r32, op2: rm32) = {
       if (op2.isInstanceOf[reg]) {
-        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = None))
+        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = Array()))
       } else None
     }
   }
@@ -41,20 +41,20 @@ trait XCHGImpl extends XCHGLow {
 
   implicit object XCHG_4 extends _1[r16] {
     val opcode: OneOpcode = 0x90 + rw
-    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r16) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
     override def hasImplicitOperand = true
   }
 
   implicit object XCHG_5 extends _1[r32] {
     val opcode: OneOpcode = 0x90 + rd
-    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r32) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
     override def hasImplicitOperand = true
   }
 
   implicit object XCHG_6 extends _1[r64] {
     val opcode: OneOpcode = 0x90 + ro
     override def prefix = REX.W(true)
-    override def explicitFormat(op1: r64) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = None))
+    override def explicitFormat(op1: r64) = Some(InstructionFormat(addressingForm = NoModRM(), immediate = Array()))
     override def hasImplicitOperand = true
   }
 }
