@@ -18,5 +18,6 @@ trait FLDLG2Impl extends FLDLG2 {
   implicit object FLDLG2_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 5
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

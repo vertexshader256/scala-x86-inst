@@ -18,5 +18,6 @@ trait FUCOMPPImpl extends FUCOMPP {
   implicit object FUCOMPP_0 extends _0 {
     val opcode: OneOpcode = 0xDA /+ 5
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

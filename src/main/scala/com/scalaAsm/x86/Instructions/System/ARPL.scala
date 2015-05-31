@@ -17,6 +17,7 @@ object ARPL extends TwoOperands[ARPL] with ARPLImpl
 trait ARPLImpl extends ARPL {
   implicit object ARPL_0 extends _2[rm16, r16] {
     val opcode: OneOpcode = 0x63 /r
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
+    val hasRMByte = true
   }
 }

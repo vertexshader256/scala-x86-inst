@@ -17,5 +17,6 @@ object WBINVD extends ZeroOperands[WBINVD] with WBINVDImpl
 trait WBINVDImpl extends WBINVD {
   implicit object WBINVD_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x09)
-      }
+        val hasRMByte = false
+  }
 }

@@ -17,5 +17,6 @@ object STC extends ZeroOperands[STC] with STCImpl
 trait STCImpl extends STC {
   implicit object STC_0 extends _0 {
     val opcode: OneOpcode = 0xF9
-      }
+        val hasRMByte = false
+  }
 }

@@ -17,5 +17,6 @@ object FNDISI extends ZeroOperands[FNDISI] with FNDISIImpl
 trait FNDISIImpl extends FNDISI {
   implicit object FNDISI_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
-      }
+        val hasRMByte = true
+  }
 }

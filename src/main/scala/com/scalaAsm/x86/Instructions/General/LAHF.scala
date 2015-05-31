@@ -18,5 +18,6 @@ trait LAHFImpl extends LAHF {
   implicit object LAHF_0 extends _0 {
     val opcode: OneOpcode = 0x9F
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

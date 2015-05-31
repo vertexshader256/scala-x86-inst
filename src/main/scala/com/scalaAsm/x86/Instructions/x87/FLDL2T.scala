@@ -18,5 +18,6 @@ trait FLDL2TImpl extends FLDL2T {
   implicit object FLDL2T_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 5
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

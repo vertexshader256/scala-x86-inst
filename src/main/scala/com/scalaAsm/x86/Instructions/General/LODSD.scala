@@ -18,5 +18,6 @@ trait LODSDImpl extends LODSD {
   implicit object LODSD_0 extends _0 {
     val opcode: OneOpcode = 0xAD
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

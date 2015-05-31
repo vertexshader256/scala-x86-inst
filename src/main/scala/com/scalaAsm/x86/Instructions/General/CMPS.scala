@@ -18,5 +18,6 @@ trait CMPSImpl extends CMPS {
   implicit object CMPS_0 extends _0 {
     val opcode: OneOpcode = 0xA6
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

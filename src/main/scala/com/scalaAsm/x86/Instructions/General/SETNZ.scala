@@ -17,6 +17,7 @@ object SETNZ extends OneOperand[SETNZ] with SETNZImpl
 trait SETNZImpl extends SETNZ {
   implicit object SETNZ_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x95) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

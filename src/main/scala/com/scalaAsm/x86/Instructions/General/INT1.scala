@@ -18,5 +18,6 @@ trait INT1Impl extends INT1 {
   implicit object INT1_0 extends _0 {
     val opcode: OneOpcode = 0xF1
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

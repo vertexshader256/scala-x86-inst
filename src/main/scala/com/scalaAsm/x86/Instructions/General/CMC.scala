@@ -17,5 +17,6 @@ object CMC extends ZeroOperands[CMC] with CMCImpl
 trait CMCImpl extends CMC {
   implicit object CMC_0 extends _0 {
     val opcode: OneOpcode = 0xF5
-      }
+        val hasRMByte = false
+  }
 }

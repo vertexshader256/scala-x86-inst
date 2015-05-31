@@ -17,13 +17,15 @@ object FSTP extends OneOperand[FSTP] with FSTPImpl
 trait FSTPImpl extends FSTP {
   implicit object FSTP_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD9 /+ 3
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object FSTP_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDD /+ 3
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

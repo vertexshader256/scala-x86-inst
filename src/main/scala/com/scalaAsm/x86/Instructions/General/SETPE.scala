@@ -17,6 +17,7 @@ object SETPE extends OneOperand[SETPE] with SETPEImpl
 trait SETPEImpl extends SETPE {
   implicit object SETPE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9A) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

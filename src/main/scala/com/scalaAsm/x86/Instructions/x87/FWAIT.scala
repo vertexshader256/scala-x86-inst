@@ -17,5 +17,6 @@ object FWAIT extends ZeroOperands[FWAIT] with FWAITImpl
 trait FWAITImpl extends FWAIT {
   implicit object FWAIT_0 extends _0 {
     val opcode: OneOpcode = 0x9B
-      }
+        val hasRMByte = false
+  }
 }

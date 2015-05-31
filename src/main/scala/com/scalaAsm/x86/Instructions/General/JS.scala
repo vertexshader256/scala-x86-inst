@@ -17,16 +17,19 @@ object JS extends OneOperand[JS] with JSImpl
 trait JSImpl extends JS {
   implicit object JS_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x78
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 
   implicit object JS_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x88)
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 
   implicit object JS_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x88)
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 }

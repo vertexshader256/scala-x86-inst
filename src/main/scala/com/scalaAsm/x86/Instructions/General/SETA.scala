@@ -17,6 +17,7 @@ object SETA extends OneOperand[SETA] with SETAImpl
 trait SETAImpl extends SETA {
   implicit object SETA_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x97) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

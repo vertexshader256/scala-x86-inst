@@ -17,26 +17,30 @@ object SLDT extends OneOperand[SLDT] with SLDTImpl
 trait SLDTImpl extends SLDT {
   implicit object SLDT_0 extends _1[m16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object SLDT_1 extends _1[r16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RegFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object SLDT_2 extends _1[r32] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RegFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object SLDT_3 extends _1[r64] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 0
     override def prefix = REX.W(true)
-    val explicitFormat = new RmFormat{}
+    val format = RegFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

@@ -17,7 +17,8 @@ object LOOPNE extends OneOperand[LOOPNE] with LOOPNEImpl
 trait LOOPNEImpl extends LOOPNE {
   implicit object LOOPNE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE0
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

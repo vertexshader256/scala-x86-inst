@@ -17,7 +17,8 @@ object LLDT extends OneOperand[LLDT] with LLDTImpl
 trait LLDTImpl extends LLDT {
   implicit object LLDT_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 2
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

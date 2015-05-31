@@ -17,35 +17,41 @@ object MOVSX extends TwoOperands[MOVSX] with MOVSXImpl
 trait MOVSXLow extends MOVSX {
   implicit object MOVSX_0 extends _2[r16, rm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBE) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object MOVSX_1 extends _2[r32, rm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBE) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object MOVSX_2 extends _2[r64, rm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBE) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object MOVSX_3 extends _2[r32, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xBF) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object MOVSX_4 extends _2[r64, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xBF) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 }
 
 trait MOVSXImpl extends MOVSXLow {
   implicit object MOVSX_5 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xBF) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 }

@@ -18,5 +18,6 @@ trait FXCHImpl extends FXCH {
   implicit object FXCH_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 1
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

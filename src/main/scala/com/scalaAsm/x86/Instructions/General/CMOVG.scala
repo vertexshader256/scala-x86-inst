@@ -17,17 +17,20 @@ object CMOVG extends TwoOperands[CMOVG] with CMOVGImpl
 trait CMOVGImpl extends CMOVG {
   implicit object CMOVG_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x4F) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object CMOVG_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x4F) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object CMOVG_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0x4F) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 }

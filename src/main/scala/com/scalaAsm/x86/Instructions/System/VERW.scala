@@ -17,6 +17,7 @@ object VERW extends OneOperand[VERW] with VERWImpl
 trait VERWImpl extends VERW {
   implicit object VERW_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 5
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

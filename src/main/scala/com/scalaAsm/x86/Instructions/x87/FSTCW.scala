@@ -17,6 +17,7 @@ object FSTCW extends OneOperand[FSTCW] with FSTCWImpl
 trait FSTCWImpl extends FSTCW {
   implicit object FSTCW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xD9 /+ 7
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

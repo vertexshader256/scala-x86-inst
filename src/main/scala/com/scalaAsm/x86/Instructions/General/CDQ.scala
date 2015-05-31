@@ -18,5 +18,6 @@ trait CDQImpl extends CDQ {
   implicit object CDQ_0 extends _0 {
     val opcode: OneOpcode = 0x99
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

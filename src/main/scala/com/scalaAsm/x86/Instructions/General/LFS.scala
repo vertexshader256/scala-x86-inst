@@ -17,20 +17,23 @@ object LFS extends TwoOperands[LFS] with LFSImpl
 trait LFSImpl extends LFS {
   implicit object LFS_0 extends _2[r16, m] {
     val opcode: TwoOpcodes = (0x0F, 0xB4) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object LFS_1 extends _2[r32, m] {
     val opcode: TwoOpcodes = (0x0F, 0xB4) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object LFS_2 extends _2[r64, m] {
     val opcode: TwoOpcodes = (0x0F, 0xB4) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

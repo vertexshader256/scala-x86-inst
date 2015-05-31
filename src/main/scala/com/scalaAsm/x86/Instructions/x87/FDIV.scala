@@ -17,13 +17,15 @@ object FDIV extends OneOperand[FDIV] with FDIVImpl
 trait FDIVImpl extends FDIV {
   implicit object FDIV_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD8 /+ 6
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object FDIV_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 6
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

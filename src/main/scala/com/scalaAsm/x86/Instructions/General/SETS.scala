@@ -17,6 +17,7 @@ object SETS extends OneOperand[SETS] with SETSImpl
 trait SETSImpl extends SETS {
   implicit object SETS_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x98) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

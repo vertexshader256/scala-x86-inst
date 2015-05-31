@@ -17,6 +17,7 @@ object SETNAE extends OneOperand[SETNAE] with SETNAEImpl
 trait SETNAEImpl extends SETNAE {
   implicit object SETNAE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x92) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

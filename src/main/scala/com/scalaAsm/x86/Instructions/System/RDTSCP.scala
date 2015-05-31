@@ -18,5 +18,6 @@ trait RDTSCPImpl extends RDTSCP {
   implicit object RDTSCP_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

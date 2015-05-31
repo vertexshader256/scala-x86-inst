@@ -18,5 +18,6 @@ trait POPFImpl extends POPF {
   implicit object POPF_0 extends _0 {
     val opcode: OneOpcode = 0x9D
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

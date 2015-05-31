@@ -17,5 +17,6 @@ object FCLEX extends ZeroOperands[FCLEX] with FCLEXImpl
 trait FCLEXImpl extends FCLEX {
   implicit object FCLEX_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
-      }
+        val hasRMByte = true
+  }
 }

@@ -17,33 +17,39 @@ object BTC extends TwoOperands[BTC] with BTCImpl
 trait BTCImpl extends BTC {
   implicit object BTC_0 extends _2[rm16, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 7
-    val explicitFormat = new RmImmFormat{}
+    val format = RmImmFormat
+    val hasRMByte = true
   }
 
   implicit object BTC_1 extends _2[rm32, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 7
-    val explicitFormat = new RmImmFormat{}
+    val format = RmImmFormat
+    val hasRMByte = true
   }
 
   implicit object BTC_2 extends _2[rm64, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 7
     override def prefix = REX.W(true)
-    val explicitFormat = new RmImmFormat{}
+    val format = RmImmFormat
+    val hasRMByte = true
   }
 
   implicit object BTC_3 extends _2[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xBB) /r
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
+    val hasRMByte = true
   }
 
   implicit object BTC_4 extends _2[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xBB) /r
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
+    val hasRMByte = true
   }
 
   implicit object BTC_5 extends _2[rm64, r64] {
     val opcode: TwoOpcodes = (0x0F, 0xBB) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
+    val hasRMByte = true
   }
 }

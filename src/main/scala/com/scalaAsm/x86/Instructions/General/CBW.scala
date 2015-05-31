@@ -18,5 +18,6 @@ trait CBWImpl extends CBW {
   implicit object CBW_0 extends _0 {
     val opcode: OneOpcode = 0x98
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

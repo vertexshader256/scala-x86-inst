@@ -17,22 +17,26 @@ object NOT extends OneOperand[NOT] with NOTImpl
 trait NOTImpl extends NOT {
   implicit object NOT_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 2
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 
   implicit object NOT_1 extends _1[rm16] {
     val opcode: OneOpcode = 0xF7 /+ 2
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 
   implicit object NOT_2 extends _1[rm32] {
     val opcode: OneOpcode = 0xF7 /+ 2
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 
   implicit object NOT_3 extends _1[rm64] {
     val opcode: OneOpcode = 0xF7 /+ 2
     override def prefix = REX.W(true)
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

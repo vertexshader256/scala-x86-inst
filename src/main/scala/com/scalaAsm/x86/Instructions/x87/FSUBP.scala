@@ -18,5 +18,6 @@ trait FSUBPImpl extends FSUBP {
   implicit object FSUBP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 5
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

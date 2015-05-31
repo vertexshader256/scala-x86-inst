@@ -17,5 +17,6 @@ object WAIT extends ZeroOperands[WAIT] with WAITImpl
 trait WAITImpl extends WAIT {
   implicit object WAIT_0 extends _0 {
     val opcode: OneOpcode = 0x9B
-      }
+        val hasRMByte = false
+  }
 }

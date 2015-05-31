@@ -18,5 +18,6 @@ trait XSETBVImpl extends XSETBV {
   implicit object XSETBV_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 2
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

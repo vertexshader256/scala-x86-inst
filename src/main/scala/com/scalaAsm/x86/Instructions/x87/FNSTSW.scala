@@ -17,11 +17,13 @@ object FNSTSW extends ZeroOperands[FNSTSW] with OneOperand[FNSTSW] with FNSTSWIm
 trait FNSTSWImpl extends FNSTSW {
   implicit object FNSTSW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xDD /+ 7
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 
   implicit object FNSTSW_1 extends _0 {
     val opcode: OneOpcode = 0xDF /+ 4
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

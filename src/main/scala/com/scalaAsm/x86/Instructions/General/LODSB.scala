@@ -18,5 +18,6 @@ trait LODSBImpl extends LODSB {
   implicit object LODSB_0 extends _0 {
     val opcode: OneOpcode = 0xAC
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

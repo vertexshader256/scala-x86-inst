@@ -18,5 +18,6 @@ trait CLTSImpl extends CLTS {
   implicit object CLTS_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x06)
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

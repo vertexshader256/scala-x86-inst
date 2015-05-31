@@ -17,20 +17,23 @@ object SHLD extends TwoOperands[SHLD] with SHLDImpl
 trait SHLDImpl extends SHLD {
   implicit object SHLD_0 extends _2[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xA5) /r
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object SHLD_1 extends _2[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xA5) /r
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object SHLD_2 extends _2[rm64, r64] {
     val opcode: TwoOpcodes = (0x0F, 0xA5) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new MemRegFormat{}
+    val format = MemRegFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

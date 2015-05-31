@@ -17,16 +17,19 @@ object JNS extends OneOperand[JNS] with JNSImpl
 trait JNSImpl extends JNS {
   implicit object JNS_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x79
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 
   implicit object JNS_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x89)
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 
   implicit object JNS_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x89)
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 }

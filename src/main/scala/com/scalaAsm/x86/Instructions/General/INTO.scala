@@ -18,5 +18,6 @@ trait INTOImpl extends INTO {
   implicit object INTO_0 extends _0 {
     val opcode: OneOpcode = 0xCE
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

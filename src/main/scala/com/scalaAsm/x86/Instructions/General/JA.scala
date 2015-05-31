@@ -17,16 +17,19 @@ object JA extends OneOperand[JA] with JAImpl
 trait JAImpl extends JA {
   implicit object JA_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x77
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 
   implicit object JA_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x87)
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 
   implicit object JA_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x87)
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
+    val hasRMByte = false
   }
 }

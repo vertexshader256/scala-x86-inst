@@ -18,5 +18,6 @@ trait CWDEImpl extends CWDE {
   implicit object CWDE_0 extends _0 {
     val opcode: OneOpcode = 0x98
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

@@ -18,5 +18,6 @@ trait FSCALEImpl extends FSCALE {
   implicit object FSCALE_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
         override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }

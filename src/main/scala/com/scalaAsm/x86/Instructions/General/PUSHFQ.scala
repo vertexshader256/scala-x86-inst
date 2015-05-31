@@ -18,5 +18,6 @@ trait PUSHFQImpl extends PUSHFQ {
   implicit object PUSHFQ_0 extends _0 {
     val opcode: OneOpcode = 0x9C
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

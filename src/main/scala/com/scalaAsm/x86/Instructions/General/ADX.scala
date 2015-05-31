@@ -17,7 +17,8 @@ object ADX extends OneOperand[ADX] with ADXImpl
 trait ADXImpl extends ADX {
   implicit object ADX_0 extends _1[imm8] {
     val opcode: OneOpcode = 0xD5
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

@@ -17,17 +17,20 @@ object CMOVAE extends TwoOperands[CMOVAE] with CMOVAEImpl
 trait CMOVAEImpl extends CMOVAE {
   implicit object CMOVAE_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x43) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object CMOVAE_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x43) /r
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 
   implicit object CMOVAE_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0x43) /r
     override def prefix = REX.W(true)
-    val explicitFormat = new RegRmFormat{}
+    val format = RegRmFormat
+    val hasRMByte = true
   }
 }

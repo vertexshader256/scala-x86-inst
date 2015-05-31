@@ -17,7 +17,8 @@ object LOOP extends OneOperand[LOOP] with LOOPImpl
 trait LOOPImpl extends LOOP {
   implicit object LOOP_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE2
-    val explicitFormat = new ImmFormat{}
+    val format = ImmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

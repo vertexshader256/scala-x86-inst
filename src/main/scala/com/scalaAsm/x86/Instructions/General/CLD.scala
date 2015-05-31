@@ -17,5 +17,6 @@ object CLD extends ZeroOperands[CLD] with CLDImpl
 trait CLDImpl extends CLD {
   implicit object CLD_0 extends _0 {
     val opcode: OneOpcode = 0xFC
-      }
+        val hasRMByte = false
+  }
 }

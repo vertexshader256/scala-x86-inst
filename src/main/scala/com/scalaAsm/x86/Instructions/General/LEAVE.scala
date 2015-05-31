@@ -18,5 +18,6 @@ trait LEAVEImpl extends LEAVE {
   implicit object LEAVE_0 extends _0 {
     val opcode: OneOpcode = 0xC9
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

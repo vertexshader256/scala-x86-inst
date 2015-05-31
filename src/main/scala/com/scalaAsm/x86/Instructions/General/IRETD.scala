@@ -18,5 +18,6 @@ trait IRETDImpl extends IRETD {
   implicit object IRETD_0 extends _0 {
     val opcode: OneOpcode = 0xCF
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

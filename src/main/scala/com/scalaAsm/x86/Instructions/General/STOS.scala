@@ -18,5 +18,6 @@ trait STOSImpl extends STOS {
   implicit object STOS_0 extends _0 {
     val opcode: OneOpcode = 0xAA
         override def hasImplicitOperand = true
+    val hasRMByte = false
   }
 }

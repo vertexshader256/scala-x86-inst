@@ -17,5 +17,6 @@ object FSETPM extends ZeroOperands[FSETPM] with FSETPMImpl
 trait FSETPMImpl extends FSETPM {
   implicit object FSETPM_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
-      }
+        val hasRMByte = true
+  }
 }

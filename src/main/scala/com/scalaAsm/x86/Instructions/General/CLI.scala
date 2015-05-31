@@ -17,5 +17,6 @@ object CLI extends ZeroOperands[CLI] with CLIImpl
 trait CLIImpl extends CLI {
   implicit object CLI_0 extends _0 {
     val opcode: OneOpcode = 0xFA
-      }
+        val hasRMByte = false
+  }
 }

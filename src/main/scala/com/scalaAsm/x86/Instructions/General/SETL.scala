@@ -17,6 +17,7 @@ object SETL extends OneOperand[SETL] with SETLImpl
 trait SETLImpl extends SETL {
   implicit object SETL_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9C) /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
+    val hasRMByte = true
   }
 }

@@ -17,13 +17,15 @@ object FADD extends OneOperand[FADD] with FADDImpl
 trait FADDImpl extends FADD {
   implicit object FADD_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD8 /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 
   implicit object FADD_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 0
-    val explicitFormat = new RmFormat{}
+    val format = RmFormat
     override def hasImplicitOperand = true
+    val hasRMByte = true
   }
 }
