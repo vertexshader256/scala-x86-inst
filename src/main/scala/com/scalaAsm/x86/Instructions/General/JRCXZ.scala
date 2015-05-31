@@ -17,6 +17,7 @@ object JRCXZ extends OneOperand[JRCXZ] with JRCXZImpl
 trait JRCXZImpl extends JRCXZ {
   implicit object JRCXZ_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE3
+    val explicitFormat = new ImmFormat{}
     override def hasImplicitOperand = true
   }
 }

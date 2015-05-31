@@ -17,13 +17,16 @@ object JNBE extends OneOperand[JNBE] with JNBEImpl
 trait JNBEImpl extends JNBE {
   implicit object JNBE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x77
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JNBE_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x87)
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JNBE_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x87)
+    val explicitFormat = new ImmFormat{}
   }
 }

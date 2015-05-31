@@ -17,6 +17,6 @@ object PUSHFD extends ZeroOperands[PUSHFD] with PUSHFDImpl
 trait PUSHFDImpl extends PUSHFD {
   implicit object PUSHFD_0 extends _0 {
     val opcode: OneOpcode = 0x9C
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

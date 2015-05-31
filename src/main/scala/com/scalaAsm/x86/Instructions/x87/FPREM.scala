@@ -17,6 +17,6 @@ object FPREM extends ZeroOperands[FPREM] with FPREMImpl
 trait FPREMImpl extends FPREM {
   implicit object FPREM_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

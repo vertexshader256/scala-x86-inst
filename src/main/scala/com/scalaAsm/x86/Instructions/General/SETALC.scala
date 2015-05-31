@@ -17,6 +17,6 @@ object SETALC extends ZeroOperands[SETALC] with SETALCImpl
 trait SETALCImpl extends SETALC {
   implicit object SETALC_0 extends _0 {
     val opcode: OneOpcode = 0xD6
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

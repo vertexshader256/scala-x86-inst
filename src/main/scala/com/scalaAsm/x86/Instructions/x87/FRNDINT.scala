@@ -17,6 +17,6 @@ object FRNDINT extends ZeroOperands[FRNDINT] with FRNDINTImpl
 trait FRNDINTImpl extends FRNDINT {
   implicit object FRNDINT_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 7
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

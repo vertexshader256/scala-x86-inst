@@ -17,6 +17,6 @@ object INTO extends ZeroOperands[INTO] with INTOImpl
 trait INTOImpl extends INTO {
   implicit object INTO_0 extends _0 {
     val opcode: OneOpcode = 0xCE
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

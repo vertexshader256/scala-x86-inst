@@ -17,6 +17,6 @@ object SWAPGS extends ZeroOperands[SWAPGS] with SWAPGSImpl
 trait SWAPGSImpl extends SWAPGS {
   implicit object SWAPGS_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

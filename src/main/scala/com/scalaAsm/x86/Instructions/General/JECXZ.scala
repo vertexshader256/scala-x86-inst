@@ -17,6 +17,7 @@ object JECXZ extends OneOperand[JECXZ] with JECXZImpl
 trait JECXZImpl extends JECXZ {
   implicit object JECXZ_0 extends _1[rel8] {
     val opcode: OneOpcode = 0xE3
+    val explicitFormat = new ImmFormat{}
     override def hasImplicitOperand = true
   }
 }

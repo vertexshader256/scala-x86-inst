@@ -17,6 +17,6 @@ object FSUBRP extends ZeroOperands[FSUBRP] with FSUBRPImpl
 trait FSUBRPImpl extends FSUBRP {
   implicit object FSUBRP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 4
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

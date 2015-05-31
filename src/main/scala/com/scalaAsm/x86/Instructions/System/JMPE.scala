@@ -17,5 +17,5 @@ object JMPE extends ZeroOperands[JMPE] with JMPEImpl
 trait JMPEImpl extends JMPE {
   implicit object JMPE_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 6
-  }
+      }
 }

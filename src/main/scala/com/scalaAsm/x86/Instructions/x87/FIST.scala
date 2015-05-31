@@ -17,11 +17,13 @@ object FIST extends OneOperand[FIST] with FISTImpl
 trait FISTImpl extends FIST {
   implicit object FIST_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDB /+ 2
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object FIST_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDF /+ 2
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

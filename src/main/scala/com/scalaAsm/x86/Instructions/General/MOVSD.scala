@@ -17,6 +17,6 @@ object MOVSD extends ZeroOperands[MOVSD] with MOVSDImpl
 trait MOVSDImpl extends MOVSD {
   implicit object MOVSD_0 extends _0 {
     val opcode: OneOpcode = 0xA5
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

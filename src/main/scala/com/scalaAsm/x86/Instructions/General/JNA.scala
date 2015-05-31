@@ -17,13 +17,16 @@ object JNA extends OneOperand[JNA] with JNAImpl
 trait JNAImpl extends JNA {
   implicit object JNA_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x76
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JNA_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x86)
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JNA_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x86)
+    val explicitFormat = new ImmFormat{}
   }
 }

@@ -17,6 +17,6 @@ object CBW extends ZeroOperands[CBW] with CBWImpl
 trait CBWImpl extends CBW {
   implicit object CBW_0 extends _0 {
     val opcode: OneOpcode = 0x98
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

@@ -17,5 +17,5 @@ object STI extends ZeroOperands[STI] with STIImpl
 trait STIImpl extends STI {
   implicit object STI_0 extends _0 {
     val opcode: OneOpcode = 0xFB
-  }
+      }
 }

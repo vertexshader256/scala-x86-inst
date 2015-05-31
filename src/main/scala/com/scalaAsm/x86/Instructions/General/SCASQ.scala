@@ -17,6 +17,6 @@ object SCASQ extends ZeroOperands[SCASQ] with SCASQImpl
 trait SCASQImpl extends SCASQ {
   implicit object SCASQ_0 extends _0 {
     val opcode: OneOpcode = 0xAF
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

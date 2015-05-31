@@ -17,19 +17,17 @@ object BSF extends TwoOperands[BSF] with BSFImpl
 trait BSFImpl extends BSF {
   implicit object BSF_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xBC) /r
+    val explicitFormat = new RegRmFormat{}
   }
 
   implicit object BSF_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0xBC) /r
-    override def explicitFormat(op1: r32, op2: rm32) = {
-      if (op2.isInstanceOf[reg]) {
-        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = Array()))
-      } else None
-    }
+    val explicitFormat = new RegRmFormat{}
   }
 
   implicit object BSF_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0xBC) /r
     override def prefix = REX.W(true)
+    val explicitFormat = new RegRmFormat{}
   }
 }

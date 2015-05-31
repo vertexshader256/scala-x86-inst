@@ -17,6 +17,6 @@ object RDTSC extends ZeroOperands[RDTSC] with RDTSCImpl
 trait RDTSCImpl extends RDTSC {
   implicit object RDTSC_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x31)
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

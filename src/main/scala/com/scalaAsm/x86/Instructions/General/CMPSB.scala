@@ -17,6 +17,6 @@ object CMPSB extends ZeroOperands[CMPSB] with CMPSBImpl
 trait CMPSBImpl extends CMPSB {
   implicit object CMPSB_0 extends _0 {
     val opcode: OneOpcode = 0xA6
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

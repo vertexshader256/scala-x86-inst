@@ -17,6 +17,6 @@ object CWD extends ZeroOperands[CWD] with CWDImpl
 trait CWDImpl extends CWD {
   implicit object CWD_0 extends _0 {
     val opcode: OneOpcode = 0x99
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

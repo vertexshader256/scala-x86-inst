@@ -17,6 +17,6 @@ object FMULP extends ZeroOperands[FMULP] with FMULPImpl
 trait FMULPImpl extends FMULP {
   implicit object FMULP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 1
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

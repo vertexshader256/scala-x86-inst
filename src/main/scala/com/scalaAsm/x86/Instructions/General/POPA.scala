@@ -17,6 +17,6 @@ object POPA extends ZeroOperands[POPA] with POPAImpl
 trait POPAImpl extends POPA {
   implicit object POPA_0 extends _0 {
     val opcode: OneOpcode = 0x61
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

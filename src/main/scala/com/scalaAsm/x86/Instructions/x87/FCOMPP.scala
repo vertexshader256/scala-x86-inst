@@ -17,6 +17,6 @@ object FCOMPP extends ZeroOperands[FCOMPP] with FCOMPPImpl
 trait FCOMPPImpl extends FCOMPP {
   implicit object FCOMPP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 3
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

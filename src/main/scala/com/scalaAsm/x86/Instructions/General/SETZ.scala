@@ -17,5 +17,6 @@ object SETZ extends OneOperand[SETZ] with SETZImpl
 trait SETZImpl extends SETZ {
   implicit object SETZ_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x94) /+ 0
+    val explicitFormat = new RmFormat{}
   }
 }

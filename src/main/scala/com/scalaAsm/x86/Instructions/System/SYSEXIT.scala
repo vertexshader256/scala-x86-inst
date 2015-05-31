@@ -17,6 +17,6 @@ object SYSEXIT extends ZeroOperands[SYSEXIT] with SYSEXITImpl
 trait SYSEXITImpl extends SYSEXIT {
   implicit object SYSEXIT_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x35)
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

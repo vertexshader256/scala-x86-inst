@@ -17,6 +17,6 @@ object FCHS extends ZeroOperands[FCHS] with FCHSImpl
 trait FCHSImpl extends FCHS {
   implicit object FCHS_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 4
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

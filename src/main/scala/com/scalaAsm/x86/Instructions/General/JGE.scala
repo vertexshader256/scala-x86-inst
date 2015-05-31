@@ -17,13 +17,16 @@ object JGE extends OneOperand[JGE] with JGEImpl
 trait JGEImpl extends JGE {
   implicit object JGE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7D
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JGE_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8D)
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JGE_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8D)
+    val explicitFormat = new ImmFormat{}
   }
 }

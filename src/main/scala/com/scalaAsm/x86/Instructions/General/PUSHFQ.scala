@@ -17,6 +17,6 @@ object PUSHFQ extends ZeroOperands[PUSHFQ] with PUSHFQImpl
 trait PUSHFQImpl extends PUSHFQ {
   implicit object PUSHFQ_0 extends _0 {
     val opcode: OneOpcode = 0x9C
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

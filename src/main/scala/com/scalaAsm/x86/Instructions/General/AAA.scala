@@ -17,6 +17,6 @@ object AAA extends ZeroOperands[AAA] with AAAImpl
 trait AAAImpl extends AAA {
   implicit object AAA_0 extends _0 {
     val opcode: OneOpcode = 0x37
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

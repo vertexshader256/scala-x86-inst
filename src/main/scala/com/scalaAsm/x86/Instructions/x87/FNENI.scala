@@ -17,5 +17,5 @@ object FNENI extends ZeroOperands[FNENI] with FNENIImpl
 trait FNENIImpl extends FNENI {
   implicit object FNENI_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
-  }
+      }
 }

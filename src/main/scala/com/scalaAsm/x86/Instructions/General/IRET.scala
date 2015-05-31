@@ -17,6 +17,6 @@ object IRET extends ZeroOperands[IRET] with IRETImpl
 trait IRETImpl extends IRET {
   implicit object IRET_0 extends _0 {
     val opcode: OneOpcode = 0xCF
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

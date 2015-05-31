@@ -17,14 +17,17 @@ object LEA extends TwoOperands[LEA] with LEAImpl
 trait LEAImpl extends LEA {
   implicit object LEA_0 extends _2[r16, m] {
     val opcode: OneOpcode = 0x8D /r
+    val explicitFormat = new RegRmFormat{}
   }
 
   implicit object LEA_1 extends _2[r32, m] {
     val opcode: OneOpcode = 0x8D /r
+    val explicitFormat = new RegRmFormat{}
   }
 
   implicit object LEA_2 extends _2[r64, m] {
     val opcode: OneOpcode = 0x8D /r
     override def prefix = REX.W(true)
+    val explicitFormat = new RegRmFormat{}
   }
 }

@@ -17,6 +17,6 @@ object LODS extends ZeroOperands[LODS] with LODSImpl
 trait LODSImpl extends LODS {
   implicit object LODS_0 extends _0 {
     val opcode: OneOpcode = 0xAC
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

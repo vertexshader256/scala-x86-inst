@@ -17,6 +17,7 @@ object INT extends OneOperand[INT] with INTImpl
 trait INTImpl extends INT {
   implicit object INT_0 extends _1[imm8] {
     val opcode: OneOpcode = 0xCD
+    val explicitFormat = new ImmFormat{}
     override def hasImplicitOperand = true
   }
 }

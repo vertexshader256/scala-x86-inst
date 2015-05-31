@@ -17,19 +17,17 @@ object CMOVA extends TwoOperands[CMOVA] with CMOVAImpl
 trait CMOVAImpl extends CMOVA {
   implicit object CMOVA_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x47) /r
+    val explicitFormat = new RegRmFormat{}
   }
 
   implicit object CMOVA_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x47) /r
-    override def explicitFormat(op1: r32, op2: rm32) = {
-      if (op2.isInstanceOf[reg]) {
-        Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op1, op2.asInstanceOf[reg])), immediate = Array()))
-      } else None
-    }
+    val explicitFormat = new RegRmFormat{}
   }
 
   implicit object CMOVA_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0x47) /r
     override def prefix = REX.W(true)
+    val explicitFormat = new RegRmFormat{}
   }
 }

@@ -17,6 +17,7 @@ object AMX extends OneOperand[AMX] with AMXImpl
 trait AMXImpl extends AMX {
   implicit object AMX_0 extends _1[imm8] {
     val opcode: OneOpcode = 0xD4
+    val explicitFormat = new ImmFormat{}
     override def hasImplicitOperand = true
   }
 }

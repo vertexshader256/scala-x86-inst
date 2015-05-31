@@ -17,13 +17,16 @@ object JNO extends OneOperand[JNO] with JNOImpl
 trait JNOImpl extends JNO {
   implicit object JNO_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x71
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JNO_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x81)
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JNO_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x81)
+    val explicitFormat = new ImmFormat{}
   }
 }

@@ -17,6 +17,6 @@ object CDQ extends ZeroOperands[CDQ] with CDQImpl
 trait CDQImpl extends CDQ {
   implicit object CDQ_0 extends _0 {
     val opcode: OneOpcode = 0x99
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

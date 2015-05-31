@@ -17,6 +17,6 @@ object LOADALL extends ZeroOperands[LOADALL] with LOADALLImpl
 trait LOADALLImpl extends LOADALL {
   implicit object LOADALL_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x05)
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

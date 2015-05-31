@@ -17,6 +17,6 @@ object MOVSW extends ZeroOperands[MOVSW] with MOVSWImpl
 trait MOVSWImpl extends MOVSW {
   implicit object MOVSW_0 extends _0 {
     val opcode: OneOpcode = 0xA5
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

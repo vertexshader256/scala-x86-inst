@@ -17,6 +17,7 @@ object LTR extends OneOperand[LTR] with LTRImpl
 trait LTRImpl extends LTR {
   implicit object LTR_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 3
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

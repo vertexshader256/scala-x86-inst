@@ -17,22 +17,20 @@ object SHRD extends TwoOperands[SHRD] with SHRDImpl
 trait SHRDImpl extends SHRD {
   implicit object SHRD_0 extends _2[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xAD) /r
+    val explicitFormat = new MemRegFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object SHRD_1 extends _2[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xAD) /r
-    override def explicitFormat(op1: rm32, op2: r32) = {
-      if (op1.isInstanceOf[reg]) {
-         Some(InstructionFormat(addressingForm = OnlyModRM(ModRMReg(TwoRegisters, op2, op1.asInstanceOf[reg])), immediate = Array()))
-      } else None
-    }
+    val explicitFormat = new MemRegFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object SHRD_2 extends _2[rm64, r64] {
     val opcode: TwoOpcodes = (0x0F, 0xAD) /r
     override def prefix = REX.W(true)
+    val explicitFormat = new MemRegFormat{}
     override def hasImplicitOperand = true
   }
 }

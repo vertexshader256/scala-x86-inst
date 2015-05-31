@@ -17,5 +17,5 @@ object FINCSTP extends ZeroOperands[FINCSTP] with FINCSTPImpl
 trait FINCSTPImpl extends FINCSTP {
   implicit object FINCSTP_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
-  }
+      }
 }

@@ -17,5 +17,5 @@ object EMMS extends ZeroOperands[EMMS] with EMMSImpl
 trait EMMSImpl extends EMMS {
   implicit object EMMS_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x77)
-  }
+      }
 }

@@ -17,22 +17,26 @@ object IDIV extends OneOperand[IDIV] with IDIVImpl
 trait IDIVImpl extends IDIV {
   implicit object IDIV_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xF6 /+ 7
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object IDIV_1 extends _1[rm16] {
     val opcode: OneOpcode = 0xF7 /+ 7
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object IDIV_2 extends _1[rm32] {
     val opcode: OneOpcode = 0xF7 /+ 7
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object IDIV_3 extends _1[rm64] {
     val opcode: OneOpcode = 0xF7 /+ 7
     override def prefix = REX.W(true)
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

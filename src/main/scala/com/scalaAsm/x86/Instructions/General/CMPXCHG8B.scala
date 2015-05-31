@@ -17,6 +17,7 @@ object CMPXCHG8B extends OneOperand[CMPXCHG8B] with CMPXCHG8BImpl
 trait CMPXCHG8BImpl extends CMPXCHG8B {
   implicit object CMPXCHG8B_0 extends _1[m64] {
     val opcode: TwoOpcodes = (0x0F, 0xC7) /+ 1
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

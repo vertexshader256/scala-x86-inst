@@ -17,11 +17,13 @@ object LDS extends TwoOperands[LDS] with LDSImpl
 trait LDSImpl extends LDS {
   implicit object LDS_0 extends _2[r16, m] {
     val opcode: OneOpcode = 0xC5 /r
+    val explicitFormat = new RegRmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object LDS_1 extends _2[r32, m] {
     val opcode: OneOpcode = 0xC5 /r
+    val explicitFormat = new RegRmFormat{}
     override def hasImplicitOperand = true
   }
 }

@@ -17,11 +17,13 @@ object FMUL extends OneOperand[FMUL] with FMULImpl
 trait FMULImpl extends FMUL {
   implicit object FMUL_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD8 /+ 1
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object FMUL_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 1
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

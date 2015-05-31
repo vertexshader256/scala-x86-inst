@@ -17,11 +17,13 @@ object LES extends TwoOperands[LES] with LESImpl
 trait LESImpl extends LES {
   implicit object LES_0 extends _2[r16, m] {
     val opcode: OneOpcode = 0xC4 /r
+    val explicitFormat = new RegRmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object LES_1 extends _2[r32, m] {
     val opcode: OneOpcode = 0xC4 /r
+    val explicitFormat = new RegRmFormat{}
     override def hasImplicitOperand = true
   }
 }

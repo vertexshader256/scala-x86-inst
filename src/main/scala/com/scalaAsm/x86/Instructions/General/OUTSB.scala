@@ -17,6 +17,6 @@ object OUTSB extends ZeroOperands[OUTSB] with OUTSBImpl
 trait OUTSBImpl extends OUTSB {
   implicit object OUTSB_0 extends _0 {
     val opcode: OneOpcode = 0x6E
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

@@ -17,11 +17,12 @@ object RETN extends ZeroOperands[RETN] with OneOperand[RETN] with RETNImpl
 trait RETNImpl extends RETN {
   implicit object RETN_0 extends _1[imm16] {
     val opcode: OneOpcode = 0xC2
+    val explicitFormat = new ImmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object RETN_1 extends _0 {
     val opcode: OneOpcode = 0xC3
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

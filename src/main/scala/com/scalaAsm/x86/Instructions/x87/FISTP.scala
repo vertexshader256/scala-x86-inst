@@ -17,11 +17,13 @@ object FISTP extends OneOperand[FISTP] with FISTPImpl
 trait FISTPImpl extends FISTP {
   implicit object FISTP_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDB /+ 3
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object FISTP_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDF /+ 3
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

@@ -17,6 +17,6 @@ object POPAD extends ZeroOperands[POPAD] with POPADImpl
 trait POPADImpl extends POPAD {
   implicit object POPAD_0 extends _0 {
     val opcode: OneOpcode = 0x61
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

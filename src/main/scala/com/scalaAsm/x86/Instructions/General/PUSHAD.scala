@@ -17,6 +17,6 @@ object PUSHAD extends ZeroOperands[PUSHAD] with PUSHADImpl
 trait PUSHADImpl extends PUSHAD {
   implicit object PUSHAD_0 extends _0 {
     val opcode: OneOpcode = 0x60
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

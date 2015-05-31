@@ -17,11 +17,13 @@ object FIADD extends OneOperand[FIADD] with FIADDImpl
 trait FIADDImpl extends FIADD {
   implicit object FIADD_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 0
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object FIADD_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 0
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

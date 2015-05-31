@@ -17,5 +17,6 @@ object SETNP extends OneOperand[SETNP] with SETNPImpl
 trait SETNPImpl extends SETNP {
   implicit object SETNP_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9B) /+ 0
+    val explicitFormat = new RmFormat{}
   }
 }

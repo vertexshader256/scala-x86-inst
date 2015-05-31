@@ -17,13 +17,16 @@ object JC extends OneOperand[JC] with JCImpl
 trait JCImpl extends JC {
   implicit object JC_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x72
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JC_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x82)
+    val explicitFormat = new ImmFormat{}
   }
 
   implicit object JC_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x82)
+    val explicitFormat = new ImmFormat{}
   }
 }

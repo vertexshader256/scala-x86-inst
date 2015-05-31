@@ -17,6 +17,6 @@ object AAS extends ZeroOperands[AAS] with AASImpl
 trait AASImpl extends AAS {
   implicit object AAS_0 extends _0 {
     val opcode: OneOpcode = 0x3F
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

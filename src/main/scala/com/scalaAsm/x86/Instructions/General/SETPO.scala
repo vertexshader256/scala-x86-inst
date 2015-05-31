@@ -17,5 +17,6 @@ object SETPO extends OneOperand[SETPO] with SETPOImpl
 trait SETPOImpl extends SETPO {
   implicit object SETPO_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9B) /+ 0
+    val explicitFormat = new RmFormat{}
   }
 }

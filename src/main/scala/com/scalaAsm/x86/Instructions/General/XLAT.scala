@@ -17,6 +17,6 @@ object XLAT extends ZeroOperands[XLAT] with XLATImpl
 trait XLATImpl extends XLAT {
   implicit object XLAT_0 extends _0 {
     val opcode: OneOpcode = 0xD7
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

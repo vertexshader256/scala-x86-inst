@@ -17,11 +17,13 @@ object BOUND extends TwoOperands[BOUND] with BOUNDImpl
 trait BOUNDImpl extends BOUND {
   implicit object BOUND_0 extends _2[r16, m16] {
     val opcode: OneOpcode = 0x62 /r
+    val explicitFormat = new RegRmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object BOUND_1 extends _2[r32, m32] {
     val opcode: OneOpcode = 0x62 /r
+    val explicitFormat = new RegRmFormat{}
     override def hasImplicitOperand = true
   }
 }

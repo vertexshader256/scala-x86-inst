@@ -17,5 +17,5 @@ object CLC extends ZeroOperands[CLC] with CLCImpl
 trait CLCImpl extends CLC {
   implicit object CLC_0 extends _0 {
     val opcode: OneOpcode = 0xF8
-  }
+      }
 }

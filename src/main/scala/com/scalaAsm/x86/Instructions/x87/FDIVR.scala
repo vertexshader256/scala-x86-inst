@@ -17,11 +17,13 @@ object FDIVR extends OneOperand[FDIVR] with FDIVRImpl
 trait FDIVRImpl extends FDIVR {
   implicit object FDIVR_0 extends _1[m32] {
     val opcode: OneOpcode = 0xD8 /+ 7
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object FDIVR_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 7
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

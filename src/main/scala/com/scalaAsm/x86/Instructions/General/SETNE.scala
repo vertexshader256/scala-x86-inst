@@ -17,5 +17,6 @@ object SETNE extends OneOperand[SETNE] with SETNEImpl
 trait SETNEImpl extends SETNE {
   implicit object SETNE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x95) /+ 0
+    val explicitFormat = new RmFormat{}
   }
 }

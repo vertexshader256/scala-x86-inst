@@ -17,6 +17,6 @@ object FLD1 extends ZeroOperands[FLD1] with FLD1Impl
 trait FLD1Impl extends FLD1 {
   implicit object FLD1_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 5
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

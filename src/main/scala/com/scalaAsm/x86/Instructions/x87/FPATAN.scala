@@ -17,6 +17,6 @@ object FPATAN extends ZeroOperands[FPATAN] with FPATANImpl
 trait FPATANImpl extends FPATAN {
   implicit object FPATAN_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

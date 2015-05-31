@@ -17,11 +17,13 @@ object FIMUL extends OneOperand[FIMUL] with FIMULImpl
 trait FIMULImpl extends FIMUL {
   implicit object FIMUL_0 extends _1[m32] {
     val opcode: OneOpcode = 0xDA /+ 1
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 
   implicit object FIMUL_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 1
+    val explicitFormat = new RmFormat{}
     override def hasImplicitOperand = true
   }
 }

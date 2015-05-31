@@ -17,6 +17,6 @@ object DAS extends ZeroOperands[DAS] with DASImpl
 trait DASImpl extends DAS {
   implicit object DAS_0 extends _0 {
     val opcode: OneOpcode = 0x2F
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }

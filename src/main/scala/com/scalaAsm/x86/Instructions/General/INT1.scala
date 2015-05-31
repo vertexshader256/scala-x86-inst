@@ -17,6 +17,6 @@ object INT1 extends ZeroOperands[INT1] with INT1Impl
 trait INT1Impl extends INT1 {
   implicit object INT1_0 extends _0 {
     val opcode: OneOpcode = 0xF1
-    override def hasImplicitOperand = true
+        override def hasImplicitOperand = true
   }
 }
