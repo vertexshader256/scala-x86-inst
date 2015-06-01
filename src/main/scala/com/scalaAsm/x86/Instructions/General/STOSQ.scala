@@ -18,6 +18,5 @@ trait STOSQImpl extends STOSQ {
   implicit object STOSQ_0 extends _0 {
     val opcode: OneOpcode = 0xAB
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

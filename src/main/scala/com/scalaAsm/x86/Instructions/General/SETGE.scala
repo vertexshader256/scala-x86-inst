@@ -18,6 +18,5 @@ trait SETGEImpl extends SETGE {
   implicit object SETGE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9D) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

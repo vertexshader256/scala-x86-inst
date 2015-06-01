@@ -18,6 +18,5 @@ trait SETNLEImpl extends SETNLE {
   implicit object SETNLE_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9F) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

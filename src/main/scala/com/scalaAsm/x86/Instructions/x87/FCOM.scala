@@ -19,19 +19,16 @@ trait FCOMImpl extends FCOM {
     val opcode: OneOpcode = 0xD8 /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FCOM_1 extends _0 {
     val opcode: OneOpcode = 0xD8 /+ 2
         override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FCOM_2 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

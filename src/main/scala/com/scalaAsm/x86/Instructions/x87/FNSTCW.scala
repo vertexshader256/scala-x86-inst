@@ -18,6 +18,5 @@ trait FNSTCWImpl extends FNSTCW {
   implicit object FNSTCW_0 extends _1[m16] {
     val opcode: OneOpcode = 0xD9 /+ 7
     val format = RmFormat
-    val hasRMByte = true
   }
 }

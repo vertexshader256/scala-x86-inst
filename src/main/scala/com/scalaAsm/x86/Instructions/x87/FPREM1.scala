@@ -18,6 +18,5 @@ trait FPREM1Impl extends FPREM1 {
   implicit object FPREM1_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
         override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

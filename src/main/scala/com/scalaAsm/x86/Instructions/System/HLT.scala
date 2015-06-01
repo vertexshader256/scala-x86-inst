@@ -17,6 +17,5 @@ object HLT extends ZeroOperands[HLT] with HLTImpl
 trait HLTImpl extends HLT {
   implicit object HLT_0 extends _0 {
     val opcode: OneOpcode = 0xF4
-        val hasRMByte = false
-  }
+      }
 }

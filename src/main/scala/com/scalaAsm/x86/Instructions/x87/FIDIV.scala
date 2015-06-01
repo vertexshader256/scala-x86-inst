@@ -19,13 +19,11 @@ trait FIDIVImpl extends FIDIV {
     val opcode: OneOpcode = 0xDA /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FIDIV_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

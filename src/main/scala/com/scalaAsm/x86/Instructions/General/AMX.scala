@@ -19,6 +19,5 @@ trait AMXImpl extends AMX {
     val opcode: OneOpcode = 0xD4
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

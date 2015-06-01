@@ -18,6 +18,5 @@ trait SETZImpl extends SETZ {
   implicit object SETZ_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x94) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

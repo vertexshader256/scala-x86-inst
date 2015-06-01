@@ -18,6 +18,5 @@ trait INSDImpl extends INSD {
   implicit object INSD_0 extends _0 {
     val opcode: OneOpcode = 0x6D
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

@@ -18,6 +18,5 @@ trait AASImpl extends AAS {
   implicit object AAS_0 extends _0 {
     val opcode: OneOpcode = 0x3F
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

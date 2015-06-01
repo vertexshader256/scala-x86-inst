@@ -18,19 +18,16 @@ trait JMPLow extends JMP {
   implicit object JMP_0 extends _1[rm16] {
     val opcode: OneOpcode = 0xFF /+ 4
     val format = RmFormat
-    val hasRMByte = true
   }
 
   implicit object JMP_1 extends _1[rm32] {
     val opcode: OneOpcode = 0xFF /+ 4
     val format = RmFormat
-    val hasRMByte = true
   }
 
   implicit object JMP_2 extends _1[rm64] {
     val opcode: OneOpcode = 0xFF /+ 4
     val format = RmFormat
-    val hasRMByte = true
   }
 }
 
@@ -38,18 +35,15 @@ trait JMPImpl extends JMPLow {
   implicit object JMP_3 extends _1[rel16] {
     val opcode: OneOpcode = 0xE9
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JMP_4 extends _1[rel32] {
     val opcode: OneOpcode = 0xE9
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JMP_5 extends _1[rel8] {
     val opcode: OneOpcode = 0xEB
     val format = ImmFormat
-    val hasRMByte = false
   }
 }

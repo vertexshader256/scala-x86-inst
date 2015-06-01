@@ -18,6 +18,5 @@ trait SAHFImpl extends SAHF {
   implicit object SAHF_0 extends _0 {
     val opcode: OneOpcode = 0x9E
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

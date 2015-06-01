@@ -18,6 +18,5 @@ trait OUTSImpl extends OUTS {
   implicit object OUTS_0 extends _0 {
     val opcode: OneOpcode = 0x6E
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

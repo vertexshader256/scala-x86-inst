@@ -19,6 +19,5 @@ trait XRSTORImpl extends XRSTOR {
     val opcode: TwoOpcodes = (0x0F, 0xAE) /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

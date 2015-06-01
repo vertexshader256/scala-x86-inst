@@ -19,13 +19,11 @@ trait FISUBRImpl extends FISUBR {
     val opcode: OneOpcode = 0xDA /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FISUBR_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

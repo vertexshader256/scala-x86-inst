@@ -19,6 +19,5 @@ trait ENTERImpl extends ENTER {
     val opcode: OneOpcode = 0xC8
     val format = null
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

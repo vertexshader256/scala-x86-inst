@@ -19,13 +19,11 @@ trait BOUNDImpl extends BOUND {
     val opcode: OneOpcode = 0x62 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object BOUND_1 extends _2[r32, m32] {
     val opcode: OneOpcode = 0x62 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

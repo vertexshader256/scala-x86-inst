@@ -19,13 +19,11 @@ trait LDSImpl extends LDS {
     val opcode: OneOpcode = 0xC5 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object LDS_1 extends _2[r32, m] {
     val opcode: OneOpcode = 0xC5 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

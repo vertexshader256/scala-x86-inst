@@ -18,6 +18,5 @@ trait AADImpl extends AAD {
   implicit object AAD_0 extends _0 {
     val opcode: OneOpcode = 0xD5
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

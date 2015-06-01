@@ -19,13 +19,11 @@ trait FISTImpl extends FIST {
     val opcode: OneOpcode = 0xDB /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FIST_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDF /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

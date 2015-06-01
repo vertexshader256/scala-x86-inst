@@ -19,13 +19,11 @@ trait FDIVImpl extends FDIV {
     val opcode: OneOpcode = 0xD8 /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FDIV_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

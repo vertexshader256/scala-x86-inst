@@ -19,6 +19,5 @@ trait LOOPImpl extends LOOP {
     val opcode: OneOpcode = 0xE2
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

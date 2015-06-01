@@ -17,6 +17,5 @@ object FINIT extends ZeroOperands[FINIT] with FINITImpl
 trait FINITImpl extends FINIT {
   implicit object FINIT_0 extends _0 {
     val opcode: OneOpcode = 0xDB /+ 4
-        val hasRMByte = true
-  }
+      }
 }

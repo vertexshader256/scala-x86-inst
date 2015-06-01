@@ -19,13 +19,11 @@ trait FSTImpl extends FST {
     val opcode: OneOpcode = 0xD9 /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FST_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDD /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

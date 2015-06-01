@@ -18,6 +18,5 @@ trait SYSENTERImpl extends SYSENTER {
   implicit object SYSENTER_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x34)
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

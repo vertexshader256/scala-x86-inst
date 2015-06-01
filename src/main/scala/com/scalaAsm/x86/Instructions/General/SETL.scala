@@ -18,6 +18,5 @@ trait SETLImpl extends SETL {
   implicit object SETL_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9C) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

@@ -18,6 +18,5 @@ trait FDIVRPImpl extends FDIVRP {
   implicit object FDIVRP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 6
         override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

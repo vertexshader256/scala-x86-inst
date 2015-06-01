@@ -19,12 +19,10 @@ trait RETFImpl extends RETF {
     val opcode: OneOpcode = 0xCA
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 
   implicit object RETF_1 extends _0 {
     val opcode: OneOpcode = 0xCB
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

@@ -18,6 +18,5 @@ trait INSWImpl extends INSW {
   implicit object INSW_0 extends _0 {
     val opcode: OneOpcode = 0x6D
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

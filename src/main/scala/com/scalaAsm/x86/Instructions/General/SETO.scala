@@ -18,6 +18,5 @@ trait SETOImpl extends SETO {
   implicit object SETO_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x90) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

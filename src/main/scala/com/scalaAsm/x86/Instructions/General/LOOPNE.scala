@@ -19,6 +19,5 @@ trait LOOPNEImpl extends LOOPNE {
     val opcode: OneOpcode = 0xE0
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

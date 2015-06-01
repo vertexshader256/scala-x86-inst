@@ -18,6 +18,5 @@ trait STOSWImpl extends STOSW {
   implicit object STOSW_0 extends _0 {
     val opcode: OneOpcode = 0xAB
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

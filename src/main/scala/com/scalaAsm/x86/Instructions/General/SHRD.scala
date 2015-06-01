@@ -19,14 +19,12 @@ trait SHRDImpl extends SHRD {
     val opcode: TwoOpcodes = (0x0F, 0xAD) /r
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object SHRD_1 extends _2[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xAD) /r
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object SHRD_2 extends _2[rm64, r64] {
@@ -34,6 +32,5 @@ trait SHRDImpl extends SHRD {
     override def prefix = REX.W(true)
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

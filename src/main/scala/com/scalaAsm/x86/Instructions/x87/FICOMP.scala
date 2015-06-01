@@ -19,13 +19,11 @@ trait FICOMPImpl extends FICOMP {
     val opcode: OneOpcode = 0xDA /+ 3
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FICOMP_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 3
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

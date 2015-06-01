@@ -19,21 +19,18 @@ trait DIVImpl extends DIV {
     val opcode: OneOpcode = 0xF6 /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object DIV_1 extends _1[rm16] {
     val opcode: OneOpcode = 0xF7 /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object DIV_2 extends _1[rm32] {
     val opcode: OneOpcode = 0xF7 /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object DIV_3 extends _1[rm64] {
@@ -41,6 +38,5 @@ trait DIVImpl extends DIV {
     override def prefix = REX.W(true)
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

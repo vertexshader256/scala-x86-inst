@@ -19,6 +19,5 @@ trait ADXImpl extends ADX {
     val opcode: OneOpcode = 0xD5
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

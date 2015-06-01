@@ -19,12 +19,10 @@ trait OUTImpl extends OUT {
     val opcode: OneOpcode = 0xE6
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 
   implicit object OUT_1 extends _0 {
     val opcode: OneOpcode = 0xEE
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

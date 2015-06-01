@@ -18,6 +18,5 @@ trait OUTSBImpl extends OUTSB {
   implicit object OUTSB_0 extends _0 {
     val opcode: OneOpcode = 0x6E
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

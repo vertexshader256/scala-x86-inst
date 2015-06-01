@@ -18,6 +18,5 @@ trait CWDImpl extends CWD {
   implicit object CWD_0 extends _0 {
     val opcode: OneOpcode = 0x99
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

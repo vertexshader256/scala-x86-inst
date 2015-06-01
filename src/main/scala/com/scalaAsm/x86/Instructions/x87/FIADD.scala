@@ -19,13 +19,11 @@ trait FIADDImpl extends FIADD {
     val opcode: OneOpcode = 0xDA /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FIADD_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

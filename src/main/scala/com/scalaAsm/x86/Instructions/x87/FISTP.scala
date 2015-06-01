@@ -19,13 +19,11 @@ trait FISTPImpl extends FISTP {
     val opcode: OneOpcode = 0xDB /+ 3
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FISTP_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDF /+ 3
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

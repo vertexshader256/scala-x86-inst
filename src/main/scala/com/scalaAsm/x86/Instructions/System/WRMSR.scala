@@ -18,6 +18,5 @@ trait WRMSRImpl extends WRMSR {
   implicit object WRMSR_0 extends _0 {
     val opcode: TwoOpcodes = (0x0F, 0x30)
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

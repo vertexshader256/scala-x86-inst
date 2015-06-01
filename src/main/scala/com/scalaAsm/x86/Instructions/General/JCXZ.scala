@@ -19,6 +19,5 @@ trait JCXZImpl extends JCXZ {
     val opcode: OneOpcode = 0xE3
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

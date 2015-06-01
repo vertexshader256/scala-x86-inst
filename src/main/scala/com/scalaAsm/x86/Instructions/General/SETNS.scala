@@ -18,6 +18,5 @@ trait SETNSImpl extends SETNS {
   implicit object SETNS_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x99) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

@@ -18,6 +18,5 @@ trait FCOMPPImpl extends FCOMPP {
   implicit object FCOMPP_0 extends _0 {
     val opcode: OneOpcode = 0xDE /+ 3
         override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

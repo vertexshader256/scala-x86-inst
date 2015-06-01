@@ -18,6 +18,5 @@ trait SCASBImpl extends SCASB {
   implicit object SCASB_0 extends _0 {
     val opcode: OneOpcode = 0xAE
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

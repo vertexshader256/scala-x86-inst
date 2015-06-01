@@ -18,6 +18,5 @@ trait VERRImpl extends VERR {
   implicit object VERR_0 extends _1[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 4
     val format = RmFormat
-    val hasRMByte = true
   }
 }

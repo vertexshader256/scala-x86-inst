@@ -18,18 +18,15 @@ trait JZImpl extends JZ {
   implicit object JZ_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x74
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JZ_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x84)
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JZ_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x84)
     val format = ImmFormat
-    val hasRMByte = false
   }
 }

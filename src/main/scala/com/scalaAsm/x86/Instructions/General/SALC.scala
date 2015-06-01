@@ -18,6 +18,5 @@ trait SALCImpl extends SALC {
   implicit object SALC_0 extends _0 {
     val opcode: OneOpcode = 0xD6
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

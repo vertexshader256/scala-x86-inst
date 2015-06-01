@@ -19,12 +19,10 @@ trait INImpl extends IN {
     val opcode: OneOpcode = 0xE4
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 
   implicit object IN_1 extends _0 {
     val opcode: OneOpcode = 0xEC
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

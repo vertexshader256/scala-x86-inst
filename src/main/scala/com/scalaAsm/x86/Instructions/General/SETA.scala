@@ -18,6 +18,5 @@ trait SETAImpl extends SETA {
   implicit object SETA_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x97) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }

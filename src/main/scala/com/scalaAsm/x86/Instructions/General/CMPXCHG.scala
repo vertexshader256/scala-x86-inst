@@ -19,21 +19,18 @@ trait CMPXCHGImpl extends CMPXCHG {
     val opcode: TwoOpcodes = (0x0F, 0xB0) /r
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object CMPXCHG_1 extends _2[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xB1) /r
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object CMPXCHG_2 extends _2[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xB1) /r
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object CMPXCHG_3 extends _2[rm64, r64] {
@@ -41,6 +38,5 @@ trait CMPXCHGImpl extends CMPXCHG {
     override def prefix = REX.W(true)
     val format = MemRegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

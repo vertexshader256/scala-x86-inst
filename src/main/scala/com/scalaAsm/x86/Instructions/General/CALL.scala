@@ -19,21 +19,18 @@ trait CALLLow extends CALL {
     val opcode: OneOpcode = 0xFF /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object CALL_1 extends _1[rm32] {
     val opcode: OneOpcode = 0xFF /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object CALL_2 extends _1[rm64] {
     val opcode: OneOpcode = 0xFF /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }
 
@@ -42,13 +39,11 @@ trait CALLImpl extends CALLLow {
     val opcode: OneOpcode = 0xE8
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 
   implicit object CALL_4 extends _1[rel32] {
     val opcode: OneOpcode = 0xE8
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

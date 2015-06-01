@@ -19,6 +19,5 @@ trait LLDTImpl extends LLDT {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

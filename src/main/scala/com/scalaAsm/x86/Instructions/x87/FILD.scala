@@ -19,13 +19,11 @@ trait FILDImpl extends FILD {
     val opcode: OneOpcode = 0xDB /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FILD_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDF /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

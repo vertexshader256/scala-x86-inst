@@ -18,18 +18,15 @@ trait JNGEImpl extends JNGE {
   implicit object JNGE_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7C
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JNGE_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8C)
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JNGE_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8C)
     val format = ImmFormat
-    val hasRMByte = false
   }
 }

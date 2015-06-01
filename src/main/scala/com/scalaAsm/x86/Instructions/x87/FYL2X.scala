@@ -18,6 +18,5 @@ trait FYL2XImpl extends FYL2X {
   implicit object FYL2X_0 extends _0 {
     val opcode: OneOpcode = 0xD9 /+ 6
         override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

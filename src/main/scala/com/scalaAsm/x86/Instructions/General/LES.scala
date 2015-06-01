@@ -19,13 +19,11 @@ trait LESImpl extends LES {
     val opcode: OneOpcode = 0xC4 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object LES_1 extends _2[r32, m] {
     val opcode: OneOpcode = 0xC4 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

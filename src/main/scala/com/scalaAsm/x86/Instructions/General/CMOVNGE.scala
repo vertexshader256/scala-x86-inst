@@ -18,19 +18,16 @@ trait CMOVNGEImpl extends CMOVNGE {
   implicit object CMOVNGE_0 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x4C) /r
     val format = RegRmFormat
-    val hasRMByte = true
   }
 
   implicit object CMOVNGE_1 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x4C) /r
     val format = RegRmFormat
-    val hasRMByte = true
   }
 
   implicit object CMOVNGE_2 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0x4C) /r
     override def prefix = REX.W(true)
     val format = RegRmFormat
-    val hasRMByte = true
   }
 }

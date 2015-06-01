@@ -19,13 +19,11 @@ trait FLDImpl extends FLD {
     val opcode: OneOpcode = 0xD9 /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FLD_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDD /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

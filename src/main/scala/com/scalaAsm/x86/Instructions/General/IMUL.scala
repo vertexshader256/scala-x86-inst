@@ -19,21 +19,18 @@ trait IMULLow extends IMUL {
     val opcode: OneOpcode = 0xF6 /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object IMUL_1 extends _1[rm16] {
     val opcode: OneOpcode = 0xF7 /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object IMUL_2 extends _1[rm32] {
     val opcode: OneOpcode = 0xF7 /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object IMUL_3 extends _1[rm64] {
@@ -41,7 +38,6 @@ trait IMULLow extends IMUL {
     override def prefix = REX.W(true)
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }
 
@@ -49,19 +45,16 @@ trait IMULImpl extends IMULLow {
   implicit object IMUL_4 extends _2[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0xAF) /r
     val format = RegRmFormat
-    val hasRMByte = true
   }
 
   implicit object IMUL_5 extends _2[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0xAF) /r
     val format = RegRmFormat
-    val hasRMByte = true
   }
 
   implicit object IMUL_6 extends _2[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0xAF) /r
     override def prefix = REX.W(true)
     val format = RegRmFormat
-    val hasRMByte = true
   }
 }

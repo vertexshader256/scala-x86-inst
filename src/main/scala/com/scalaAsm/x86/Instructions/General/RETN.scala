@@ -19,12 +19,10 @@ trait RETNImpl extends RETN {
     val opcode: OneOpcode = 0xC2
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 
   implicit object RETN_1 extends _0 {
     val opcode: OneOpcode = 0xC3
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

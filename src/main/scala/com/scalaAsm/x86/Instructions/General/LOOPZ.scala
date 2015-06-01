@@ -19,6 +19,5 @@ trait LOOPZImpl extends LOOPZ {
     val opcode: OneOpcode = 0xE1
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

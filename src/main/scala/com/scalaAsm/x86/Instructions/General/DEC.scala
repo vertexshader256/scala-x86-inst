@@ -18,26 +18,22 @@ trait DECLow extends DEC {
   implicit object DEC_0 extends _1[rm8] {
     val opcode: OneOpcode = 0xFE /+ 1
     val format = RmFormat
-    val hasRMByte = true
   }
 
   implicit object DEC_1 extends _1[rm16] {
     val opcode: OneOpcode = 0xFF /+ 1
     val format = RmFormat
-    val hasRMByte = true
   }
 
   implicit object DEC_2 extends _1[rm32] {
     val opcode: OneOpcode = 0xFF /+ 1
     val format = RmFormat
-    val hasRMByte = true
   }
 
   implicit object DEC_3 extends _1[rm64] {
     val opcode: OneOpcode = 0xFF /+ 1
     override def prefix = REX.W(true)
     val format = RmFormat
-    val hasRMByte = true
   }
 }
 
@@ -45,12 +41,10 @@ trait DECImpl extends DECLow {
   implicit object DEC_4 extends _1[r16] {
     val opcode: OneOpcode = 0x48 + rw
     val format = RegFormat
-    val hasRMByte = false
   }
 
   implicit object DEC_5 extends _1[r32] {
     val opcode: OneOpcode = 0x48 + rd
     val format = RegFormat
-    val hasRMByte = false
   }
 }

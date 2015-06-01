@@ -19,13 +19,11 @@ trait FSUBImpl extends FSUB {
     val opcode: OneOpcode = 0xD8 /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FSUB_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

@@ -19,14 +19,12 @@ trait LGSImpl extends LGS {
     val opcode: TwoOpcodes = (0x0F, 0xB5) /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object LGS_1 extends _2[r32, m] {
     val opcode: TwoOpcodes = (0x0F, 0xB5) /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object LGS_2 extends _2[r64, m] {
@@ -34,6 +32,5 @@ trait LGSImpl extends LGS {
     override def prefix = REX.W(true)
     val format = RegRmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

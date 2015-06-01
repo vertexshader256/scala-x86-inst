@@ -19,6 +19,5 @@ trait INTImpl extends INT {
     val opcode: OneOpcode = 0xCD
     val format = ImmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

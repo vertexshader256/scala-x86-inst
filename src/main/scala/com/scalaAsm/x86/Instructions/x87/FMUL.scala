@@ -19,13 +19,11 @@ trait FMULImpl extends FMUL {
     val opcode: OneOpcode = 0xD8 /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FMUL_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

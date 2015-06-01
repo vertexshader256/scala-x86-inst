@@ -18,18 +18,15 @@ trait JGImpl extends JG {
   implicit object JG_0 extends _1[rel8] {
     val opcode: OneOpcode = 0x7F
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JG_1 extends _1[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8F)
     val format = ImmFormat
-    val hasRMByte = false
   }
 
   implicit object JG_2 extends _1[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8F)
     val format = ImmFormat
-    val hasRMByte = false
   }
 }

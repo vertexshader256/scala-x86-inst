@@ -17,6 +17,5 @@ object STD extends ZeroOperands[STD] with STDImpl
 trait STDImpl extends STD {
   implicit object STD_0 extends _0 {
     val opcode: OneOpcode = 0xFD
-        val hasRMByte = false
-  }
+      }
 }

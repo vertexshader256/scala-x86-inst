@@ -19,6 +19,5 @@ trait LMSWImpl extends LMSW {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

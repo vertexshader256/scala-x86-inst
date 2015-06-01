@@ -19,13 +19,11 @@ trait FDIVRImpl extends FDIVR {
     val opcode: OneOpcode = 0xD8 /+ 7
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FDIVR_1 extends _1[m64] {
     val opcode: OneOpcode = 0xDC /+ 7
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

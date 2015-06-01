@@ -19,13 +19,11 @@ trait FIMULImpl extends FIMUL {
     val opcode: OneOpcode = 0xDA /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object FIMUL_1 extends _1[m16] {
     val opcode: OneOpcode = 0xDE /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

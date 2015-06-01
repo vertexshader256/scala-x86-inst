@@ -18,6 +18,5 @@ trait PUSHAImpl extends PUSHA {
   implicit object PUSHA_0 extends _0 {
     val opcode: OneOpcode = 0x60
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

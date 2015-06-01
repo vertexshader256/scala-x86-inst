@@ -19,21 +19,18 @@ trait SMSWImpl extends SMSW {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object SMSW_1 extends _1[r16] {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 4
     val format = RegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object SMSW_2 extends _1[r32] {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 4
     val format = RegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object SMSW_3 extends _1[r64] {
@@ -41,6 +38,5 @@ trait SMSWImpl extends SMSW {
     override def prefix = REX.W(true)
     val format = RegFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

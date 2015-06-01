@@ -18,7 +18,6 @@ trait MOVSXDLow extends MOVSXD {
   implicit object MOVSXD_0 extends _2[r64, rm32] {
     val opcode: OneOpcode = 0x63 /r
     val format = RegRmFormat
-    val hasRMByte = true
   }
 }
 
@@ -26,6 +25,5 @@ trait MOVSXDImpl extends MOVSXDLow {
   implicit object MOVSXD_1 extends _2[r32, rm32] {
     val opcode: OneOpcode = 0x63 /r
     val format = RegRmFormat
-    val hasRMByte = true
   }
 }

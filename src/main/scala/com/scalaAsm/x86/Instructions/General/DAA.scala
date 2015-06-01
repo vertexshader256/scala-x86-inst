@@ -18,6 +18,5 @@ trait DAAImpl extends DAA {
   implicit object DAA_0 extends _0 {
     val opcode: OneOpcode = 0x27
         override def hasImplicitOperand = true
-    val hasRMByte = false
   }
 }

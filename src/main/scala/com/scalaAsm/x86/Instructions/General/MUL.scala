@@ -19,21 +19,18 @@ trait MULImpl extends MUL {
     val opcode: OneOpcode = 0xF6 /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object MUL_1 extends _1[rm16] {
     val opcode: OneOpcode = 0xF7 /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object MUL_2 extends _1[rm32] {
     val opcode: OneOpcode = 0xF7 /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 
   implicit object MUL_3 extends _1[rm64] {
@@ -41,6 +38,5 @@ trait MULImpl extends MUL {
     override def prefix = REX.W(true)
     val format = RmFormat
     override def hasImplicitOperand = true
-    val hasRMByte = true
   }
 }

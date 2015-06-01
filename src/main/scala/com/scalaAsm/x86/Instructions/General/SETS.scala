@@ -18,6 +18,5 @@ trait SETSImpl extends SETS {
   implicit object SETS_0 extends _1[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x98) /+ 0
     val format = RmFormat
-    val hasRMByte = true
   }
 }
