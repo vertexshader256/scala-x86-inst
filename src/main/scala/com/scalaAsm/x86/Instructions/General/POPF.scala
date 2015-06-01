@@ -15,7 +15,7 @@ trait POPF extends InstructionDefinition {
 object POPF extends ZeroOperands[POPF] with POPFImpl
 
 trait POPFImpl extends POPF {
-  implicit object POPF_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x9D
         override def hasImplicitOperand = true
   }

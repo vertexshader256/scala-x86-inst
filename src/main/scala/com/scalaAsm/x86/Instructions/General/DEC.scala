@@ -15,22 +15,22 @@ trait DEC extends InstructionDefinition {
 object DEC extends OneOperand[DEC] with DECImpl
 
 trait DECLow extends DEC {
-  implicit object DEC_0 extends _1[rm8] {
+  implicit object _0 extends OneOp[rm8] {
     val opcode: OneOpcode = 0xFE /+ 1
     val format = RmFormat
   }
 
-  implicit object DEC_1 extends _1[rm16] {
+  implicit object _1 extends OneOp[rm16] {
     val opcode: OneOpcode = 0xFF /+ 1
     val format = RmFormat
   }
 
-  implicit object DEC_2 extends _1[rm32] {
+  implicit object _2 extends OneOp[rm32] {
     val opcode: OneOpcode = 0xFF /+ 1
     val format = RmFormat
   }
 
-  implicit object DEC_3 extends _1[rm64] {
+  implicit object _3 extends OneOp[rm64] {
     val opcode: OneOpcode = 0xFF /+ 1
     override def prefix = REX.W(true)
     val format = RmFormat
@@ -38,12 +38,12 @@ trait DECLow extends DEC {
 }
 
 trait DECImpl extends DECLow {
-  implicit object DEC_4 extends _1[r16] {
+  implicit object _4 extends OneOp[r16] {
     val opcode: OneOpcode = 0x48 + rw
     val format = RegFormat
   }
 
-  implicit object DEC_5 extends _1[r32] {
+  implicit object _5 extends OneOp[r32] {
     val opcode: OneOpcode = 0x48 + rd
     val format = RegFormat
   }

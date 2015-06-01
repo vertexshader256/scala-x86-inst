@@ -15,7 +15,7 @@ trait SALC extends InstructionDefinition {
 object SALC extends ZeroOperands[SALC] with SALCImpl
 
 trait SALCImpl extends SALC {
-  implicit object SALC_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD6
         override def hasImplicitOperand = true
   }

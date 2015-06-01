@@ -15,13 +15,13 @@ trait RETF extends InstructionDefinition {
 object RETF extends ZeroOperands[RETF] with OneOperand[RETF] with RETFImpl
 
 trait RETFImpl extends RETF {
-  implicit object RETF_0 extends _1[imm16] {
+  implicit object _0 extends OneOp[imm16] {
     val opcode: OneOpcode = 0xCA
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object RETF_1 extends _0 {
+  implicit object _1 extends NoOp{
     val opcode: OneOpcode = 0xCB
         override def hasImplicitOperand = true
   }

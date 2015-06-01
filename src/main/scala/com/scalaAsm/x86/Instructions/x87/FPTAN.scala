@@ -15,7 +15,7 @@ trait FPTAN extends InstructionDefinition {
 object FPTAN extends ZeroOperands[FPTAN] with FPTANImpl
 
 trait FPTANImpl extends FPTAN {
-  implicit object FPTAN_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 6
         override def hasImplicitOperand = true
   }

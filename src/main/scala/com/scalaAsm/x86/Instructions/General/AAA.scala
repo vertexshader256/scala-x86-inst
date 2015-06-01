@@ -15,7 +15,7 @@ trait AAA extends InstructionDefinition {
 object AAA extends ZeroOperands[AAA] with AAAImpl
 
 trait AAAImpl extends AAA {
-  implicit object AAA_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x37
         override def hasImplicitOperand = true
   }

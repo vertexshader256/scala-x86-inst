@@ -15,7 +15,7 @@ trait INVLPG extends InstructionDefinition {
 object INVLPG extends OneOperand[INVLPG] with INVLPGImpl
 
 trait INVLPGImpl extends INVLPG {
-  implicit object INVLPG_0 extends _1[m] {
+  implicit object _0 extends OneOp[m] {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
     val format = RmFormat
   }

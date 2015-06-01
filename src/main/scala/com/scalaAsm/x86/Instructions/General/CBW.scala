@@ -15,7 +15,7 @@ trait CBW extends InstructionDefinition {
 object CBW extends ZeroOperands[CBW] with CBWImpl
 
 trait CBWImpl extends CBW {
-  implicit object CBW_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x98
         override def hasImplicitOperand = true
   }

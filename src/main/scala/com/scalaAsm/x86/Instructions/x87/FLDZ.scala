@@ -15,7 +15,7 @@ trait FLDZ extends InstructionDefinition {
 object FLDZ extends ZeroOperands[FLDZ] with FLDZImpl
 
 trait FLDZImpl extends FLDZ {
-  implicit object FLDZ_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 5
         override def hasImplicitOperand = true
   }

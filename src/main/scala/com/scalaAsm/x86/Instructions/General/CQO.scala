@@ -15,7 +15,7 @@ trait CQO extends InstructionDefinition {
 object CQO extends ZeroOperands[CQO] with CQOImpl
 
 trait CQOImpl extends CQO {
-  implicit object CQO_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x99
         override def hasImplicitOperand = true
   }

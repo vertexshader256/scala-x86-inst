@@ -15,7 +15,7 @@ trait FSUBRP extends InstructionDefinition {
 object FSUBRP extends ZeroOperands[FSUBRP] with FSUBRPImpl
 
 trait FSUBRPImpl extends FSUBRP {
-  implicit object FSUBRP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDE /+ 4
         override def hasImplicitOperand = true
   }

@@ -15,7 +15,7 @@ trait STOSW extends InstructionDefinition {
 object STOSW extends ZeroOperands[STOSW] with STOSWImpl
 
 trait STOSWImpl extends STOSW {
-  implicit object STOSW_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xAB
         override def hasImplicitOperand = true
   }

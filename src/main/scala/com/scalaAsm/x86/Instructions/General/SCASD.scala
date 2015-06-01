@@ -15,7 +15,7 @@ trait SCASD extends InstructionDefinition {
 object SCASD extends ZeroOperands[SCASD] with SCASDImpl
 
 trait SCASDImpl extends SCASD {
-  implicit object SCASD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xAF
         override def hasImplicitOperand = true
   }

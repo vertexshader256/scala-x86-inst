@@ -15,7 +15,7 @@ trait CMPXCHG8B extends InstructionDefinition {
 object CMPXCHG8B extends OneOperand[CMPXCHG8B] with CMPXCHG8BImpl
 
 trait CMPXCHG8BImpl extends CMPXCHG8B {
-  implicit object CMPXCHG8B_0 extends _1[m64] {
+  implicit object _0 extends OneOp[m64] {
     val opcode: TwoOpcodes = (0x0F, 0xC7) /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true

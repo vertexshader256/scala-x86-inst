@@ -15,7 +15,7 @@ trait PUSHFD extends InstructionDefinition {
 object PUSHFD extends ZeroOperands[PUSHFD] with PUSHFDImpl
 
 trait PUSHFDImpl extends PUSHFD {
-  implicit object PUSHFD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x9C
         override def hasImplicitOperand = true
   }

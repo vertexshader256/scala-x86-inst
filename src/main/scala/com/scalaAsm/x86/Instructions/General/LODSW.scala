@@ -15,7 +15,7 @@ trait LODSW extends InstructionDefinition {
 object LODSW extends ZeroOperands[LODSW] with LODSWImpl
 
 trait LODSWImpl extends LODSW {
-  implicit object LODSW_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xAD
         override def hasImplicitOperand = true
   }

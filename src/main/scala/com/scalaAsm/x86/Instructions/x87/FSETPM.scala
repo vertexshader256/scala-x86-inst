@@ -15,7 +15,7 @@ trait FSETPM extends InstructionDefinition {
 object FSETPM extends ZeroOperands[FSETPM] with FSETPMImpl
 
 trait FSETPMImpl extends FSETPM {
-  implicit object FSETPM_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

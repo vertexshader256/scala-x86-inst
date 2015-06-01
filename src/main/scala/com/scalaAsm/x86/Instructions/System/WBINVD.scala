@@ -15,7 +15,7 @@ trait WBINVD extends InstructionDefinition {
 object WBINVD extends ZeroOperands[WBINVD] with WBINVDImpl
 
 trait WBINVDImpl extends WBINVD {
-  implicit object WBINVD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x09)
       }
 }

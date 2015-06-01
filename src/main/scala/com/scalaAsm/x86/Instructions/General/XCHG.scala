@@ -15,42 +15,42 @@ trait XCHG extends InstructionDefinition {
 object XCHG extends OneOperand[XCHG] with TwoOperands[XCHG] with XCHGImpl
 
 trait XCHGLow extends XCHG {
-  implicit object XCHG_0 extends _2[r8, rm8] {
+  implicit object _0 extends TwoOp[r8, rm8] {
     val opcode: OneOpcode = 0x86 /r
     val format = RegRmFormat
   }
 }
 
 trait XCHGImpl extends XCHGLow {
-  implicit object XCHG_1 extends _2[r16, rm16] {
+  implicit object _1 extends TwoOp[r16, rm16] {
     val opcode: OneOpcode = 0x87 /r
     val format = RegRmFormat
   }
 
-  implicit object XCHG_2 extends _2[r32, rm32] {
+  implicit object _2 extends TwoOp[r32, rm32] {
     val opcode: OneOpcode = 0x87 /r
     val format = RegRmFormat
   }
 
-  implicit object XCHG_3 extends _2[r64, rm64] {
+  implicit object _3 extends TwoOp[r64, rm64] {
     val opcode: OneOpcode = 0x87 /r
     override def prefix = REX.W(true)
     val format = RegRmFormat
   }
 
-  implicit object XCHG_4 extends _1[r16] {
+  implicit object _4 extends OneOp[r16] {
     val opcode: OneOpcode = 0x90 + rw
     val format = RegFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object XCHG_5 extends _1[r32] {
+  implicit object _5 extends OneOp[r32] {
     val opcode: OneOpcode = 0x90 + rd
     val format = RegFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object XCHG_6 extends _1[r64] {
+  implicit object _6 extends OneOp[r64] {
     val opcode: OneOpcode = 0x90 + ro
     override def prefix = REX.W(true)
     val format = RegFormat

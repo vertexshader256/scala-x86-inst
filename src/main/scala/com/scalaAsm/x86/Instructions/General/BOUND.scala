@@ -15,13 +15,13 @@ trait BOUND extends InstructionDefinition {
 object BOUND extends TwoOperands[BOUND] with BOUNDImpl
 
 trait BOUNDImpl extends BOUND {
-  implicit object BOUND_0 extends _2[r16, m16] {
+  implicit object _0 extends TwoOp[r16, m16] {
     val opcode: OneOpcode = 0x62 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object BOUND_1 extends _2[r32, m32] {
+  implicit object _1 extends TwoOp[r32, m32] {
     val opcode: OneOpcode = 0x62 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true

@@ -15,7 +15,7 @@ trait SETZ extends InstructionDefinition {
 object SETZ extends OneOperand[SETZ] with SETZImpl
 
 trait SETZImpl extends SETZ {
-  implicit object SETZ_0 extends _1[rm8] {
+  implicit object _0 extends OneOp[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x94) /+ 0
     val format = RmFormat
   }

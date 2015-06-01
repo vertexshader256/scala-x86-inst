@@ -15,7 +15,7 @@ trait XRSTOR extends InstructionDefinition {
 object XRSTOR extends OneOperand[XRSTOR] with XRSTORImpl
 
 trait XRSTORImpl extends XRSTOR {
-  implicit object XRSTOR_0 extends _1[m] {
+  implicit object _0 extends OneOp[m] {
     val opcode: TwoOpcodes = (0x0F, 0xAE) /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true

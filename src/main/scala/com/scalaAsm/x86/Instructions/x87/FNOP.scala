@@ -15,7 +15,7 @@ trait FNOP extends InstructionDefinition {
 object FNOP extends ZeroOperands[FNOP] with FNOPImpl
 
 trait FNOPImpl extends FNOP {
-  implicit object FNOP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 2
       }
 }

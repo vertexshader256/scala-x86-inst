@@ -15,7 +15,7 @@ trait FNENI extends InstructionDefinition {
 object FNENI extends ZeroOperands[FNENI] with FNENIImpl
 
 trait FNENIImpl extends FNENI {
-  implicit object FNENI_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

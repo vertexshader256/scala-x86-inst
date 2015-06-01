@@ -15,7 +15,7 @@ trait LEAVE extends InstructionDefinition {
 object LEAVE extends ZeroOperands[LEAVE] with LEAVEImpl
 
 trait LEAVEImpl extends LEAVE {
-  implicit object LEAVE_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xC9
         override def hasImplicitOperand = true
   }

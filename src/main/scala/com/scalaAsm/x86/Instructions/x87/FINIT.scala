@@ -15,7 +15,7 @@ trait FINIT extends InstructionDefinition {
 object FINIT extends ZeroOperands[FINIT] with FINITImpl
 
 trait FINITImpl extends FINIT {
-  implicit object FINIT_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

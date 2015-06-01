@@ -15,13 +15,13 @@ trait FISTTP extends InstructionDefinition {
 object FISTTP extends OneOperand[FISTTP] with FISTTPImpl
 
 trait FISTTPImpl extends FISTTP {
-  implicit object FISTTP_0 extends _1[m32] {
+  implicit object _0 extends OneOp[m32] {
     val opcode: OneOpcode = 0xDB /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object FISTTP_1 extends _1[m16] {
+  implicit object _1 extends OneOp[m16] {
     val opcode: OneOpcode = 0xDF /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true

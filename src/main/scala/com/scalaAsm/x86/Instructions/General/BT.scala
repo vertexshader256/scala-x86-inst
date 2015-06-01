@@ -15,33 +15,33 @@ trait BT extends InstructionDefinition {
 object BT extends TwoOperands[BT] with BTImpl
 
 trait BTImpl extends BT {
-  implicit object BT_0 extends _2[rm16, r16] {
+  implicit object _0 extends TwoOp[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xA3) /r
     val format = MemRegFormat
   }
 
-  implicit object BT_1 extends _2[rm32, r32] {
+  implicit object _1 extends TwoOp[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xA3) /r
     val format = MemRegFormat
   }
 
-  implicit object BT_2 extends _2[rm64, r64] {
+  implicit object _2 extends TwoOp[rm64, r64] {
     val opcode: TwoOpcodes = (0x0F, 0xA3) /r
     override def prefix = REX.W(true)
     val format = MemRegFormat
   }
 
-  implicit object BT_3 extends _2[rm16, imm8] {
+  implicit object _3 extends TwoOp[rm16, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 4
     val format = RmImmFormat
   }
 
-  implicit object BT_4 extends _2[rm32, imm8] {
+  implicit object _4 extends TwoOp[rm32, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 4
     val format = RmImmFormat
   }
 
-  implicit object BT_5 extends _2[rm64, imm8] {
+  implicit object _5 extends TwoOp[rm64, imm8] {
     val opcode: TwoOpcodes = (0x0F, 0xBA) /+ 4
     override def prefix = REX.W(true)
     val format = RmImmFormat

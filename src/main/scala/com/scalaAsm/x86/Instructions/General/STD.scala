@@ -15,7 +15,7 @@ trait STD extends InstructionDefinition {
 object STD extends ZeroOperands[STD] with STDImpl
 
 trait STDImpl extends STD {
-  implicit object STD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xFD
       }
 }

@@ -15,19 +15,19 @@ trait PUSH extends InstructionDefinition {
 object PUSH extends ZeroOperands[PUSH] with OneOperand[PUSH] with PUSHImpl
 
 trait PUSHLow extends PUSH {
-  implicit object PUSH_0 extends _1[rm16] {
+  implicit object _0 extends OneOp[rm16] {
     val opcode: OneOpcode = 0xFF /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_1 extends _1[rm32] {
+  implicit object _1 extends OneOp[rm32] {
     val opcode: OneOpcode = 0xFF /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_2 extends _1[rm64] {
+  implicit object _2 extends OneOp[rm64] {
     val opcode: OneOpcode = 0xFF /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true
@@ -35,42 +35,42 @@ trait PUSHLow extends PUSH {
 }
 
 trait PUSHImpl extends PUSHLow {
-  implicit object PUSH_3 extends _0 {
+  implicit object _3 extends NoOp{
     val opcode: OneOpcode = 0x06
         override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_4 extends _1[r16] {
+  implicit object _4 extends OneOp[r16] {
     val opcode: OneOpcode = 0x50 + rw
     val format = RegFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_5 extends _1[r32] {
+  implicit object _5 extends OneOp[r32] {
     val opcode: OneOpcode = 0x50 + rd
     val format = RegFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_6 extends _1[r64] {
+  implicit object _6 extends OneOp[r64] {
     val opcode: OneOpcode = 0x50 + ro
     val format = RegFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_7 extends _1[imm16] {
+  implicit object _7 extends OneOp[imm16] {
     val opcode: OneOpcode = 0x68
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_8 extends _1[imm32] {
+  implicit object _8 extends OneOp[imm32] {
     val opcode: OneOpcode = 0x68
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object PUSH_9 extends _1[imm8] {
+  implicit object _9 extends OneOp[imm8] {
     val opcode: OneOpcode = 0x6A
     val format = ImmFormat
     override def hasImplicitOperand = true

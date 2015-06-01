@@ -15,13 +15,13 @@ trait LDS extends InstructionDefinition {
 object LDS extends TwoOperands[LDS] with LDSImpl
 
 trait LDSImpl extends LDS {
-  implicit object LDS_0 extends _2[r16, m] {
+  implicit object _0 extends TwoOp[r16, m] {
     val opcode: OneOpcode = 0xC5 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object LDS_1 extends _2[r32, m] {
+  implicit object _1 extends TwoOp[r32, m] {
     val opcode: OneOpcode = 0xC5 /r
     val format = RegRmFormat
     override def hasImplicitOperand = true

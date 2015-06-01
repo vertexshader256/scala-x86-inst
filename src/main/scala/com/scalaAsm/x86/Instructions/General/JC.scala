@@ -15,17 +15,17 @@ trait JC extends InstructionDefinition {
 object JC extends OneOperand[JC] with JCImpl
 
 trait JCImpl extends JC {
-  implicit object JC_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x72
     val format = ImmFormat
   }
 
-  implicit object JC_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x82)
     val format = ImmFormat
   }
 
-  implicit object JC_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x82)
     val format = ImmFormat
   }

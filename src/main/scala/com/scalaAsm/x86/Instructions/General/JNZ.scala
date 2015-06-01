@@ -15,17 +15,17 @@ trait JNZ extends InstructionDefinition {
 object JNZ extends OneOperand[JNZ] with JNZImpl
 
 trait JNZImpl extends JNZ {
-  implicit object JNZ_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x75
     val format = ImmFormat
   }
 
-  implicit object JNZ_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x85)
     val format = ImmFormat
   }
 
-  implicit object JNZ_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x85)
     val format = ImmFormat
   }

@@ -15,13 +15,13 @@ trait FIMUL extends InstructionDefinition {
 object FIMUL extends OneOperand[FIMUL] with FIMULImpl
 
 trait FIMULImpl extends FIMUL {
-  implicit object FIMUL_0 extends _1[m32] {
+  implicit object _0 extends OneOp[m32] {
     val opcode: OneOpcode = 0xDA /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object FIMUL_1 extends _1[m16] {
+  implicit object _1 extends OneOp[m16] {
     val opcode: OneOpcode = 0xDE /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true

@@ -15,7 +15,7 @@ trait JMPE extends InstructionDefinition {
 object JMPE extends ZeroOperands[JMPE] with JMPEImpl
 
 trait JMPEImpl extends JMPE {
-  implicit object JMPE_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 6
       }
 }

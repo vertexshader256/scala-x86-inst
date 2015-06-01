@@ -15,7 +15,7 @@ trait FSTCW extends InstructionDefinition {
 object FSTCW extends OneOperand[FSTCW] with FSTCWImpl
 
 trait FSTCWImpl extends FSTCW {
-  implicit object FSTCW_0 extends _1[m16] {
+  implicit object _0 extends OneOp[m16] {
     val opcode: OneOpcode = 0xD9 /+ 7
     val format = RmFormat
   }

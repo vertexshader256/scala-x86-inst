@@ -15,7 +15,7 @@ trait RDPMC extends InstructionDefinition {
 object RDPMC extends ZeroOperands[RDPMC] with RDPMCImpl
 
 trait RDPMCImpl extends RDPMC {
-  implicit object RDPMC_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x33)
         override def hasImplicitOperand = true
   }

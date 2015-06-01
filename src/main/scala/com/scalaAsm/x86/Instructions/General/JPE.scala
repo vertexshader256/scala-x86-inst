@@ -15,17 +15,17 @@ trait JPE extends InstructionDefinition {
 object JPE extends OneOperand[JPE] with JPEImpl
 
 trait JPEImpl extends JPE {
-  implicit object JPE_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x7A
     val format = ImmFormat
   }
 
-  implicit object JPE_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8A)
     val format = ImmFormat
   }
 
-  implicit object JPE_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8A)
     val format = ImmFormat
   }

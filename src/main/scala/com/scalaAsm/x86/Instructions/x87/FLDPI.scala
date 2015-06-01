@@ -15,7 +15,7 @@ trait FLDPI extends InstructionDefinition {
 object FLDPI extends ZeroOperands[FLDPI] with FLDPIImpl
 
 trait FLDPIImpl extends FLDPI {
-  implicit object FLDPI_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 5
         override def hasImplicitOperand = true
   }

@@ -15,7 +15,7 @@ trait LMSW extends InstructionDefinition {
 object LMSW extends OneOperand[LMSW] with LMSWImpl
 
 trait LMSWImpl extends LMSW {
-  implicit object LMSW_0 extends _1[rm16] {
+  implicit object _0 extends OneOp[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 6
     val format = RmFormat
     override def hasImplicitOperand = true

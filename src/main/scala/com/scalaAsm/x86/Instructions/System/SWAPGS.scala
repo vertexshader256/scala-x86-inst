@@ -15,7 +15,7 @@ trait SWAPGS extends InstructionDefinition {
 object SWAPGS extends ZeroOperands[SWAPGS] with SWAPGSImpl
 
 trait SWAPGSImpl extends SWAPGS {
-  implicit object SWAPGS_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 7
         override def hasImplicitOperand = true
   }

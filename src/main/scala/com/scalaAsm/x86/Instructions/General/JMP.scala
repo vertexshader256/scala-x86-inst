@@ -15,34 +15,34 @@ trait JMP extends InstructionDefinition {
 object JMP extends OneOperand[JMP] with JMPImpl
 
 trait JMPLow extends JMP {
-  implicit object JMP_0 extends _1[rm16] {
+  implicit object _0 extends OneOp[rm16] {
     val opcode: OneOpcode = 0xFF /+ 4
     val format = RmFormat
   }
 
-  implicit object JMP_1 extends _1[rm32] {
+  implicit object _1 extends OneOp[rm32] {
     val opcode: OneOpcode = 0xFF /+ 4
     val format = RmFormat
   }
 
-  implicit object JMP_2 extends _1[rm64] {
+  implicit object _2 extends OneOp[rm64] {
     val opcode: OneOpcode = 0xFF /+ 4
     val format = RmFormat
   }
 }
 
 trait JMPImpl extends JMPLow {
-  implicit object JMP_3 extends _1[rel16] {
+  implicit object _3 extends OneOp[rel16] {
     val opcode: OneOpcode = 0xE9
     val format = ImmFormat
   }
 
-  implicit object JMP_4 extends _1[rel32] {
+  implicit object _4 extends OneOp[rel32] {
     val opcode: OneOpcode = 0xE9
     val format = ImmFormat
   }
 
-  implicit object JMP_5 extends _1[rel8] {
+  implicit object _5 extends OneOp[rel8] {
     val opcode: OneOpcode = 0xEB
     val format = ImmFormat
   }

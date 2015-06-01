@@ -15,7 +15,7 @@ trait LOOPZ extends InstructionDefinition {
 object LOOPZ extends OneOperand[LOOPZ] with LOOPZImpl
 
 trait LOOPZImpl extends LOOPZ {
-  implicit object LOOPZ_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0xE1
     val format = ImmFormat
     override def hasImplicitOperand = true

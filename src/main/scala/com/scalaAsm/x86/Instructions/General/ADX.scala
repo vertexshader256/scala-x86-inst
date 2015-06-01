@@ -15,7 +15,7 @@ trait ADX extends InstructionDefinition {
 object ADX extends OneOperand[ADX] with ADXImpl
 
 trait ADXImpl extends ADX {
-  implicit object ADX_0 extends _1[imm8] {
+  implicit object _0 extends OneOp[imm8] {
     val opcode: OneOpcode = 0xD5
     val format = ImmFormat
     override def hasImplicitOperand = true

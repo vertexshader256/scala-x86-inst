@@ -15,7 +15,7 @@ trait SYSENTER extends InstructionDefinition {
 object SYSENTER extends ZeroOperands[SYSENTER] with SYSENTERImpl
 
 trait SYSENTERImpl extends SYSENTER {
-  implicit object SYSENTER_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x34)
         override def hasImplicitOperand = true
   }

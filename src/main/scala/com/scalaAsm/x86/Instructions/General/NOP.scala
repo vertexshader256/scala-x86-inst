@@ -15,19 +15,19 @@ trait NOP extends InstructionDefinition {
 object NOP extends ZeroOperands[NOP] with OneOperand[NOP] with NOPImpl
 
 trait NOPLow extends NOP {
-  implicit object NOP_0 extends _1[rm16] {
+  implicit object _0 extends OneOp[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x0D)
     val format = RmFormat
   }
 
-  implicit object NOP_1 extends _1[rm32] {
+  implicit object _1 extends OneOp[rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x0D)
     val format = RmFormat
   }
 }
 
 trait NOPImpl extends NOPLow {
-  implicit object NOP_2 extends _0 {
+  implicit object _2 extends NoOp{
     val opcode: OneOpcode = 0x90
       }
 }

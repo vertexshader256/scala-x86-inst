@@ -15,7 +15,7 @@ trait DAS extends InstructionDefinition {
 object DAS extends ZeroOperands[DAS] with DASImpl
 
 trait DASImpl extends DAS {
-  implicit object DAS_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x2F
         override def hasImplicitOperand = true
   }

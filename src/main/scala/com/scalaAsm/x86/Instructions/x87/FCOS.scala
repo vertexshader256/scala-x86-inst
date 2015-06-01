@@ -15,7 +15,7 @@ trait FCOS extends InstructionDefinition {
 object FCOS extends ZeroOperands[FCOS] with FCOSImpl
 
 trait FCOSImpl extends FCOS {
-  implicit object FCOS_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 7
         override def hasImplicitOperand = true
   }

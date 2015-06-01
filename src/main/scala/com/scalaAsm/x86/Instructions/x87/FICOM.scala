@@ -15,13 +15,13 @@ trait FICOM extends InstructionDefinition {
 object FICOM extends OneOperand[FICOM] with FICOMImpl
 
 trait FICOMImpl extends FICOM {
-  implicit object FICOM_0 extends _1[m32] {
+  implicit object _0 extends OneOp[m32] {
     val opcode: OneOpcode = 0xDA /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object FICOM_1 extends _1[m16] {
+  implicit object _1 extends OneOp[m16] {
     val opcode: OneOpcode = 0xDE /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true

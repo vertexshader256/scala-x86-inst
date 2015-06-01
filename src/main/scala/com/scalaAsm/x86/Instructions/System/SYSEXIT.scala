@@ -15,7 +15,7 @@ trait SYSEXIT extends InstructionDefinition {
 object SYSEXIT extends ZeroOperands[SYSEXIT] with SYSEXITImpl
 
 trait SYSEXITImpl extends SYSEXIT {
-  implicit object SYSEXIT_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x35)
         override def hasImplicitOperand = true
   }

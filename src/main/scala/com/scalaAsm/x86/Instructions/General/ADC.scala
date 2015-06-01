@@ -15,64 +15,64 @@ trait ADC extends InstructionDefinition {
 object ADC extends OneOperand[ADC] with TwoOperands[ADC] with ADCImpl
 
 trait ADCLow extends ADC {
-  implicit object ADC_0 extends _2[rm8, r8] {
+  implicit object _0 extends TwoOp[rm8, r8] {
     val opcode: OneOpcode = 0x10 /r
     val format = MemRegFormat
   }
 
-  implicit object ADC_1 extends _2[rm16, r16] {
+  implicit object _1 extends TwoOp[rm16, r16] {
     val opcode: OneOpcode = 0x11 /r
     val format = MemRegFormat
   }
 
-  implicit object ADC_2 extends _2[rm32, r32] {
+  implicit object _2 extends TwoOp[rm32, r32] {
     val opcode: OneOpcode = 0x11 /r
     val format = MemRegFormat
   }
 
-  implicit object ADC_3 extends _2[rm64, r64] {
+  implicit object _3 extends TwoOp[rm64, r64] {
     val opcode: OneOpcode = 0x11 /r
     override def prefix = REX.W(true)
     val format = MemRegFormat
   }
 
-  implicit object ADC_4 extends _2[r8, rm8] {
+  implicit object _4 extends TwoOp[r8, rm8] {
     val opcode: OneOpcode = 0x12 /r
     val format = RegRmFormat
   }
 
-  implicit object ADC_5 extends _2[rm8, imm8] {
+  implicit object _5 extends TwoOp[rm8, imm8] {
     val opcode: OneOpcode = 0x80 /+ 2
     val format = RmImmFormat
   }
 
-  implicit object ADC_6 extends _2[rm16, imm16] {
+  implicit object _6 extends TwoOp[rm16, imm16] {
     val opcode: OneOpcode = 0x81 /+ 2
     val format = RmImmFormat
   }
 
-  implicit object ADC_7 extends _2[rm32, imm32] {
+  implicit object _7 extends TwoOp[rm32, imm32] {
     val opcode: OneOpcode = 0x81 /+ 2
     val format = RmImmFormat
   }
 
-  implicit object ADC_8 extends _2[rm64, imm32] {
+  implicit object _8 extends TwoOp[rm64, imm32] {
     val opcode: OneOpcode = 0x81 /+ 2
     override def prefix = REX.W(true)
     val format = RmImmFormat
   }
 
-  implicit object ADC_9 extends _2[rm16, imm8] {
+  implicit object _9 extends TwoOp[rm16, imm8] {
     val opcode: OneOpcode = 0x83 /+ 2
     val format = RmImmFormat
   }
 
-  implicit object ADC_10 extends _2[rm32, imm8] {
+  implicit object _10 extends TwoOp[rm32, imm8] {
     val opcode: OneOpcode = 0x83 /+ 2
     val format = RmImmFormat
   }
 
-  implicit object ADC_11 extends _2[rm64, imm8] {
+  implicit object _11 extends TwoOp[rm64, imm8] {
     val opcode: OneOpcode = 0x83 /+ 2
     override def prefix = REX.W(true)
     val format = RmImmFormat
@@ -80,35 +80,35 @@ trait ADCLow extends ADC {
 }
 
 trait ADCImpl extends ADCLow {
-  implicit object ADC_12 extends _2[r16, rm16] {
+  implicit object _12 extends TwoOp[r16, rm16] {
     val opcode: OneOpcode = 0x13 /r
     val format = RegRmFormat
   }
 
-  implicit object ADC_13 extends _2[r32, rm32] {
+  implicit object _13 extends TwoOp[r32, rm32] {
     val opcode: OneOpcode = 0x13 /r
     val format = RegRmFormat
   }
 
-  implicit object ADC_14 extends _2[r64, rm64] {
+  implicit object _14 extends TwoOp[r64, rm64] {
     val opcode: OneOpcode = 0x13 /r
     override def prefix = REX.W(true)
     val format = RegRmFormat
   }
 
-  implicit object ADC_15 extends _1[imm8] {
+  implicit object _15 extends OneOp[imm8] {
     val opcode: OneOpcode = 0x14
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object ADC_16 extends _1[imm16] {
+  implicit object _16 extends OneOp[imm16] {
     val opcode: OneOpcode = 0x15
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object ADC_17 extends _1[imm32] {
+  implicit object _17 extends OneOp[imm32] {
     val opcode: OneOpcode = 0x15
     val format = ImmFormat
     override def hasImplicitOperand = true

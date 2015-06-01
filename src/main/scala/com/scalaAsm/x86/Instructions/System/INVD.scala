@@ -15,7 +15,7 @@ trait INVD extends InstructionDefinition {
 object INVD extends ZeroOperands[INVD] with INVDImpl
 
 trait INVDImpl extends INVD {
-  implicit object INVD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x08)
       }
 }

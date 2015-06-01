@@ -15,7 +15,7 @@ trait STOSQ extends InstructionDefinition {
 object STOSQ extends ZeroOperands[STOSQ] with STOSQImpl
 
 trait STOSQImpl extends STOSQ {
-  implicit object STOSQ_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xAB
         override def hasImplicitOperand = true
   }

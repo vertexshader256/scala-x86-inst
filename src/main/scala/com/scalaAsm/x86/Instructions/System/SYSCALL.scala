@@ -15,7 +15,7 @@ trait SYSCALL extends InstructionDefinition {
 object SYSCALL extends ZeroOperands[SYSCALL] with SYSCALLImpl
 
 trait SYSCALLImpl extends SYSCALL {
-  implicit object SYSCALL_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x05)
         override def hasImplicitOperand = true
   }

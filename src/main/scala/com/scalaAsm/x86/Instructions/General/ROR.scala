@@ -15,46 +15,46 @@ trait ROR extends InstructionDefinition {
 object ROR extends OneOperand[ROR] with TwoOperands[ROR] with RORImpl
 
 trait RORImpl extends ROR {
-  implicit object ROR_0 extends _2[rm8, imm8] {
+  implicit object _0 extends TwoOp[rm8, imm8] {
     val opcode: OneOpcode = 0xC0 /+ 1
     val format = RmImmFormat
   }
 
-  implicit object ROR_1 extends _2[rm16, imm8] {
+  implicit object _1 extends TwoOp[rm16, imm8] {
     val opcode: OneOpcode = 0xC1 /+ 1
     val format = RmImmFormat
   }
 
-  implicit object ROR_2 extends _2[rm32, imm8] {
+  implicit object _2 extends TwoOp[rm32, imm8] {
     val opcode: OneOpcode = 0xC1 /+ 1
     val format = RmImmFormat
   }
 
-  implicit object ROR_3 extends _2[rm64, imm8] {
+  implicit object _3 extends TwoOp[rm64, imm8] {
     val opcode: OneOpcode = 0xC1 /+ 1
     override def prefix = REX.W(true)
     val format = RmImmFormat
   }
 
-  implicit object ROR_4 extends _1[rm8] {
+  implicit object _4 extends OneOp[rm8] {
     val opcode: OneOpcode = 0xD0 /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object ROR_5 extends _1[rm16] {
+  implicit object _5 extends OneOp[rm16] {
     val opcode: OneOpcode = 0xD1 /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object ROR_6 extends _1[rm32] {
+  implicit object _6 extends OneOp[rm32] {
     val opcode: OneOpcode = 0xD1 /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object ROR_7 extends _1[rm64] {
+  implicit object _7 extends OneOp[rm64] {
     val opcode: OneOpcode = 0xD1 /+ 1
     override def prefix = REX.W(true)
     val format = RmFormat

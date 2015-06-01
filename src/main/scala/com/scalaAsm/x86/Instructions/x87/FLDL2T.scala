@@ -15,7 +15,7 @@ trait FLDL2T extends InstructionDefinition {
 object FLDL2T extends ZeroOperands[FLDL2T] with FLDL2TImpl
 
 trait FLDL2TImpl extends FLDL2T {
-  implicit object FLDL2T_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 5
         override def hasImplicitOperand = true
   }

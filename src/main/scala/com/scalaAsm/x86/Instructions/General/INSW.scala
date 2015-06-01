@@ -15,7 +15,7 @@ trait INSW extends InstructionDefinition {
 object INSW extends ZeroOperands[INSW] with INSWImpl
 
 trait INSWImpl extends INSW {
-  implicit object INSW_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x6D
         override def hasImplicitOperand = true
   }

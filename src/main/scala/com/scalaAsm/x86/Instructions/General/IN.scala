@@ -15,13 +15,13 @@ trait IN extends InstructionDefinition {
 object IN extends ZeroOperands[IN] with OneOperand[IN] with INImpl
 
 trait INImpl extends IN {
-  implicit object IN_0 extends _1[imm8] {
+  implicit object _0 extends OneOp[imm8] {
     val opcode: OneOpcode = 0xE4
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object IN_1 extends _0 {
+  implicit object _1 extends NoOp{
     val opcode: OneOpcode = 0xEC
         override def hasImplicitOperand = true
   }

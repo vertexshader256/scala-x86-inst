@@ -15,7 +15,7 @@ trait FNCLEX extends InstructionDefinition {
 object FNCLEX extends ZeroOperands[FNCLEX] with FNCLEXImpl
 
 trait FNCLEXImpl extends FNCLEX {
-  implicit object FNCLEX_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

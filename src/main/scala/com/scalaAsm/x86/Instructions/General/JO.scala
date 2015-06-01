@@ -15,17 +15,17 @@ trait JO extends InstructionDefinition {
 object JO extends OneOperand[JO] with JOImpl
 
 trait JOImpl extends JO {
-  implicit object JO_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x70
     val format = ImmFormat
   }
 
-  implicit object JO_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x80)
     val format = ImmFormat
   }
 
-  implicit object JO_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x80)
     val format = ImmFormat
   }

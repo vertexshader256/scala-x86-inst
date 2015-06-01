@@ -15,7 +15,7 @@ trait SETLE extends InstructionDefinition {
 object SETLE extends OneOperand[SETLE] with SETLEImpl
 
 trait SETLEImpl extends SETLE {
-  implicit object SETLE_0 extends _1[rm8] {
+  implicit object _0 extends OneOp[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9E) /+ 0
     val format = RmFormat
   }

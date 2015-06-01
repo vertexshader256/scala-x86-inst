@@ -15,7 +15,7 @@ trait SYSRET extends InstructionDefinition {
 object SYSRET extends ZeroOperands[SYSRET] with SYSRETImpl
 
 trait SYSRETImpl extends SYSRET {
-  implicit object SYSRET_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x07)
         override def hasImplicitOperand = true
   }

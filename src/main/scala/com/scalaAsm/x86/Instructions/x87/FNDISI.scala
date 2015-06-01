@@ -15,7 +15,7 @@ trait FNDISI extends InstructionDefinition {
 object FNDISI extends ZeroOperands[FNDISI] with FNDISIImpl
 
 trait FNDISIImpl extends FNDISI {
-  implicit object FNDISI_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

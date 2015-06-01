@@ -15,7 +15,7 @@ trait CMPSW extends InstructionDefinition {
 object CMPSW extends ZeroOperands[CMPSW] with CMPSWImpl
 
 trait CMPSWImpl extends CMPSW {
-  implicit object CMPSW_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xA7
         override def hasImplicitOperand = true
   }

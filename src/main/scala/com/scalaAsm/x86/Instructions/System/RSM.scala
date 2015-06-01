@@ -15,7 +15,7 @@ trait RSM extends InstructionDefinition {
 object RSM extends ZeroOperands[RSM] with RSMImpl
 
 trait RSMImpl extends RSM {
-  implicit object RSM_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0xAA)
         override def hasImplicitOperand = true
   }

@@ -15,64 +15,64 @@ trait CMP extends InstructionDefinition {
 object CMP extends OneOperand[CMP] with TwoOperands[CMP] with CMPImpl
 
 trait CMPLow extends CMP {
-  implicit object CMP_0 extends _2[rm8, r8] {
+  implicit object _0 extends TwoOp[rm8, r8] {
     val opcode: OneOpcode = 0x38 /r
     val format = MemRegFormat
   }
 
-  implicit object CMP_1 extends _2[rm16, r16] {
+  implicit object _1 extends TwoOp[rm16, r16] {
     val opcode: OneOpcode = 0x39 /r
     val format = MemRegFormat
   }
 
-  implicit object CMP_2 extends _2[rm32, r32] {
+  implicit object _2 extends TwoOp[rm32, r32] {
     val opcode: OneOpcode = 0x39 /r
     val format = MemRegFormat
   }
 
-  implicit object CMP_3 extends _2[rm64, r64] {
+  implicit object _3 extends TwoOp[rm64, r64] {
     val opcode: OneOpcode = 0x39 /r
     override def prefix = REX.W(true)
     val format = MemRegFormat
   }
 
-  implicit object CMP_4 extends _2[r8, rm8] {
+  implicit object _4 extends TwoOp[r8, rm8] {
     val opcode: OneOpcode = 0x3A /r
     val format = RegRmFormat
   }
 
-  implicit object CMP_5 extends _2[rm8, imm8] {
+  implicit object _5 extends TwoOp[rm8, imm8] {
     val opcode: OneOpcode = 0x80 /+ 7
     val format = RmImmFormat
   }
 
-  implicit object CMP_6 extends _2[rm16, imm16] {
+  implicit object _6 extends TwoOp[rm16, imm16] {
     val opcode: OneOpcode = 0x81 /+ 7
     val format = RmImmFormat
   }
 
-  implicit object CMP_7 extends _2[rm32, imm32] {
+  implicit object _7 extends TwoOp[rm32, imm32] {
     val opcode: OneOpcode = 0x81 /+ 7
     val format = RmImmFormat
   }
 
-  implicit object CMP_8 extends _2[rm64, imm32] {
+  implicit object _8 extends TwoOp[rm64, imm32] {
     val opcode: OneOpcode = 0x81 /+ 7
     override def prefix = REX.W(true)
     val format = RmImmFormat
   }
 
-  implicit object CMP_9 extends _2[rm16, imm8] {
+  implicit object _9 extends TwoOp[rm16, imm8] {
     val opcode: OneOpcode = 0x83 /+ 7
     val format = RmImmFormat
   }
 
-  implicit object CMP_10 extends _2[rm32, imm8] {
+  implicit object _10 extends TwoOp[rm32, imm8] {
     val opcode: OneOpcode = 0x83 /+ 7
     val format = RmImmFormat
   }
 
-  implicit object CMP_11 extends _2[rm64, imm8] {
+  implicit object _11 extends TwoOp[rm64, imm8] {
     val opcode: OneOpcode = 0x83 /+ 7
     override def prefix = REX.W(true)
     val format = RmImmFormat
@@ -80,35 +80,35 @@ trait CMPLow extends CMP {
 }
 
 trait CMPImpl extends CMPLow {
-  implicit object CMP_12 extends _2[r16, rm16] {
+  implicit object _12 extends TwoOp[r16, rm16] {
     val opcode: OneOpcode = 0x3B /r
     val format = RegRmFormat
   }
 
-  implicit object CMP_13 extends _2[r32, rm32] {
+  implicit object _13 extends TwoOp[r32, rm32] {
     val opcode: OneOpcode = 0x3B /r
     val format = RegRmFormat
   }
 
-  implicit object CMP_14 extends _2[r64, rm64] {
+  implicit object _14 extends TwoOp[r64, rm64] {
     val opcode: OneOpcode = 0x3B /r
     override def prefix = REX.W(true)
     val format = RegRmFormat
   }
 
-  implicit object CMP_15 extends _1[imm8] {
+  implicit object _15 extends OneOp[imm8] {
     val opcode: OneOpcode = 0x3C
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object CMP_16 extends _1[imm16] {
+  implicit object _16 extends OneOp[imm16] {
     val opcode: OneOpcode = 0x3D
     val format = ImmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object CMP_17 extends _1[imm32] {
+  implicit object _17 extends OneOp[imm32] {
     val opcode: OneOpcode = 0x3D
     val format = ImmFormat
     override def hasImplicitOperand = true

@@ -15,7 +15,7 @@ trait XGETBV extends InstructionDefinition {
 object XGETBV extends ZeroOperands[XGETBV] with XGETBVImpl
 
 trait XGETBVImpl extends XGETBV {
-  implicit object XGETBV_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x01) /+ 2
         override def hasImplicitOperand = true
   }

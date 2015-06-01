@@ -15,7 +15,7 @@ trait INS extends InstructionDefinition {
 object INS extends ZeroOperands[INS] with INSImpl
 
 trait INSImpl extends INS {
-  implicit object INS_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x6C
         override def hasImplicitOperand = true
   }

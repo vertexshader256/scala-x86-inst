@@ -15,7 +15,7 @@ trait FPREM extends InstructionDefinition {
 object FPREM extends ZeroOperands[FPREM] with FPREMImpl
 
 trait FPREMImpl extends FPREM {
-  implicit object FPREM_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 7
         override def hasImplicitOperand = true
   }

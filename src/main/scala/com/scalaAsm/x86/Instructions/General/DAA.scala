@@ -15,7 +15,7 @@ trait DAA extends InstructionDefinition {
 object DAA extends ZeroOperands[DAA] with DAAImpl
 
 trait DAAImpl extends DAA {
-  implicit object DAA_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x27
         override def hasImplicitOperand = true
   }

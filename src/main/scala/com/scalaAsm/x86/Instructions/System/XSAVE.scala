@@ -15,7 +15,7 @@ trait XSAVE extends InstructionDefinition {
 object XSAVE extends OneOperand[XSAVE] with XSAVEImpl
 
 trait XSAVEImpl extends XSAVE {
-  implicit object XSAVE_0 extends _1[m] {
+  implicit object _0 extends OneOp[m] {
     val opcode: TwoOpcodes = (0x0F, 0xAE) /+ 4
     val format = RmFormat
     override def hasImplicitOperand = true

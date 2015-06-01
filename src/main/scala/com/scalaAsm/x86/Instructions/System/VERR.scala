@@ -15,7 +15,7 @@ trait VERR extends InstructionDefinition {
 object VERR extends OneOperand[VERR] with VERRImpl
 
 trait VERRImpl extends VERR {
-  implicit object VERR_0 extends _1[rm16] {
+  implicit object _0 extends OneOp[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 4
     val format = RmFormat
   }

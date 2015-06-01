@@ -15,7 +15,7 @@ trait FSINCOS extends InstructionDefinition {
 object FSINCOS extends ZeroOperands[FSINCOS] with FSINCOSImpl
 
 trait FSINCOSImpl extends FSINCOS {
-  implicit object FSINCOS_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 7
         override def hasImplicitOperand = true
   }

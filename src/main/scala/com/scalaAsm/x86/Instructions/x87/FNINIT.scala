@@ -15,7 +15,7 @@ trait FNINIT extends InstructionDefinition {
 object FNINIT extends ZeroOperands[FNINIT] with FNINITImpl
 
 trait FNINITImpl extends FNINIT {
-  implicit object FNINIT_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

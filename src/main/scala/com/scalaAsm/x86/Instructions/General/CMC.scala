@@ -15,7 +15,7 @@ trait CMC extends InstructionDefinition {
 object CMC extends ZeroOperands[CMC] with CMCImpl
 
 trait CMCImpl extends CMC {
-  implicit object CMC_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xF5
       }
 }

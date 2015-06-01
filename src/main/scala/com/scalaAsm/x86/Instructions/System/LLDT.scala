@@ -15,7 +15,7 @@ trait LLDT extends InstructionDefinition {
 object LLDT extends OneOperand[LLDT] with LLDTImpl
 
 trait LLDTImpl extends LLDT {
-  implicit object LLDT_0 extends _1[rm16] {
+  implicit object _0 extends OneOp[rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x00) /+ 2
     val format = RmFormat
     override def hasImplicitOperand = true

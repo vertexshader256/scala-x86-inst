@@ -15,7 +15,7 @@ trait SETNA extends InstructionDefinition {
 object SETNA extends OneOperand[SETNA] with SETNAImpl
 
 trait SETNAImpl extends SETNA {
-  implicit object SETNA_0 extends _1[rm8] {
+  implicit object _0 extends OneOp[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x96) /+ 0
     val format = RmFormat
   }

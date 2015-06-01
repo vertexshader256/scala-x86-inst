@@ -15,7 +15,7 @@ trait WAIT extends InstructionDefinition {
 object WAIT extends ZeroOperands[WAIT] with WAITImpl
 
 trait WAITImpl extends WAIT {
-  implicit object WAIT_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x9B
       }
 }

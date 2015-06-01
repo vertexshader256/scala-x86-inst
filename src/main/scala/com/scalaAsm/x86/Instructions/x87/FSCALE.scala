@@ -15,7 +15,7 @@ trait FSCALE extends InstructionDefinition {
 object FSCALE extends ZeroOperands[FSCALE] with FSCALEImpl
 
 trait FSCALEImpl extends FSCALE {
-  implicit object FSCALE_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 7
         override def hasImplicitOperand = true
   }

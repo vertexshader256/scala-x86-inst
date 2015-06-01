@@ -15,7 +15,7 @@ trait FXTRACT extends InstructionDefinition {
 object FXTRACT extends ZeroOperands[FXTRACT] with FXTRACTImpl
 
 trait FXTRACTImpl extends FXTRACT {
-  implicit object FXTRACT_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 6
         override def hasImplicitOperand = true
   }

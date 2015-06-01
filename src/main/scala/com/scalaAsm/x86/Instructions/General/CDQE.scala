@@ -15,7 +15,7 @@ trait CDQE extends InstructionDefinition {
 object CDQE extends ZeroOperands[CDQE] with CDQEImpl
 
 trait CDQEImpl extends CDQE {
-  implicit object CDQE_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x98
         override def hasImplicitOperand = true
   }

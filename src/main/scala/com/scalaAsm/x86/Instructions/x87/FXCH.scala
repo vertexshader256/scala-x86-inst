@@ -15,7 +15,7 @@ trait FXCH extends InstructionDefinition {
 object FXCH extends ZeroOperands[FXCH] with FXCHImpl
 
 trait FXCHImpl extends FXCH {
-  implicit object FXCH_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 1
         override def hasImplicitOperand = true
   }

@@ -15,7 +15,7 @@ trait FMULP extends InstructionDefinition {
 object FMULP extends ZeroOperands[FMULP] with FMULPImpl
 
 trait FMULPImpl extends FMULP {
-  implicit object FMULP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDE /+ 1
         override def hasImplicitOperand = true
   }

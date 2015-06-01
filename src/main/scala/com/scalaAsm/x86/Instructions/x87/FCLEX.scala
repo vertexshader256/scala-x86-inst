@@ -15,7 +15,7 @@ trait FCLEX extends InstructionDefinition {
 object FCLEX extends ZeroOperands[FCLEX] with FCLEXImpl
 
 trait FCLEXImpl extends FCLEX {
-  implicit object FCLEX_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDB /+ 4
       }
 }

@@ -15,7 +15,7 @@ trait ICEBP extends InstructionDefinition {
 object ICEBP extends ZeroOperands[ICEBP] with ICEBPImpl
 
 trait ICEBPImpl extends ICEBP {
-  implicit object ICEBP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xF1
         override def hasImplicitOperand = true
   }

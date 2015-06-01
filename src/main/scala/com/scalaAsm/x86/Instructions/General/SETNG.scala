@@ -15,7 +15,7 @@ trait SETNG extends InstructionDefinition {
 object SETNG extends OneOperand[SETNG] with SETNGImpl
 
 trait SETNGImpl extends SETNG {
-  implicit object SETNG_0 extends _1[rm8] {
+  implicit object _0 extends OneOp[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x9E) /+ 0
     val format = RmFormat
   }

@@ -15,7 +15,7 @@ trait JRCXZ extends InstructionDefinition {
 object JRCXZ extends OneOperand[JRCXZ] with JRCXZImpl
 
 trait JRCXZImpl extends JRCXZ {
-  implicit object JRCXZ_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0xE3
     val format = ImmFormat
     override def hasImplicitOperand = true

@@ -15,7 +15,7 @@ trait POPAD extends InstructionDefinition {
 object POPAD extends ZeroOperands[POPAD] with POPADImpl
 
 trait POPADImpl extends POPAD {
-  implicit object POPAD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x61
         override def hasImplicitOperand = true
   }

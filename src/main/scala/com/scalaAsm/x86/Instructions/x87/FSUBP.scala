@@ -15,7 +15,7 @@ trait FSUBP extends InstructionDefinition {
 object FSUBP extends ZeroOperands[FSUBP] with FSUBPImpl
 
 trait FSUBPImpl extends FSUBP {
-  implicit object FSUBP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDE /+ 5
         override def hasImplicitOperand = true
   }

@@ -15,7 +15,7 @@ trait XLATB extends InstructionDefinition {
 object XLATB extends ZeroOperands[XLATB] with XLATBImpl
 
 trait XLATBImpl extends XLATB {
-  implicit object XLATB_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD7
         override def hasImplicitOperand = true
   }

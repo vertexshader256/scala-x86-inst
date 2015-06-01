@@ -15,7 +15,7 @@ trait CWDE extends InstructionDefinition {
 object CWDE extends ZeroOperands[CWDE] with CWDEImpl
 
 trait CWDEImpl extends CWDE {
-  implicit object CWDE_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x98
         override def hasImplicitOperand = true
   }

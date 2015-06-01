@@ -15,7 +15,7 @@ trait CPUID extends InstructionDefinition {
 object CPUID extends ZeroOperands[CPUID] with CPUIDImpl
 
 trait CPUIDImpl extends CPUID {
-  implicit object CPUID_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0xA2)
         override def hasImplicitOperand = true
   }

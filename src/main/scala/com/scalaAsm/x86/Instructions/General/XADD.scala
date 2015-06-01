@@ -15,22 +15,22 @@ trait XADD extends InstructionDefinition {
 object XADD extends TwoOperands[XADD] with XADDImpl
 
 trait XADDImpl extends XADD {
-  implicit object XADD_0 extends _2[rm8, r8] {
+  implicit object _0 extends TwoOp[rm8, r8] {
     val opcode: TwoOpcodes = (0x0F, 0xC0) /r
     val format = MemRegFormat
   }
 
-  implicit object XADD_1 extends _2[rm16, r16] {
+  implicit object _1 extends TwoOp[rm16, r16] {
     val opcode: TwoOpcodes = (0x0F, 0xC1) /r
     val format = MemRegFormat
   }
 
-  implicit object XADD_2 extends _2[rm32, r32] {
+  implicit object _2 extends TwoOp[rm32, r32] {
     val opcode: TwoOpcodes = (0x0F, 0xC1) /r
     val format = MemRegFormat
   }
 
-  implicit object XADD_3 extends _2[rm64, r64] {
+  implicit object _3 extends TwoOp[rm64, r64] {
     val opcode: TwoOpcodes = (0x0F, 0xC1) /r
     override def prefix = REX.W(true)
     val format = MemRegFormat

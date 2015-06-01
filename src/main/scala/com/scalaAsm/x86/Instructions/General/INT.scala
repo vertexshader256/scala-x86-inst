@@ -15,7 +15,7 @@ trait INT extends InstructionDefinition {
 object INT extends OneOperand[INT] with INTImpl
 
 trait INTImpl extends INT {
-  implicit object INT_0 extends _1[imm8] {
+  implicit object _0 extends OneOp[imm8] {
     val opcode: OneOpcode = 0xCD
     val format = ImmFormat
     override def hasImplicitOperand = true

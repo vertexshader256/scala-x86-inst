@@ -15,17 +15,17 @@ trait JNL extends InstructionDefinition {
 object JNL extends OneOperand[JNL] with JNLImpl
 
 trait JNLImpl extends JNL {
-  implicit object JNL_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x7D
     val format = ImmFormat
   }
 
-  implicit object JNL_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8D)
     val format = ImmFormat
   }
 
-  implicit object JNL_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8D)
     val format = ImmFormat
   }

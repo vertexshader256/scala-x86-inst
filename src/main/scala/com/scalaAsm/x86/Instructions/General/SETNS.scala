@@ -15,7 +15,7 @@ trait SETNS extends InstructionDefinition {
 object SETNS extends OneOperand[SETNS] with SETNSImpl
 
 trait SETNSImpl extends SETNS {
-  implicit object SETNS_0 extends _1[rm8] {
+  implicit object _0 extends OneOp[rm8] {
     val opcode: TwoOpcodes = (0x0F, 0x99) /+ 0
     val format = RmFormat
   }

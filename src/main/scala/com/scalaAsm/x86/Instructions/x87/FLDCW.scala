@@ -15,7 +15,7 @@ trait FLDCW extends InstructionDefinition {
 object FLDCW extends OneOperand[FLDCW] with FLDCWImpl
 
 trait FLDCWImpl extends FLDCW {
-  implicit object FLDCW_0 extends _1[m16] {
+  implicit object _0 extends OneOp[m16] {
     val opcode: OneOpcode = 0xD9 /+ 5
     val format = RmFormat
   }

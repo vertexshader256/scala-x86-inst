@@ -15,7 +15,7 @@ trait FDIVP extends InstructionDefinition {
 object FDIVP extends ZeroOperands[FDIVP] with FDIVPImpl
 
 trait FDIVPImpl extends FDIVP {
-  implicit object FDIVP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDE /+ 7
         override def hasImplicitOperand = true
   }

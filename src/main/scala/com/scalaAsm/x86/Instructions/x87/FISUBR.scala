@@ -15,13 +15,13 @@ trait FISUBR extends InstructionDefinition {
 object FISUBR extends OneOperand[FISUBR] with FISUBRImpl
 
 trait FISUBRImpl extends FISUBR {
-  implicit object FISUBR_0 extends _1[m32] {
+  implicit object _0 extends OneOp[m32] {
     val opcode: OneOpcode = 0xDA /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object FISUBR_1 extends _1[m16] {
+  implicit object _1 extends OneOp[m16] {
     val opcode: OneOpcode = 0xDE /+ 5
     val format = RmFormat
     override def hasImplicitOperand = true

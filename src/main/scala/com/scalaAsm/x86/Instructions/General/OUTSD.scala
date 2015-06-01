@@ -15,7 +15,7 @@ trait OUTSD extends InstructionDefinition {
 object OUTSD extends ZeroOperands[OUTSD] with OUTSDImpl
 
 trait OUTSDImpl extends OUTSD {
-  implicit object OUTSD_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0x6F
         override def hasImplicitOperand = true
   }

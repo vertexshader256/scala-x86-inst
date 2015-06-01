@@ -15,17 +15,17 @@ trait JNLE extends InstructionDefinition {
 object JNLE extends OneOperand[JNLE] with JNLEImpl
 
 trait JNLEImpl extends JNLE {
-  implicit object JNLE_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x7F
     val format = ImmFormat
   }
 
-  implicit object JNLE_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x8F)
     val format = ImmFormat
   }
 
-  implicit object JNLE_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x8F)
     val format = ImmFormat
   }

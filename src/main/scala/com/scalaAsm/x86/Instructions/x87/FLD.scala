@@ -15,13 +15,13 @@ trait FLD extends InstructionDefinition {
 object FLD extends OneOperand[FLD] with FLDImpl
 
 trait FLDImpl extends FLD {
-  implicit object FLD_0 extends _1[m32] {
+  implicit object _0 extends OneOp[m32] {
     val opcode: OneOpcode = 0xD9 /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object FLD_1 extends _1[m64] {
+  implicit object _1 extends OneOp[m64] {
     val opcode: OneOpcode = 0xDD /+ 0
     val format = RmFormat
     override def hasImplicitOperand = true

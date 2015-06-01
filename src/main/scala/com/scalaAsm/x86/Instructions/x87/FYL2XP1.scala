@@ -15,7 +15,7 @@ trait FYL2XP1 extends InstructionDefinition {
 object FYL2XP1 extends ZeroOperands[FYL2XP1] with FYL2XP1Impl
 
 trait FYL2XP1Impl extends FYL2XP1 {
-  implicit object FYL2XP1_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 7
         override def hasImplicitOperand = true
   }

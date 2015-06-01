@@ -15,7 +15,7 @@ trait CMPSQ extends InstructionDefinition {
 object CMPSQ extends ZeroOperands[CMPSQ] with CMPSQImpl
 
 trait CMPSQImpl extends CMPSQ {
-  implicit object CMPSQ_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xA7
         override def hasImplicitOperand = true
   }

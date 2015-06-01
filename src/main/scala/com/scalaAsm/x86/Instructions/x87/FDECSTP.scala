@@ -15,7 +15,7 @@ trait FDECSTP extends InstructionDefinition {
 object FDECSTP extends ZeroOperands[FDECSTP] with FDECSTPImpl
 
 trait FDECSTPImpl extends FDECSTP {
-  implicit object FDECSTP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD9 /+ 6
       }
 }

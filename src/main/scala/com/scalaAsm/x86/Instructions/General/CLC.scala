@@ -15,7 +15,7 @@ trait CLC extends InstructionDefinition {
 object CLC extends ZeroOperands[CLC] with CLCImpl
 
 trait CLCImpl extends CLC {
-  implicit object CLC_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xF8
       }
 }

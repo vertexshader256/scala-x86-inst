@@ -15,17 +15,17 @@ trait CMOVNB extends InstructionDefinition {
 object CMOVNB extends TwoOperands[CMOVNB] with CMOVNBImpl
 
 trait CMOVNBImpl extends CMOVNB {
-  implicit object CMOVNB_0 extends _2[r16, rm16] {
+  implicit object _0 extends TwoOp[r16, rm16] {
     val opcode: TwoOpcodes = (0x0F, 0x43) /r
     val format = RegRmFormat
   }
 
-  implicit object CMOVNB_1 extends _2[r32, rm32] {
+  implicit object _1 extends TwoOp[r32, rm32] {
     val opcode: TwoOpcodes = (0x0F, 0x43) /r
     val format = RegRmFormat
   }
 
-  implicit object CMOVNB_2 extends _2[r64, rm64] {
+  implicit object _2 extends TwoOp[r64, rm64] {
     val opcode: TwoOpcodes = (0x0F, 0x43) /r
     override def prefix = REX.W(true)
     val format = RegRmFormat

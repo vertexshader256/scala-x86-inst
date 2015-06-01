@@ -15,7 +15,7 @@ trait CLI extends InstructionDefinition {
 object CLI extends ZeroOperands[CLI] with CLIImpl
 
 trait CLIImpl extends CLI {
-  implicit object CLI_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xFA
       }
 }

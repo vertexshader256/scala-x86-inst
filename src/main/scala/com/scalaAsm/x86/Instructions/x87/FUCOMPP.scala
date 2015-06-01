@@ -15,7 +15,7 @@ trait FUCOMPP extends InstructionDefinition {
 object FUCOMPP extends ZeroOperands[FUCOMPP] with FUCOMPPImpl
 
 trait FUCOMPPImpl extends FUCOMPP {
-  implicit object FUCOMPP_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xDA /+ 5
         override def hasImplicitOperand = true
   }

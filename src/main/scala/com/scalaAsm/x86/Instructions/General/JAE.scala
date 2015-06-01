@@ -15,17 +15,17 @@ trait JAE extends InstructionDefinition {
 object JAE extends OneOperand[JAE] with JAEImpl
 
 trait JAEImpl extends JAE {
-  implicit object JAE_0 extends _1[rel8] {
+  implicit object _0 extends OneOp[rel8] {
     val opcode: OneOpcode = 0x73
     val format = ImmFormat
   }
 
-  implicit object JAE_1 extends _1[rel16] {
+  implicit object _1 extends OneOp[rel16] {
     val opcode: TwoOpcodes = (0x0F, 0x83)
     val format = ImmFormat
   }
 
-  implicit object JAE_2 extends _1[rel32] {
+  implicit object _2 extends OneOp[rel32] {
     val opcode: TwoOpcodes = (0x0F, 0x83)
     val format = ImmFormat
   }

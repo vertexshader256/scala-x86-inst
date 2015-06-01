@@ -15,7 +15,7 @@ trait UD2 extends InstructionDefinition {
 object UD2 extends ZeroOperands[UD2] with UD2Impl
 
 trait UD2Impl extends UD2 {
-  implicit object UD2_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: TwoOpcodes = (0x0F, 0x0B)
       }
 }

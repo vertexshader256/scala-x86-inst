@@ -15,13 +15,13 @@ trait FMUL extends InstructionDefinition {
 object FMUL extends OneOperand[FMUL] with FMULImpl
 
 trait FMULImpl extends FMUL {
-  implicit object FMUL_0 extends _1[m32] {
+  implicit object _0 extends OneOp[m32] {
     val opcode: OneOpcode = 0xD8 /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true
   }
 
-  implicit object FMUL_1 extends _1[m64] {
+  implicit object _1 extends OneOp[m64] {
     val opcode: OneOpcode = 0xDC /+ 1
     val format = RmFormat
     override def hasImplicitOperand = true

@@ -15,7 +15,7 @@ trait SETALC extends InstructionDefinition {
 object SETALC extends ZeroOperands[SETALC] with SETALCImpl
 
 trait SETALCImpl extends SETALC {
-  implicit object SETALC_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xD6
         override def hasImplicitOperand = true
   }

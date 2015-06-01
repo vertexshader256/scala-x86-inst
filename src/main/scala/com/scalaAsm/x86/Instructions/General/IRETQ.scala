@@ -15,7 +15,7 @@ trait IRETQ extends InstructionDefinition {
 object IRETQ extends ZeroOperands[IRETQ] with IRETQImpl
 
 trait IRETQImpl extends IRETQ {
-  implicit object IRETQ_0 extends _0 {
+  implicit object _0 extends NoOp{
     val opcode: OneOpcode = 0xCF
         override def hasImplicitOperand = true
   }
