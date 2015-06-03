@@ -4,7 +4,7 @@ import com.scalaAsm.x86.Instructions.General._
 import com.scalaAsm.x86.Instructions.System._
 import com.scalaAsm.x86.Instructions.x87._
 
-object instructionMap {
+object InstructionMap {
   val instMap = Map[Int, Set[x86Instruction]](
     0x00 -> Set(ADD._0),
     0x01 -> Set(ADD._2, ADD._1, ADD._3),

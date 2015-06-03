@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package System
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Verify a Segment for Reading
 // Category: general
 

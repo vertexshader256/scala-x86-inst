@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package General
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Convert Byte to Word
 // Category: general/conver
 

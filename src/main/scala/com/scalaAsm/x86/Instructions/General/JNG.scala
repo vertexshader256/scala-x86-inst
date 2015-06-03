@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package General
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Jump short if less or equal/not greater ((ZF=1) OR (SF!=OF))
 // Category: general/branch/cond
 

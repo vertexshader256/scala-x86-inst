@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package x87
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Initialize Floating-Point Unit
 // Category: general/control
 

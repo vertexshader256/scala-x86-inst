@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package General
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Conditional Move - parity/parity even (PF=1)
 // Category: general/datamov
 

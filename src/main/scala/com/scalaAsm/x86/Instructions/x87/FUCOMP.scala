@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package x87
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Unordered Compare Floating Point Values and Pop
 // Category: general/compar
 

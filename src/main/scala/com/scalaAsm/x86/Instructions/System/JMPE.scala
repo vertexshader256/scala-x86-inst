@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package System
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Jump to IA-64 Instruction Set
 // Category: general/branch
 

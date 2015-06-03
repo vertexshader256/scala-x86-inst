@@ -2,9 +2,6 @@ package com.scalaAsm.x86
 package Instructions
 package General
 
-import com.scalaAsm.x86.Operands._
-import com.scalaAsm.x86.Operands.Memory._
-
 // Description: Conditional Move - below or equal/not above (CF=1 AND ZF=1)
 // Category: general/datamov
 
